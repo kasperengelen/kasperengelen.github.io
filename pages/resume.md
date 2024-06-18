@@ -6,7 +6,7 @@ permalink: /resume/
 
 <div class="profile-container cv_section" id="about">
     <div class="profile-picture">
-        <img src="/assets/images/profile_picture_20240605.jpeg" alt="Avatar">
+        <img src="/assets/images/profile_picture_20240605.jpeg" alt="Me!">
     </div>
     <div class="about-me">
         <h2>About Me</h2>
