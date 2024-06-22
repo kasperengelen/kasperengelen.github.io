@@ -169,7 +169,7 @@
 
     /* Different types of boxes */
     .section-box {
-        border-radius: 20px;
+        border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
         margin-top: 10px;  
@@ -181,41 +181,61 @@
         margin-bottom: 0px;  
     }
 
-    .highlight-box-gray {
-        background-color: #eeeef0; 
+    .highlight-box-white {
+        border: 1px solid;
+        border-color: #d9d9d9;
         border-radius: 5px;
+        background-color: #ffffff; 
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
-        margin-top: 10px;  
+        margin-top: 10px;
+    }
+
+    .highlight-box-gray {
+        border: 1px solid;
+        border-color: #c7c7c9;
+        border-radius: 5px;
+        background-color: #eeeef0; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        padding: 20px;
+        margin-top: 10px;
     }
 
     .highlight-box-red {
-        background-color: #ed4a4a; 
+        border: 1px solid;
+        border-color: #ed4a4a; 
         border-radius: 5px;
+        background-color: #f29999;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
         margin-top: 10px;  
     }
 
     .highlight-box-purple {
-        background-color: #eef; 
+        border: 1px solid;
+        border-color: #cacaeb;
         border-radius: 5px;
+        background-color: #eef; 
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
         margin-top: 10px;  
     }
 
     .highlight-box-green {
-        background-color: #6ab366; 
+        border: 1px solid;
+        border-color: #528c4f;
         border-radius: 5px;
+        background-color: #97bf95; 
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
         margin-top: 10px;  
     }
 
     .highlight-box-yellow {
-        background-color: #ffc547; 
+        border: 1px solid;
+        border-color: #e3aa2d;
         border-radius: 5px;
+        background-color: #facf73; 
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
         margin-top: 10px;  
