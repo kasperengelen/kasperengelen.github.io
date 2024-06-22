@@ -74,4 +74,63 @@ In this demo you can see different images position next to each other in a row. 
     </div>
 </div>
 
+## Boxes
 
+<div class="section-box">
+    <h3>Title</h3>
+    turpis enim, elementum quis accumsan nec, molestie vel diam. Maecenas eget vulputate orci. Aliquam tristique, libero quis facilisis imperdiet, odio felis posuere diam, vitae tempor neque urna ut risus. Aliquam erat volutpat. Integer laoreet vestibulum tincidunt. Aliquam erat volutpat. Aliquam porta viverra elit suscipit volutpat. Donec vitae magna nec purus pretium auctor nec vel leo. Morbi egestas efficitur metus, sit amet aliquet nulla commodo vitae. Maecenas augue felis, accumsan a orci tincidunt, gravida iaculis arcu. Donec quam massa, rhoncus a vestibulum vitae, tincidunt condimentum dolor. Morbi ultricies magna purus, ut aliquam erat malesuada eu. Integer mattis lacus dictum, volutpat arcu et, tincidunt mi.
+
+    $$I = \int f(x)\,dx$$
+</div>
+
+<div class="highlight-box-gray">
+    <h3>Title</h3>
+    turpis enim, elementum quis accumsan nec, molestie vel diam. Maecenas eget vulputate orci. Aliquam tristique, libero quis facilisis imperdiet, odio felis posuere diam, vitae tempor neque urna ut risus. Aliquam erat volutpat. Integer laoreet vestibulum tincidunt. Aliquam erat volutpat. Aliquam porta viverra elit suscipit volutpat. Donec vitae magna nec purus pretium auctor nec vel leo. Morbi egestas efficitur metus, sit amet aliquet nulla commodo vitae. Maecenas augue felis, accumsan a orci tincidunt, gravida iaculis arcu. Donec quam massa, rhoncus a vestibulum vitae, tincidunt condimentum dolor. Morbi ultricies magna purus, ut aliquam erat malesuada eu. Integer mattis lacus dictum, volutpat arcu et, tincidunt mi.
+
+    $$I = \int f(x)\,dx$$
+</div>
+
+<div class="highlight-box-purple">
+    <h3>Title</h3>
+    turpis enim, elementum quis accumsan nec, molestie vel diam. Maecenas eget vulputate orci. Aliquam tristique, libero quis facilisis imperdiet, odio felis posuere diam, vitae tempor neque urna ut risus. Aliquam erat volutpat. Integer laoreet vestibulum tincidunt. Aliquam erat volutpat. Aliquam porta viverra elit suscipit volutpat. Donec vitae magna nec purus pretium auctor nec vel leo. Morbi egestas efficitur metus, sit amet aliquet nulla commodo vitae. Maecenas augue felis, accumsan a orci tincidunt, gravida iaculis arcu. Donec quam massa, rhoncus a vestibulum vitae, tincidunt condimentum dolor. Morbi ultricies magna purus, ut aliquam erat malesuada eu. Integer mattis lacus dictum, volutpat arcu et, tincidunt mi.
+
+    $$I = \int f(x)\,dx$$
+</div>
+
+<div class="highlight-box-red">
+    <h3>Title</h3>
+    turpis enim, elementum quis accumsan nec, molestie vel diam. Maecenas eget vulputate orci. Aliquam tristique, libero quis facilisis imperdiet, odio felis posuere diam, vitae tempor neque urna ut risus. Aliquam erat volutpat. Integer laoreet vestibulum tincidunt. Aliquam erat volutpat. Aliquam porta viverra elit suscipit volutpat. Donec vitae magna nec purus pretium auctor nec vel leo. Morbi egestas efficitur metus, sit amet aliquet nulla commodo vitae. Maecenas augue felis, accumsan a orci tincidunt, gravida iaculis arcu. Donec quam massa, rhoncus a vestibulum vitae, tincidunt condimentum dolor. Morbi ultricies magna purus, ut aliquam erat malesuada eu. Integer mattis lacus dictum, volutpat arcu et, tincidunt mi.
+
+    $$I = \int f(x)\,dx$$
+</div>
+
+<div class="highlight-box-green">
+    <h3>Title</h3>
+    turpis enim, elementum quis accumsan nec, molestie vel diam. Maecenas eget vulputate orci. Aliquam tristique, libero quis facilisis imperdiet, odio felis posuere diam, vitae tempor neque urna ut risus. Aliquam erat volutpat. Integer laoreet vestibulum tincidunt. Aliquam erat volutpat. Aliquam porta viverra elit suscipit volutpat. Donec vitae magna nec purus pretium auctor nec vel leo. Morbi egestas efficitur metus, sit amet aliquet nulla commodo vitae. Maecenas augue felis, accumsan a orci tincidunt, gravida iaculis arcu. Donec quam massa, rhoncus a vestibulum vitae, tincidunt condimentum dolor. Morbi ultricies magna purus, ut aliquam erat malesuada eu. Integer mattis lacus dictum, volutpat arcu et, tincidunt mi.
+
+    $$I = \int f(x)\,dx$$
+</div>
+
+
+<div class="highlight-box-yellow">
+    <h3>Title</h3>
+    turpis enim, elementum quis accumsan nec, molestie vel diam. Maecenas eget vulputate orci. Aliquam tristique, libero quis facilisis imperdiet, odio felis posuere diam, vitae tempor neque urna ut risus. Aliquam erat volutpat. Integer laoreet vestibulum tincidunt. Aliquam erat volutpat. Aliquam porta viverra elit suscipit volutpat. Donec vitae magna nec purus pretium auctor nec vel leo. Morbi egestas efficitur metus, sit amet aliquet nulla commodo vitae. Maecenas augue felis, accumsan a orci tincidunt, gravida iaculis arcu. Donec quam massa, rhoncus a vestibulum vitae, tincidunt condimentum dolor. Morbi ultricies magna purus, ut aliquam erat malesuada eu. Integer mattis lacus dictum, volutpat arcu et, tincidunt mi.
+
+    $$I = \int f(x)\,dx$$
+</div>
+
+## Content-specific boxes
+
+<example-box>
+    <example-title>Example</example-title>
+    turpis enim, elementum quis accumsan nec, molestie vel diam. Maecenas eget vulputate orci. Aliquam tristique, libero quis facilisis imperdiet, odio felis posuere diam, vitae tempor neque urna ut risus. Aliquam erat volutpat. Integer laoreet vestibulum tincidunt. Aliquam erat volutpat. Aliquam porta viverra elit suscipit volutpat. Donec vitae magna nec purus pretium auctor nec vel leo. Morbi egestas efficitur metus, sit amet aliquet nulla commodo vitae. Maecenas augue felis, accumsan a orci tincidunt, gravida iaculis arcu. Donec quam massa, rhoncus a vestibulum vitae, tincidunt condimentum dolor. Morbi ultricies magna purus, ut aliquam erat malesuada eu. Integer mattis lacus dictum, volutpat arcu et, tincidunt mi.
+
+    $$I = \int f(x)\,dx$$
+</example-box>
+
+<warning-box>
+    <warning-title>Warning!</warning-title>
+    turpis enim, elementum quis accumsan nec, molestie vel diam. Maecenas eget vulputate orci. Aliquam tristique, libero quis facilisis imperdiet, odio felis posuere diam, vitae tempor neque urna ut risus. Aliquam erat volutpat. Integer laoreet vestibulum tincidunt. Aliquam erat volutpat. Aliquam porta viverra elit suscipit volutpat. Donec vitae magna nec purus pretium auctor nec vel leo. Morbi egestas efficitur metus, sit amet aliquet nulla commodo vitae. Maecenas augue felis, accumsan a orci tincidunt, gravida iaculis arcu. Donec quam massa, rhoncus a vestibulum vitae, tincidunt condimentum dolor. Morbi ultricies magna purus, ut aliquam erat malesuada eu. Integer mattis lacus dictum, volutpat arcu et, tincidunt mi.
+
+    $$I = \int f(x)\,dx$$
+</warning-box>

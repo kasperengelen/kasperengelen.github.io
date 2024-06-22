@@ -4,7 +4,7 @@ title: Resume
 permalink: /resume/
 ---
 
-<div class="profile-container cv_section" id="about">
+<div class="profile-container cv-section" id="about">
     <div class="profile-picture">
         <img src="/assets/images/profile_picture_20240605.jpeg" alt="Me!">
     </div>
@@ -15,7 +15,7 @@ permalink: /resume/
 </div>
 
 
-<div class="cv_section" id="exp">
+<div class="cv-section" id="exp">
 	<h2>Experience</h2>
 	<h3>PhD researcher / Teaching assistant</h3>
 	University of Antwerp<br>
@@ -26,7 +26,7 @@ permalink: /resume/
 	</ul>
 </div>
 
-<div class="cv_section" id="educ">
+<div class="cv-section" id="educ">
 	<h2>Education</h2>
 	<h3>Bachelors in Computer Science</h3>
 	University of Antwerp<br>
@@ -48,7 +48,7 @@ permalink: /resume/
     </ul>
 </div>
 
-<div class="cv_section">
+<div class="cv-section">
 	<h2 id="publ">Publications</h2>
 	<h3>Graph-Based Reductions for Parametric and Weighted MDPs</h3>
     Kasper Engelen, Guillermo A. Pérez, Shisha Rao <br>

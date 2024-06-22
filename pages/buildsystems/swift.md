@@ -113,7 +113,7 @@ print("Hello world!".bit8(13)) // purple
 ```
 If we run the `swift run` command, we get the following output:
 
-<div class="monoBox">
+<div class="mono-box">
 <p style="font-family:'Lucida Console', monospace">
 Building for debugging...<br>
 [7/7] Applying NewProject<br>
