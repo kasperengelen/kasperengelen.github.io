@@ -5,10 +5,19 @@
     }
 
     .cv-section {
-        border-radius: 20px;
+/* OLD */
+/*        border-radius: 20px;*/
+/*        box-shadow: 0 4px 8px rgba(0,0,0,0.2);*/
+/*        padding: 20px;*/
+/*        margin-top: 10px;  */
+/* NEW. Identical to a white highlight box. */
+        border: 1px solid;
+        border-color: #d9d9d9;
+        border-radius: 5px;
+        background-color: #ffffff; 
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
-        margin-top: 10px;  
+        margin-bottom: 10px;
     }
 
     .cv-section h3 {
@@ -137,6 +146,7 @@
         padding: 0 4px;
         align-items: center;
         justify-content: center;
+        margin-bottom: 10px;
     }
 
     .fig-in-row {
@@ -144,15 +154,16 @@
         max-width: 40%;
         padding-left: 15px;
         padding-right: 15px;
-        margin-top: 20px;
+/*        margin-top: 20px;*/
     }
 
     .fig-in-row img {
-        margin-top: 8px;
+/*        margin-top: 8px;*/
+        margin-bottom: 8px;
         vertical-align: middle;
         width: 100%;
         border-radius: 2%;
-        /* x y blur spread color */
+        /* <x> <y> <blur> <spread> <color> */
         box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2);
     }
 
@@ -164,6 +175,7 @@
         .fig-in-row {
             flex: 60%;
             max-width: 60%;
+            margin-top: 20px; /* Spacing between images when displayed as a column. */
         }
     }
 
@@ -172,7 +184,7 @@
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
-        margin-top: 10px;  
+        margin-bottom: 10px;  
     }
 
     .section-box h3 {
@@ -188,7 +200,7 @@
         background-color: #ffffff; 
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
-        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .highlight-box-gray {
@@ -198,7 +210,7 @@
         background-color: #eeeef0; 
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
-        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .highlight-box-red {
@@ -208,7 +220,7 @@
         background-color: #f29999;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
-        margin-top: 10px;  
+        margin-bottom: 10px;  
     }
 
     .highlight-box-purple {
@@ -218,7 +230,7 @@
         background-color: #eef; 
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
-        margin-top: 10px;  
+        margin-bottom: 10px;  
     }
 
     .highlight-box-green {
@@ -228,7 +240,7 @@
         background-color: #97bf95; 
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
-        margin-top: 10px;  
+        margin-bottom: 10px;  
     }
 
     .highlight-box-yellow {
@@ -238,5 +250,157 @@
         background-color: #facf73; 
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 20px;
-        margin-top: 10px;  
+        margin-bottom: 10px;  
     }
+
+    /* typewriter style inside the highlight box. */
+    .highlight-box-yellow code {
+        background: #f7bb3b; /* Darker than the background of the highlight box. */
+        border-color: #e3aa2d; /* Same as the border of the highlight box. */
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    /* NOTE: parent div CSS class decides the style of the fieldset */
+    .fs-blue {
+        margin-bottom: 10px; 
+    }
+
+    .fs-blue fieldset {
+        border: 2px solid #1F497D;
+        background: #eeeef0;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    .fs-blue fieldset legend {
+        background: #1F497D;
+        color: #fff;
+        padding: 5px 10px ;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
+
+    .fs-green {
+        margin-bottom: 10px; 
+    }
+
+    .fs-green fieldset {
+        border: 2px solid #528c4f;
+        background: #eeeef0;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    .fs-green fieldset legend {
+        background: #528c4f;
+        color: #fff;
+        padding: 5px 10px ;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
+
+    .fs-red {
+        margin-bottom: 10px; 
+    }
+
+    .fs-red fieldset {
+        border: 2px solid #ed4a4a;
+        background: #eeeef0;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    .fs-red fieldset legend {
+        background: #ed4a4a;
+        color: #fff;
+        padding: 5px 10px ;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
+
+    .fs-yellow {
+        margin-bottom: 10px; 
+    }
+
+    .fs-yellow fieldset {
+        border: 2px solid #e3aa2d;
+        background: #eeeef0;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    .fs-yellow fieldset legend {
+        background: #e3aa2d;
+        color: #fff;
+        padding: 5px 10px ;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
+
+    .fs-purple {
+        margin-bottom: 10px; 
+    }
+
+    .fs-purple fieldset {
+        border: 2px solid #702963;
+        background: #eeeef0;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    .fs-purple fieldset legend {
+        background: #702963;
+        color: #fff;
+        padding: 5px 10px ;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
+
+    .fs-orange {
+        margin-bottom: 10px; 
+    }
+
+    .fs-orange fieldset {
+        border: 2px solid #FF7518;
+        background: #eeeef0;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    .fs-orange fieldset legend {
+        background: #FF7518;
+        color: #fff;
+        padding: 5px 10px ;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
+
+    table {
+        border:1px solid black;
+        width: 70%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom: 10px; 
+    }
+
+    table th {
+        background-color: #cccccc;
+    }
+
+    table tr:nth-child(odd) td{
+        background-color: #ededed;
+    }
+    table tr:nth-child(even) td{
+        background-color: #e3e3e3;
+    }
+
+
