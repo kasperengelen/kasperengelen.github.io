@@ -12,6 +12,7 @@ title:
 <div class="highlight-box-white">
     <h2>Changelog</h2>
     <ul>
-        <li>2025-06-09: Added blogpost about the Swift package manager</li>
+        <li>2024-06-09: Added blogpost about the Swift package manager.</li>
+        <li>2024-07-05: Added blogpost on coding matrices in Swift.</li>
     </ul>
 </div>
