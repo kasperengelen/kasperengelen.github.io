@@ -10,7 +10,32 @@
 
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="/assets/custom_commands.js"></script>
-
+    <script type="text/javascript">
+        window.MathJax = {
+            // for MathJax 2
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            },
+            TeX: {
+                Macros: {
+                    adj: '\\mathrm{adj}',
+                    det: '\\mathrm{det}'
+                }
+            }
+            // for MathJax 3
+            // tex: {
+            //     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            //     macros: {
+            //         adj: '\\mathrm{adj}',
+            //         det: '\\mathrm{det}'
+            //     }
+            // },
+        };
+    </script>
+<!--     <script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+ -->
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
         type="text/javascript">

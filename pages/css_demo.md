@@ -10,6 +10,9 @@ exclude: true
 * TOC 
 {:toc}
 
+
+
+
 ## Two Columns
 
 <div class="col-container" id="col_demo">
@@ -38,14 +41,16 @@ exclude: true
 
 ## Images
 
-In this demo you can see different images position next to each other in a row. This is dynamic, meaning that the number of images can be arbitrary and that each image has identical CSS, regardless of the number of images per row.
+In this demo you can see different images position next to each other in a row. This is dynamic, meaning that the number of images can be arbitrary and that each image has identical CSS, regardless of the number of images per row. Additionally, the figure numbers in the captions are automatically generated.
 
 ### Single image
 
 <div class="fig-row">
     <div class="fig-in-row">
-        <img src="/assets/images/red.png">
-        <figcaption>Fig.1 - Centered image.</figcaption>
+        <figure>
+            <img src="/assets/images/red.png">
+            <figcaption>Centered image.</figcaption>
+        </figure>
     </div>
 </div>
 
@@ -53,12 +58,16 @@ In this demo you can see different images position next to each other in a row. 
 
 <div class="fig-row">
     <div class="fig-in-row">
-        <img src="/assets/images/red.png">
-        <figcaption>Fig.2 - Left image</figcaption>
+        <figure figId="fig2ID">
+            <img src="/assets/images/red.png">
+            <figcaption>Left image</figcaption>
+        </figure>
     </div>
     <div class="fig-in-row">
-        <img src="/assets/images/green.png">
-        <figcaption>Fig.3 - Right image</figcaption>
+        <figure>
+            <img src="/assets/images/green.png">
+            <figcaption>Right image</figcaption>
+        </figure>
     </div>
 </div>
 
@@ -66,16 +75,22 @@ In this demo you can see different images position next to each other in a row. 
 
 <div class="fig-row">
     <div class="fig-in-row">
-        <img src="/assets/images/red.png">
-        <figcaption>Fig.4 - Leftmost figure</figcaption>
+        <figure>
+            <img src="/assets/images/red.png">
+            <figcaption>Leftmost figure</figcaption>
+        </figure>
     </div>
     <div class="fig-in-row">
-        <img src="/assets/images/green.png">
-        <figcaption>Fig.5 - Middle figure</figcaption>
+        <figure>
+            <img src="/assets/images/green.png">
+            <figcaption>Middle figure</figcaption>
+        </figure>
     </div>
     <div class="fig-in-row">
-        <img src="/assets/images/blue.png">
-        <figcaption>Fig.6 - Rightmost figure</figcaption>
+        <figure>
+            <img src="/assets/images/blue.png">
+            <figcaption>Rightmost figure with a lot of text that goes on and on and on ...</figcaption>
+        </figure>
     </div>
 </div>
 
@@ -129,6 +144,19 @@ In this demo you can see different images position next to each other in a row. 
 </div>
 
 <div class="highlight-box-red">
+    <h3>Title</h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    <display-math>I = \int f(x)\,dx</display-math>
+</div>
+
+
+<div class="highlight-box-blue">
     <h3>Title</h3>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -279,6 +307,12 @@ The following is accessible with `<warning-box title="Warning!">...</warning-box
     <display-math>I = \int f(x)\,dx</display-math>
 </warning-box>
 
+The following is accessible with `<todo-box>...</todo-box>`.
+
+<todo-box>
+Some text about something that needs to be done ...
+</todo-box>
+
 Paragraph before table.
 
 <table>
@@ -328,7 +362,7 @@ In this section we will demonstrate various LaTeX-like environments, implemented
 
 <strong>Source:</strong> These definitions and theorems all come from the book "Understanding Analysis" by Stephen Abbott.
 
-<definition name="<inline-math>\varepsilon</inline-math>-neighborhood" id="eps_neighborhood">
+<definition envName="<inline-math>\varepsilon</inline-math>-neighborhood" envId="eps_neighborhood">
 Given <inline-math>a \in \mathbb{R}</inline-math> and <inline-math>\varepsilon > 0</inline-math>, the <inline-math>\varepsilon</inline-math>-neighborhood of <inline-math>a</inline-math> is the set
 <display-math>
     V_\varepsilon(a) = \{ x \in \mathbb{R} : \left| x - a \right| < \varepsilon \}.
@@ -339,10 +373,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat <smart-ref refType="theorem" envId="limit_point_thm"></smart-ref> nulla pariatur. Excepteur sint occaecat <smart-ref refType="theorem" envId="limit_point_thm">Click here for thm 2!</smart-ref> cupidatat non
+cillum dolore eu fugiat <smart-ref targetType="thm" targetId="limit_point_thm"></smart-ref> nulla pariatur. Excepteur sint occaecat <smart-ref targetType="thm" targetId="limit_point_thm">Click here for thm 2!</smart-ref> cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<definition id="open_set">
+<definition envId="open_set">
 A set \(O \subseteq \mathbb{R}\) is <i>open</i> if for all points \(a \in O\) there exists an \(\varepsilon\)-neighborhood \(V_\varepsilon(a) \subseteq O\).
 </definition>
 
@@ -353,7 +387,7 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<theorem name="Union and intersection of open sets">
+<theorem envName="Union and intersection of open sets">
 <ol>
     <li>The union of an arbitrary collection of open sets is open.</li>
     <li>The intersection of a finite collection of open sets is open.</li>
@@ -375,17 +409,17 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 A point \(x\) is the <i>limit point</i> of a set \(A\) if every \(\varepsilon\)-neighborhood \(V_\varepsilon(x)\) of \(x\) intersects the set \(A\) in some point other than \(x\).
 </definition>
 
-<theorem name="From Understanding Analysis, theorem 3.2.5" id="limit_point_thm">
+<theorem envName="From Understanding Analysis, theorem 3.2.5" envId="limit_point_thm">
 A point \(x\) is a limit point of a set \(A\) if and only if \(x = \lim a_n\) for some sequence \((a_n)\) contained in \(A\) satisfying \(a_n \neq x\) for all \(n \in \mathbb{N}\).
 </theorem>
 
 The proof is left as an exercise to the reader.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut <smart-ref refType="definition" envId="eps_neighborhood"></smart-ref> labore et dolore magna aliqua. Ut enim ad minim veniam,
+tempor incididunt ut <smart-ref targetType="def" targetId="eps_neighborhood"></smart-ref> labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit <smart-ref refType="definition" envId="some_def"></smart-ref> in voluptate velit esse
-cillum dolore <smart-ref refType="zefize"></smart-ref> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+consequat. Duis aute irure dolor in reprehenderit <smart-ref targetType="def" targetId="some_def"></smart-ref> in voluptate velit esse
+cillum dolore <smart-ref targetType="zefize"></smart-ref> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -395,6 +429,31 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+<div class="fig-row">
+    <div class="fig-in-row">
+        <figure figId="AnotherFig">
+            <img src="/assets/images/red.png">
+            <figcaption>Left image</figcaption>
+        </figure>
+    </div>
+</div>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt <smart-ref targetType="fig" targetId="Some_fig"></smart-ref> ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in <smart-ref targetType="fig" targetId="AnotherFig"></smart-ref> reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<div class="fig-row">
+    <div class="fig-in-row">
+        <figure figId="Some_fig">
+            <img src="/assets/images/red.png">
+            <figcaption>Left image</figcaption>
+        </figure>
+    </div>
+</div>
+
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -402,8 +461,10 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<lemma id="some_lemma">Some lemma.</lemma>
-<lemma id="some_lemma">Second lemma.</lemma>
+
+
+<lemma envId="some_lemma">Some lemma.</lemma>
+<lemma envId="some_lemma">Second lemma.</lemma>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -413,9 +474,120 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
+<div class="fig-row">
+    <div class="fig-in-row">
+        <figure figId="fig2ID">
+            <img src="/assets/images/red.png">
+            <figcaption>Left image</figcaption>
+        </figure>
+    </div>
+    <div class="fig-in-row">
+        <figure figId="fig2ID">
+            <img src="/assets/images/green.png">
+            <figcaption>Right image</figcaption>
+        </figure>
+    </div>
+</div>
 
 
+<div class="fig-row">
+    <div class="fig-in-row">
+        <figure>
+            <img src="/assets/images/red.png">
+            <figcaption>Left image</figcaption>
+        </figure>
+    </div>
+    <div class="fig-in-row">
+        <figure>
+            <img src="/assets/images/green.png">
+            <figcaption>Right image</figcaption>
+        </figure>
+    </div>
+</div>
 
 
+## Mobile-friendly math
 
+<display-math>
+\mathrm{adj}(A)b = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} 
+</display-math>
+
+This also works in combination with custom environments, such as `theorem`.
+
+<theorem>
+<p>Nunc interdum porttitor erat, in fermentum nisl ultricies tincidunt. Integer auctor purus id metus tempor, ac lacinia nibh dapibus. Nulla sed magna et lacus rhoncus mollis. Praesent quis sem eget purus sagittis ullamcorper. Morbi quis imperdiet ipsum. Nunc vehicula scelerisque magna sit amet ornare. Nulla sed porttitor mauris, id laoreet lacus. Nam vel sapien sit amet ipsum placerat dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam vel urna felis. Duis auctor, orci eget ultrices efficitur, massa mi mattis dui, ullamcorper iaculis orci orci in augue. Curabitur id diam tincidunt, viverra lacus in, tincidunt purus. Quisque neque odio, viverra in posuere congue, mollis mollis lorem. </p>
+<display-math>
+\mathrm{adj}(A)b = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} = \begin{bmatrix}
+A & B & \dots & C \\
+D & E & \dots & F \\
+\dots & \dots & \dots & \dots \\
+G & H & \dots & I
+\end{bmatrix} 
+</display-math>
+</theorem>
 

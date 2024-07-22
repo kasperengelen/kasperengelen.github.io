@@ -1,406 +1,476 @@
-    .mono-box {
-        /* A monospace box to display terminal output. */
-        background: #eef; 
-        padding: 10px;
-    }
+.mono-box {
+    /* A monospace box to display terminal output. */
+    background: #eef; 
+    padding: 10px;
+}
 
-    .cv-section {
-/* OLD */
-/*        border-radius: 20px;*/
-/*        box-shadow: 0 4px 8px rgba(0,0,0,0.2);*/
-/*        padding: 20px;*/
-/*        margin-top: 10px;  */
-/* NEW. Identical to a white highlight box. */
-        border: 1px solid;
-        border-color: #d9d9d9;
-        border-radius: 5px;
-        background-color: #ffffff; 
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        padding: 20px;
-        margin-bottom: 10px;
-    }
+.cv-section {
+    border: 1px solid;
+    border-color: #d9d9d9;
+    border-radius: 5px;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 10px;
+}
 
-    .cv-section h3 {
-        font: bold 18px Arial;
-        margin-top: 20px;  
-        margin-bottom: 0px;  
-    }
+.cv-section h3 {
+    font: bold 18px Arial;
+    margin-top: 20px;  
+    margin-bottom: 0px;  
+}
 
-    /* Profile picture and about me stuff. These are basically columns, but specialised for the resume page */ 
+/* Profile picture and about me stuff. These are basically columns, but specialised for the resume page */ 
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.about-me {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+@media (min-width: 800px) {
     .profile-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
-    .profile-picture img {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-    }
-
-    .about-me {
-        text-align: justify;
-        margin-top: 20px;
-    }
-
-    @media (min-width: 800px) {
-        .profile-container {
-            flex-direction: row;
-            align-items: flex-start;
-        }
-
-        .profile-picture {
-            flex: 1;
-            text-align: center;
-        }
-
-        .about-me {
-            flex: 2;
-            text-align: left;
-            margin-top: 0;
-            margin-left: 20px;
-            /* This is assymetric, but OK. */
-        }
-    }
-
-    /** CSS code for little buttons. Useful for links to publications */
-    .publ_links {
-        margin-top: 10px;  
-    }
-
-    .button {
-        border-radius: 20px;
-        font: bold 12px Arial;
-        text-decoration: none;
-        background-color: #EEEEEE;
-        color: #333333;
-        padding: 6px 8px 6px 8px;
-    }
-
-    /* Flexible columns with different widths */
-    .col-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /*padding: 20px;*/ /* This creates a small margin around the entire column container. */
-        justify-content: center;
-    }
-
-    .col-content-1 {
-        text-align: justify;
-        margin-top: 20px;
-    }
-
-    .col-2-content-2 {
-        text-align: justify;
-        margin-top: 20px;
-    }
-
-    .col-content-3 {
-        text-align: justify;
-        margin-top: 20px;
-    }
-
-    @media (min-width: 800px) {
-        /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-        .col-container {
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            align-content: center;
-            gap: 10px 20px
-        }
-
-        .col-content-1 {
-            flex: 1;
-            text-align: justify;
-            margin-top: 0;
-/*            margin-left: 10px;
-            margin-right: 10px;*/
-            /* NOTE: disabled the margins of the individual columns, in favor a "gap" space specified in the container */
-        }
-
-        .col-content-2 {
-            flex: 2;
-            text-align: justify;
-            margin-top: 0;
-/*            margin-left: 10px;
-            margin-right: 10px;*/
-        }
-
-        .col-content-3 {
-            flex: 3;
-            text-align: justify;
-            margin-top: 0;
-/*            margin-left: 10px;
-            margin-right: 10px;*/
-        }
-    }
-
-    /* Row of images */
-    .fig-row {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .fig-in-row {
+    .profile-picture {
         flex: 1;
-        max-width: 40%;
-        padding-left: 15px;
-        padding-right: 15px;
-/*        margin-top: 20px;*/
-    }
-
-    .fig-in-row img {
-/*        margin-top: 8px;*/
-        margin-bottom: 8px;
-        vertical-align: middle;
-        width: 100%;
-        border-radius: 2%;
-        /* <x> <y> <blur> <spread> <color> */
-        box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2);
-    }
-
-    .fig-in-row figcaption {
         text-align: center;
     }
 
-    @media screen and (max-width: 800px) {
-        .fig-in-row {
-            flex: 60%;
-            max-width: 60%;
-            margin-top: 20px; /* Spacing between images when displayed as a column. */
-        }
+    .about-me {
+        flex: 2;
+        text-align: left;
+        margin-top: 0;
+        margin-left: 20px;
+        /* This is assymetric, but OK. */
+    }
+}
+
+/** CSS code for little buttons. Useful for links to publications */
+.publ_links {
+    margin-top: 10px;  
+}
+
+.button {
+    border-radius: 20px;
+    font: bold 12px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 6px 8px 6px 8px;
+}
+
+/* Flexible columns with different widths */
+.col-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*padding: 20px;*/ /* This creates a small margin around the entire column container. */
+    justify-content: center;
+}
+
+.col-content-1 {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.col-2-content-2 {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.col-content-3 {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+@media (min-width: 800px) {
+    /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    .col-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-content: center;
+        gap: 10px 20px
     }
 
-    /* Different types of boxes */
-    .section-box {
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        padding: 20px;
-        margin-bottom: 10px;  
-    }
-
-    .section-box h3 {
-        font: bold 18px Arial;
-        margin-top: 20px;  
-        margin-bottom: 0px;  
-    }
-
-    .highlight-box-white {
-        border: 1px solid;
-        border-color: #d9d9d9;
-        border-radius: 5px;
-        background-color: #ffffff; 
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        padding: 20px;
-        margin-bottom: 10px;
-    }
-
-    .highlight-box-gray {
-        border: 1px solid;
-        border-color: #c7c7c9;
-        border-radius: 5px;
-        background-color: #eeeef0; 
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        padding: 20px;
-        margin-bottom: 10px;
-    }
-
-    .highlight-box-red {
-        border: 1px solid;
-        border-color: #ed4a4a; 
-        border-radius: 5px;
-        background-color: #f29999;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        padding: 20px;
-        margin-bottom: 10px;  
-    }
-
-    .highlight-box-purple {
-        border: 1px solid;
-        border-color: #cacaeb;
-        border-radius: 5px;
-        background-color: #eef; 
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        padding: 20px;
-        margin-bottom: 10px;  
-    }
-
-    .highlight-box-green {
-        border: 1px solid;
-        border-color: #528c4f;
-        border-radius: 5px;
-        background-color: #97bf95; 
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        padding: 20px;
-        margin-bottom: 10px;  
-    }
-
-    .highlight-box-yellow {
-        border: 1px solid;
-        border-color: #e3aa2d;
-        border-radius: 5px;
-        background-color: #facf73; 
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        padding: 20px;
-        margin-bottom: 10px;  
-    }
-
-    /* typewriter style inside the highlight box. */
-    .highlight-box-yellow code {
-        background: #f7bb3b; /* Darker than the background of the highlight box. */
-        border-color: #e3aa2d; /* Same as the border of the highlight box. */
-    }
-
-    p {
+    .col-content-1 {
+        flex: 1;
         text-align: justify;
+        margin-top: 0;
+/*            margin-left: 10px;
+        margin-right: 10px;*/
+        /* NOTE: disabled the margins of the individual columns, in favor a "gap" space specified in the container */
     }
 
-    /* NOTE: parent div CSS class decides the style of the fieldset */
-    .fs-blue {
-        margin-bottom: 10px; 
+    .col-content-2 {
+        flex: 2;
+        text-align: justify;
+        margin-top: 0;
+/*            margin-left: 10px;
+        margin-right: 10px;*/
     }
 
-    .fs-blue fieldset {
-        border: 2px solid #1F497D;
-        background: #eeeef0;
-        border-radius: 5px;
-        padding: 15px;
+    .col-content-3 {
+        flex: 3;
+        text-align: justify;
+        margin-top: 0;
+/*            margin-left: 10px;
+        margin-right: 10px;*/
     }
+}
 
-    .fs-blue fieldset legend {
-        background: #1F497D;
-        color: #fff;
-        padding: 5px 10px ;
-        font-size: 18px;
-        border-radius: 5px;
-        margin-left: 15px;
-    }
+/* Row of images */
+.fig-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    align-items: top;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 
-    .fs-green {
-        margin-bottom: 10px; 
-    }
+.fig-in-row {
+    flex: 1;
+    max-width: 40%;
+    padding-left: 15px;
+    padding-right: 15px;
+/*        margin-top: 20px;*/
+}
 
-    .fs-green fieldset {
-        border: 2px solid #528c4f;
-        background: #eeeef0;
-        border-radius: 5px;
-        padding: 15px;
-    }
+.fig-in-row img {
+/*        margin-top: 8px;*/
+    margin-bottom: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 2%;
+    /* <x> <y> <blur> <spread> <color> */
+    box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2);
+}
 
-    .fs-green fieldset legend {
-        background: #528c4f;
-        color: #fff;
-        padding: 5px 10px ;
-        font-size: 18px;
-        border-radius: 5px;
-        margin-left: 15px;
-    }
+.fig-in-row figcaption {
+    text-align: center;
+}
 
-    .fs-red {
-        margin-bottom: 10px; 
+@media screen and (max-width: 800px) {
+    .fig-in-row {
+        flex: 60%;
+        max-width: 60%;
+        margin-top: 20px; /* Spacing between images when displayed as a column. */
     }
+}
 
-    .fs-red fieldset {
-        border: 2px solid #ed4a4a;
-        background: #eeeef0;
-        border-radius: 5px;
-        padding: 15px;
-    }
+/* Different types of boxes */
+.section-box {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 10px;  
+}
 
-    .fs-red fieldset legend {
-        background: #ed4a4a;
-        color: #fff;
-        padding: 5px 10px ;
-        font-size: 18px;
-        border-radius: 5px;
-        margin-left: 15px;
-    }
+.section-box h3 {
+    font: bold 18px Arial;
+    margin-top: 20px;  
+    margin-bottom: 0px;  
+}
 
-    .fs-yellow {
-        margin-bottom: 10px; 
-    }
+.highlight-box-white {
+    border: 1px solid;
+    border-color: #d9d9d9;
+    border-radius: 5px;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 10px;
+}
 
-    .fs-yellow fieldset {
-        border: 2px solid #e3aa2d;
-        background: #eeeef0;
-        border-radius: 5px;
-        padding: 15px;
-    }
+.highlight-box-gray {
+    border: 1px solid;
+    border-color: #c7c7c9;
+    border-radius: 5px;
+    background-color: #eeeef0; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 10px;
+}
 
-    .fs-yellow fieldset legend {
-        background: #e3aa2d;
-        color: #fff;
-        padding: 5px 10px ;
-        font-size: 18px;
-        border-radius: 5px;
-        margin-left: 15px;
-    }
+.highlight-box-red {
+    border: 1px solid;
+    border-color: #ed4a4a; 
+    border-radius: 5px;
+    background-color: #f29999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 10px;  
+}
 
-    .fs-purple {
-        margin-bottom: 10px; 
-    }
+.highlight-box-blue {
+    border: 1px solid;
+    border-color: #1d4480; 
+    border-radius: 5px;
+    background-color: #749ad4;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 10px;  
+}
 
-    .fs-purple fieldset {
-        border: 2px solid #702963;
-        background: #eeeef0;
-        border-radius: 5px;
-        padding: 15px;
-    }
+.highlight-box-purple {
+    border: 1px solid;
+    border-color: #cacaeb;
+    border-radius: 5px;
+    background-color: #eef; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 10px;  
+}
 
-    .fs-purple fieldset legend {
-        background: #702963;
-        color: #fff;
-        padding: 5px 10px ;
-        font-size: 18px;
-        border-radius: 5px;
-        margin-left: 15px;
-    }
+.highlight-box-green {
+    border: 1px solid;
+    border-color: #528c4f;
+    border-radius: 5px;
+    background-color: #97bf95; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 10px;  
+}
 
-    .fs-orange {
-        margin-bottom: 10px; 
-    }
+.highlight-box-yellow {
+    border: 1px solid;
+    border-color: #e3aa2d;
+    border-radius: 5px;
+    background-color: #facf73; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 10px;  
+}
 
-    .fs-orange fieldset {
-        border: 2px solid #FF7518;
-        background: #eeeef0;
-        border-radius: 5px;
-        padding: 15px;
-    }
+/* typewriter style inside the highlight box. */
+.highlight-box-yellow code {
+    background: #f7bb3b; /* Darker than the background of the highlight box. */
+    border-color: #e3aa2d; /* Same as the border of the highlight box. */
+}
 
-    .fs-orange fieldset legend {
-        background: #FF7518;
-        color: #fff;
-        padding: 5px 10px ;
-        font-size: 18px;
-        border-radius: 5px;
-        margin-left: 15px;
-    }
+p {
+    text-align: justify;
+}
 
-    table {
-        border:1px solid black;
-        width: 70%;
-        margin-left:auto;
-        margin-right:auto;
-        margin-bottom: 10px; 
-    }
+/* NOTE: parent div CSS class decides the style of the fieldset */
+.fs-blue {
+    margin-bottom: 10px; 
+}
 
-    table th {
-        background-color: #cccccc;
-    }
+.fs-blue fieldset {
+    border: 2px solid #1F497D;
+    background: #eeeef0;
+    border-radius: 5px;
+    padding: 15px;
+    /* Very important. browsers have default CSS for fieldsets.
+     * This overrides those defaults. Otherwise the min-width will 
+       be very big. */
+    min-width: auto; 
+    max-width: 100%;
+}
 
-    table tr:nth-child(odd) td{
-        background-color: #ededed;
-    }
-    table tr:nth-child(even) td{
-        background-color: #e3e3e3;
-    }
+.fs-blue fieldset legend {
+    background: #1F497D;
+    color: #fff;
+    padding: 5px 10px;
+/*        font-size: 18px;*/
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.fs-blue p {
+    font-size: 16px;
+}
+
+.fs-green {
+    margin-bottom: 10px; 
+    max-width: 100%;
+}
+
+.fs-green fieldset {
+    border: 2px solid #528c4f;
+    background: #eeeef0;
+    border-radius: 5px;
+    padding: 15px;
+    /* Very important. browsers have default CSS for fieldsets.
+     * This overrides those defaults. Otherwise the min-width will 
+       be very big. */
+    min-width: auto; 
+    max-width: 100%;
+}
+
+.fs-green fieldset legend {
+    background: #528c4f;
+    color: #fff;
+    padding: 5px 10px ;
+/*        font-size: 18px;*/
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.fs-green p {
+    font-size: 16px;
+}
+
+.fs-red {
+    margin-bottom: 10px; 
+}
+
+.fs-red fieldset {
+    border: 2px solid #ed4a4a;
+    background: #eeeef0;
+    border-radius: 5px;
+    padding: 15px;
+    /* Very important. browsers have default CSS for fieldsets.
+     * This overrides those defaults. Otherwise the min-width will 
+       be very big. */
+    min-width: auto; 
+    max-width: 100%;
+}
+
+.fs-red fieldset legend {
+    background: #ed4a4a;
+    color: #fff;
+    padding: 5px 10px ;
+/*        font-size: 18px;*/
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.fs-red p {
+    font-size: 16px;
+}
+
+.fs-yellow {
+    margin-bottom: 10px; 
+}
+
+.fs-yellow fieldset {
+    border: 2px solid #e3aa2d;
+    background: #eeeef0;
+    border-radius: 5px;
+    padding: 15px;
+    /* Very important. browsers have default CSS for fieldsets.
+     * This overrides those defaults. Otherwise the min-width will 
+       be very big. */
+    min-width: auto; 
+    max-width: 100%;
+}
+
+.fs-yellow fieldset legend {
+    background: #e3aa2d;
+    color: #fff;
+    padding: 5px 10px ;
+/*        font-size: 18px;*/
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.fs-yellow p {
+    font-size: 16px;
+}
+
+.fs-purple {
+    margin-bottom: 10px; 
+}
+
+.fs-purple fieldset {
+    border: 2px solid #702963;
+    background: #eeeef0;
+    border-radius: 5px;
+    padding: 15px;
+    /* Very important. browsers have default CSS for fieldsets.
+     * This overrides those defaults. Otherwise the min-width will 
+       be very big. */
+    min-width: auto; 
+    max-width: 100%;
+}
+
+.fs-purple fieldset legend {
+    background: #702963;
+    color: #fff;
+    padding: 5px 10px ;
+/*        font-size: 18px;*/
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.fs-purple p {
+    font-size: 16px;
+}
+
+.fs-orange {
+    margin-bottom: 10px; 
+}
+
+.fs-orange fieldset {
+    border: 2px solid #FF7518;
+    background: #eeeef0;
+    border-radius: 5px;
+    padding: 15px;
+    /* Very important. browsers have default CSS for fieldsets.
+     * This overrides those defaults. Otherwise the min-width will 
+       be very big. */
+    min-width: auto; 
+    max-width: 100%;
+}
+
+.fs-orange fieldset legend {
+    background: #FF7518;
+    color: #fff;
+    padding: 5px 10px ;
+/*        font-size: 18px;*/
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.fs-orange p {
+    font-size: 16px;
+}
+
+table {
+    border:1px solid black;
+    width: 70%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 10px; 
+}
+
+table th {
+    background-color: #cccccc;
+}
+
+table tr:nth-child(odd) td{
+    background-color: #ededed;
+}
+table tr:nth-child(even) td{
+    background-color: #e3e3e3;
+}
+
+/* Parent div that is placed around display math. */
+.display-math-div {
+    overflow-x: auto;
+}
 
 

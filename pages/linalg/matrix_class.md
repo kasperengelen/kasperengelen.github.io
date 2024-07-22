@@ -32,16 +32,20 @@ exclude: true
 
 <div class="fig-row">
     <div class="fig-in-row">
-        <img src="/assets/images/linalg/row_major.png">
-        <figcaption>Fig. 1 - Row-major</figcaption>
+        <figure figId="rowMajor">
+            <img src="/assets/images/linalg/row_major.png">
+            <figcaption>Row-major</figcaption>
+        </figure>
     </div>
     <div class="fig-in-row">
-        <img src="/assets/images/linalg/col_major.png">
-        <figcaption>Fig. 2 - Column-major</figcaption>
+        <figure figId="colMajor">
+            <img src="/assets/images/linalg/col_major.png">
+            <figcaption>Column-major</figcaption>
+        </figure>
     </div>
 </div>
 
-<p>In the case of row-major, the elements are stored row per row, by first storing all elements of the first row one after the other, followed by the elements of the second row, then the third, and so on. Column-major does the exact opposite: the elements are stored in a column-by-column fashion.</p>
+<p>In the case of row-major (<smart-ref targetType="fig" targetId="rowMajor"></smart-ref>), the elements are stored row per row, by first storing all elements of the first row one after the other, followed by the elements of the second row, then the third, and so on. Column-major (<smart-ref targetType="fig" targetId="colMajor"></smart-ref>) does the exact opposite: the elements are stored in a column-by-column fashion.</p>
 
 <!-- <example-box>
 <example-title>Example</example-title>
@@ -149,7 +153,7 @@ In the Swift language there are two keywords that are important when implementin
 
 On one hand, Swift supports classes. Classes support inheritance and polymorphism. They are also passed by reference, which allows for sharing instances across a program. This flexibility comes at a cost, however, since class objects are stored on the heap and make use of reference counting. Additionally, method calls on classes are resolved by consulting a so-called vtable, through a process called "dynamic dispatch". Concretely this means that when you call a method on a class object, a table with memory addresses is consulted at run-time to determine the location of the appropriate method.
 
-A struct, on the other hand, is a type with value-semantics. In Swift this means that the object is passed by value and thus copied everytime it is assigned to a new variable. While this might not sound very efficient, it is actually not that bad since many data structures such as arrays make use of a technique called "copy-on-write" (COW), which reduces the amount of times the underlying data is actually duplicated. As a result, copying a struct is usually just a cheap shallow copy. A benefit is that passing objects as values instead of references prevents bugs that are the result of sharing instances. Additionally, they are stored on the stack, which is more efficient than the heap. 
+A struct, on the other hand, is a type with value-semantics. In Swift this means that the object is passed by value and thus copied every time it is assigned to a new variable. While this might not sound very efficient, it is actually not that bad since many data structures such as arrays make use of a technique called "copy-on-write" (COW), which reduces the amount of times the underlying data is actually duplicated. As a result, copying a struct is usually just a cheap shallow copy. A benefit is that passing objects as values instead of references prevents bugs that are the result of sharing instances. Additionally, they are stored on the stack, which is more efficient than the heap. 
 
 Another important aspect of structs is that they do not support inheritance. This might sound like a big limitation, but it actually has the benefit that when you call a method on a struct, the compiler knows exactly which method is called at compile time, as opposed to having to resolve this through a vtable at run-time. This concept is called "static dispatch", and allows the compiler to apply various optimisations such as inlining function calls.
 
@@ -169,7 +173,7 @@ As you can see the syntax is very similar to C++ or Java. The <texttt>ElementTyp
 
 ## Properties
 
-In Swift, classes and structs can have data members. In Swift lingo these are called "properties". In the case of our matrix struct, we'll need to store the elements that make up the matrix, as well as the number of rows and colums.
+In Swift, classes and structs can have data members. In Swift lingo these are called "properties". In the case of our matrix struct, we'll need to store the elements that make up the matrix, as well as the number of rows and columns.
 
 ```swift
 struct Matrix<ElementType> {
@@ -182,7 +186,7 @@ struct Matrix<ElementType> {
 }
 ```
 
-The elements of the matrix will be stored in a single one dimensional array <texttt>elements</texttt>. The <texttt>nRows</texttt> and <texttt>nCols</texttt> properties indicate the number of rows and colums, respectively. The <texttt>public</texttt> modifier indicates that their getters are public while the <texttt>private(set)</texttt> means their setters are private. This is important, since modifying the <texttt>nRows</texttt> or <texttt>nCols</texttt> properties would cause them to no longer match the number of elements in the matrix. We also do not want users to freely modify the contents of the matrix. Instead, they should make use of the setters exposed by the public interface of our matrix.
+The elements of the matrix will be stored in a single one dimensional array <texttt>elements</texttt>. The <texttt>nRows</texttt> and <texttt>nCols</texttt> properties indicate the number of rows and columns, respectively. The <texttt>public</texttt> modifier indicates that their getters are public while the <texttt>private(set)</texttt> means their setters are private. This is important, since modifying the <texttt>nRows</texttt> or <texttt>nCols</texttt> properties would cause them to no longer match the number of elements in the matrix. We also do not want users to freely modify the contents of the matrix. Instead, they should make use of the setters exposed by the public interface of our matrix.
 
 ## Initialisers
 
@@ -391,7 +395,7 @@ extension Matrix: CustomStringConvertible where ElementType: CustomStringConvert
 }
 ```
 
-This will first go row by row and merge all elements of a row into one string <texttt>rowContents</texttt>. Once all elements are concatenated, the result is concatenated with the string <texttt>stringRepresentation</texttt> that already contains the preceding rows. Note that the string representation of individual elements is obtained by applying the string interpolation operator, which is possible since the elements are required to provide <texttt>CustomStringConvertible</texttt> according to the <texttt>where</texttt> clause. We can try out our new string represention by creating a matrix, and passing it to <texttt>print</texttt>:
+This will first go row by row and merge all elements of a row into one string <texttt>rowContents</texttt>. Once all elements are concatenated, the result is concatenated with the string <texttt>stringRepresentation</texttt> that already contains the preceding rows. Note that the string representation of individual elements is obtained by applying the string interpolation operator, which is possible since the elements are required to provide <texttt>CustomStringConvertible</texttt> according to the <texttt>where</texttt> clause. We can try out our new string representation by creating a matrix, and passing it to <texttt>print</texttt>:
 
 
 ```swift
