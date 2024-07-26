@@ -3,6 +3,7 @@ layout: page
 title: Swift Package Manager
 permalink: /posts/buildsystems/swift
 exclude: true
+referenceId: swift_package_manager
 ---
 
 
@@ -31,7 +32,7 @@ In this post we will learn how to create a new Swift project from scratch, inclu
 **Note** that we do not make use of XCode. While opinions on which IDE to use can differ from person to person, I do strongly recommend that you learn how to compile and run code from the **command line**. Once you have a good grip on the language and the associated tooling, you can move on to use an IDE that nicely abstracts away all the technical details behind a GUI, such as XCode or VSCode. The reason for this is that IDEs sometimes have bugs, or that errors might occur. In such a scenario it is very useful to have a good idea of what goes on behind the scenes.
 ## Prerequisites
 
-In this post we will not go over the installation progress. How to install Swift on different platforms can be found in the [official documentation](https://www.swift.org/install/). To check whether Swift is installed on MacOS, you can run the following command:
+In this post we will not go over the installation progress. How to install Swift on different platforms can be found in the <smart-link linkType="ext" linkId="swift_docs">official documentation</smart-link>. To check whether Swift is installed on MacOS, you can run the following command:
 
 ```
 swift --version
@@ -72,7 +73,7 @@ Hello, world!
 ```
 ## Adding a dependency
 
-Since the current "hello world" example is quite boring, we can make it more interesting by adding some libraries to the project. Concretely, we will make use of the [Rainbow](https://github.com/onevcat/Rainbow) library that makes it easy to print coloured text to the terminal.
+Since the current "hello world" example is quite boring, we can make it more interesting by adding some libraries to the project. Concretely, we will make use of the <smart-link linkType="ext" linkId="rainbow_lib">Rainbow</smart-link> library that makes it easy to print coloured text to the terminal.
 
 We can add dependencies by modifying the `Package.swift` file. The `Package` object has a `dependencies` argument where dependencies can be specified. Similarly, the `executableTarget` also takes a `dependencies` argument, with which you can specify the package (`package`) as well as the module (`name`) you wish to use in your code:
 
@@ -215,7 +216,7 @@ As a result, adding unit tests makes it very easy to find bugs in your code. Thi
 
 In this post we discovered how to create projects with the Swift package manager and how to add targets as well as dependencies. We also added a small and colourful "hello world" example, and wrote a few unit tests.
 
-A GitHub repository with the code can be found [here](https://github.com/kasperengelen/tutorial_code/tree/main/buildsystems/swift). In order to learn more about the Swift language I recommend writing programs in Swift, while at the same time consulting various resources:
+A GitHub repository with the code can be found <smart-link linkType="ext" linkId="code_buildsystem_swift">here</smart-link>. In order to learn more about the Swift language I recommend writing programs in Swift, while at the same time consulting various resources:
 * [Google's Swift Style Guide](https://google.github.io/swift/)
 * [Swift book](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/)
 * Stack overflow
