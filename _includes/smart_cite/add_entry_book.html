@@ -1,0 +1,7 @@
+        bib.addBibEntry(new BookEntry(
+            "{{ include.bib_entry.identifier }}",
+            new AuthorList([{{ author_list }}]),
+            "{{ include.bib_entry.title }}",
+            {% if include.bib_entry.publisher and include.bib_entry.publisher != "" %}"{{ include.bib_entry.publisher }}" {% else %} null {% endif %},
+            {% if include.bib_entry.year and include.bib_entry.year != "" %}{{ include.bib_entry.year }} {% else %} null {% endif %},
+        ));

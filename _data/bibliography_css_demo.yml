@@ -1,0 +1,56 @@
+
+- identifier: understanding_analysis
+  type: book
+  authors:
+    - Stephen Abbott
+  title: Understanding Analysis
+  publisher: Springer New York
+  year: 2015
+
+- identifier: model_checking_book
+  type: book
+  authors:
+    - Christel Baier
+    - Joost-Pieter Katoen
+  title: Principles of model checking
+  publisher: MIT Press
+  year: 2008
+
+- identifier: css_demo
+  type: website
+  authors:
+    - Kasper Engelen
+  title: CSS Demo
+  url: https://kasperengelen.github.io
+  accessed:
+    year: 2024
+    month: 7
+    day: 23
+
+- identifier: hoeffding_ineq
+  type: conferenceArticle
+  authors:
+    - Wassily Hoeffding
+  title: Probability Inequalities for Sums of Bounded Random Variables
+  conference: Journal of the American Statistical Association
+  year: 1963
+
+
+- identifier: css_demo
+  type: website
+  authors:
+    - Kasper Engelen
+  title: CSS Demo
+  url: https://kasperengelen.github.io
+  accessed:
+    year: 2024
+    month: 7
+    day: 23
+
+
+- identifier: non_existing_type
+  type: someType_123
+  authors:
+    - Author 1
+    - Another author
+  title: Some title

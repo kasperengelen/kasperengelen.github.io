@@ -473,4 +473,35 @@ table tr:nth-child(even) td{
     overflow-x: auto;
 }
 
+.bibList {
+    font-size: 18px;
+}
 
+.bibList ol {
+    counter-reset: item;
+}
+
+
+.bibList li {
+/*    list-style-type: none;*/
+/*    display: inline-block;*/
+    display: block;
+    position: relative;
+}
+
+.bibList li::before {
+    content: "[" counter(item) "]";
+    counter-increment: item;
+    display: block;
+    text-align: center;
+    position: absolute;
+/*    outline: 1px dotted black;*/
+    width: 20px;
+    left: -30px;
+    top: 0;
+}
+
+.docs-test p {
+    display: inline-block;
+    margin: 0;
+}
