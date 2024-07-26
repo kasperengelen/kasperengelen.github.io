@@ -62,7 +62,7 @@ class SmartLink {
      * Parameters:
      *  - domObj: HTML object
      *  - identifier: string
-     *  - linkType: string ("ext" or "int")
+     *  - linkType: string ("ext", "int", or "local")
      *  - label: string
      */
     constructor(domObj, identifier, linkType, label) {
@@ -88,6 +88,10 @@ class SmartLink {
 
     /**
      * Retrieve the link type.
+     * 
+     * - "int" means that the link refers to a page on the same website.
+     * - "ext" means that the link refers to a different website.
+     * - "local" links refer to an HTML element on the same page.
      */
     get linkType() {
         return this._linkType;
@@ -128,7 +132,7 @@ function renderSmartLinks(smartLinks, internalUrls, externalUrls) {
         let label = smartLink.label;
 
         // link type must be internal or external
-        if(linkType != "int" && linkType != "ext") {
+        if(linkType != "int" && linkType != "ext" && linkType != "local") {
             $(smartLink.domObj).replaceWith(function(i, content) {
                 return "<span style=\"color: red; background: yellow;\"><strong>ERROR: INVALID LINK TYPE '" + linkType + "'!</strong></span>";
             });
@@ -152,7 +156,7 @@ function renderSmartLinks(smartLinks, internalUrls, externalUrls) {
         var urlContainer = null;
         if(linkType == "int") {
             urlContainer = internalUrls;
-        } else {
+        } else if (linkType == "ext") {
             urlContainer = externalUrls;
         }
 
@@ -162,14 +166,18 @@ function renderSmartLinks(smartLinks, internalUrls, externalUrls) {
             });
         }
 
-        if(label == "") {
+        if(label == "" || label == null) {
             $(smartLink.domObj).replaceWith(function(i, content) {
                 return "<span style=\"color: red; background: yellow;\"><strong>ERROR: NO LABEL SPECIFIED!</strong></span>";
             });
         }
 
         // render the hyper link
-        if(urlContainer.hasUrl(identifier)) {
+        if(linkType == "local") {
+            $(smartLink.domObj).replaceWith(function(i, content) {
+                return "<a href=\"#" + identifier + "\">" + label + "</a>";
+            });
+        } else if(urlContainer.hasUrl(identifier)) {
             // replace with <a href="URL">LABEL</a>
             var targetStr = "";
             if(linkType == "ext") {

@@ -697,13 +697,13 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor <smart-link linkType="int" linkId="css_demo_page"></smart-link> sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+tempor <smart-link linkType="local" linkId="custom-fieldsets">Link to an element</smart-link> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+consequat. Duis aute irure dolor in reprehenderit in <smart-link linkType="local" linkId="">Link to an element</smart-link> voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Lorem ipsum <smart-link linkType="int" linkId="">Some label</smart-link> dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+Lorem ipsum <smart-link linkType="local" linkId="thm_limit_point_thm">Some label</smart-link> dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in <smart-link linkType="abc" linkId="css_demo_page">Some label</smart-link> voluptate velit esse

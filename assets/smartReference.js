@@ -245,11 +245,13 @@ $(document).ready(function () {
     refTargetContainer.addTargetType("def");
     refTargetContainer.addTargetType("proof");
     refTargetContainer.addTargetType("fig");
+    refTargetContainer.addTargetType("ex");
 
     addEnvironmentsToReferenceContainer(refTargetContainer, lemmaEnvs, "lem", "Lemma");
     addEnvironmentsToReferenceContainer(refTargetContainer, theoremEnvs, "thm", "Theorem");
     addEnvironmentsToReferenceContainer(refTargetContainer, definitionEnvs, "def", "Definition");
     addEnvironmentsToReferenceContainer(refTargetContainer, proofEnvs, "proof", "Proof");
+    addEnvironmentsToReferenceContainer(refTargetContainer, exampleEnvs, "ex", "Example");
     addFiguresToReferenceContainer(refTargetContainer, figures);
 
     smartRefs = collectSmartReferences();

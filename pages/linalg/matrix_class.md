@@ -593,7 +593,7 @@ final class MatrixPrettyPrintTests: XCTestCase {
 }
 ```
 
-Note that in the above test case, we test my refined implementation of <texttt>CustomStringConvertible</texttt> that can be found on GitHub, and not the simple implementation we discussed <a href="#using-print-statements">earlier</a> in the article.
+Note that in the above test case, we test my refined implementation of <texttt>CustomStringConvertible</texttt> that can be found on GitHub, and not the simple implementation we discussed <smart-link linkType="local" linkId="using-print-statements">earlier</smart-link> in the article.
 
 ## Conclusion
 
