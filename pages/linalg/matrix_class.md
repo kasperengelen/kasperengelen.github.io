@@ -5,6 +5,14 @@ permalink: /posts/linalg/matrix
 exclude: true
 ---
 
+<div>
+{% include smart_link/load_url_file.html url_file=site.data.external_urls_linalg_matrix_class %}
+</div>
+
+<div>
+{% include smart_link/load_internal_urls.html %}
+</div>
+
 <p>In this tutorial we will be implementing a matrix data structure in Swift that, as you might guess, represents matrices. Although matrices are two-dimensional, they can also be used to represent one-dimensional vectors (i.e., a vector is a matrix with a single column).</p>
 
 <p>The reason why we will use the Swift programming language is because many of the articles that cover linear algebra in-depth already make use of programming languages such as Python, Julia, MATLAB, etc. Additionally, the Swift language has some interesting features, is statically typed, compiled, and has a brief syntax.</p>
@@ -141,9 +149,9 @@ When stored in memory, the matrix will look like below:</p>
 
 <p>For the necessary context, we first need to go back to 1957 when John Backus invented the FORTRAN language. This language was the first "modern" programming language that was more high-level and user friendly than binary or assembly. Its primary purpose was to simplify the job of programming numerical algorithms in mainframes, which up until then had been mostly done by manually flipping bits. Its main contribution was allowing programmers to specify machine instructions using plain language, using keywords such as <texttt>for</texttt> and <texttt>if</texttt>, as opposed to implementing programs in binary or assembly.</p>
 
-<p><strong>Fun fact:</strong> John Backus is also known for inventing the so-called <a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">Backus-Naur form</a>, which is a widely used notation to describe context-free grammars.</p>
+<p><strong>Fun fact:</strong> John Backus is also known for inventing the so-called <smart-link linkType="ext" linkId="wiki_backus_naur">Backus-Naur form</smart-link>, which is a widely used notation to describe context-free grammars.</p>
 
-<p>While designing the FORTRAN language, the team at IBM had to choose how to store matrices in memory, given that matrices are often used in such numerical algorithms. Back then, the choice was made to do this in column-major. The language became widespread soon after, and many libraries where written in FORTRAN, thus making use of column-major. Some of the libraries, such as LAPACK, are still used up until today. If you wish to learn more about the history of FORTRAN, or the history of computer science in general, make sure to listen to the <a href="https://adventofcomputing.com/">Advent of Computing podcast</a>! The podcast has a <a href="https://www.youtube.com/watch?v=-1Cm2P5_KNY">dedicated episode</a> on the topic of FORTRAN.</p>
+<p>While designing the FORTRAN language, the team at IBM had to choose how to store matrices in memory, given that matrices are often used in such numerical algorithms. Back then, the choice was made to do this in column-major. The language became widespread soon after, and many libraries where written in FORTRAN, thus making use of column-major. Some of the libraries, such as LAPACK, are still used up until today. If you wish to learn more about the history of FORTRAN, or the history of computer science in general, make sure to listen to the <smart-link linkType="ext" linkId="advent_of_computing">Advent of Computing podcast</smart-link>! The podcast has a <smart-link linkType="ext" linkId="podcast_fortran">dedicated episode</smart-link> on the topic of FORTRAN.</p>
 
 <p>Nowadays, usage of both row-major and column-major are widespread in the field of scientific computing. Row-major, for example, is used in NumPy in Python, as well as OpenCV in C++ (and its Python bindings). Column-major, on the other hand, also has survived into the 21st century and is used by the Eigen C++ library, MATLAB, as well as Apple Accelerate in Swift. In order to provide interoperability with Apple Accelerate, our matrix will also make use of column major.</p>
 
@@ -157,7 +165,9 @@ A struct, on the other hand, is a type with value-semantics. In Swift this means
 
 Another important aspect of structs is that they do not support inheritance. This might sound like a big limitation, but it actually has the benefit that when you call a method on a struct, the compiler knows exactly which method is called at compile time, as opposed to having to resolve this through a vtable at run-time. This concept is called "static dispatch", and allows the compiler to apply various optimisations such as inlining function calls.
 
-As a best practice, you should consider using structs by default. I learned all the stuff above from a [WWDC 2016 talk on Swift performance](https://developer.apple.com/videos/play/wwdc2016/416). If you are interested in how Swift handles objects, memory, polymorphism, etc., I do recommend to watch this talk.
+As a best practice, you should consider using structs by default. I learned all the stuff above from a <smart-link linkType="ext" linkId="wwdc16_performance">WWDC 2016 talk on Swift performance</smart-link>. If you are interested in how Swift handles objects, memory, polymorphism, etc., I do recommend to watch this talk.
+
+
 
 A struct can be defined as follows:
 
@@ -548,7 +558,7 @@ final class MatrixInitTests: XCTestCase {
 }
 ```
 
-In the <a href="/posts/buildsystems/swift">previous tutorial on Swift</a>, we saw that we can declare a set of test cases using <texttt>XCTestCase</texttt>. Checking whether certain values are correct can be done using <texttt>XCTAssertEqual</texttt>. In the above test we call the initialiser we want to test, in order to construct our matrix. We then assert that the number of rows and columns needs to be correct. Finally, we verify the contents of the matrix. Note that while the initialiser takes an array of elements in row-major ordering, the <texttt>elements</texttt> property gives us an array of elements in column-major order, since that is the order that the Matrix struct uses internally.
+In the <smart-link linkType="int" linkId="swift_package_manager">previous tutorial on Swift</smart-link>, we saw that we can declare a set of test cases using <texttt>XCTestCase</texttt>. Checking whether certain values are correct can be done using <texttt>XCTAssertEqual</texttt>. In the above test we call the initialiser we want to test, in order to construct our matrix. We then assert that the number of rows and columns needs to be correct. Finally, we verify the contents of the matrix. Note that while the initialiser takes an array of elements in row-major ordering, the <texttt>elements</texttt> property gives us an array of elements in column-major order, since that is the order that the Matrix struct uses internally.
 
 Next, we will test our implementation of the <texttt>CustomStringConvertible</texttt> protocol. For this we again construct a matrix, and then invoke this protocol using either the string interpolation operator in combination with <texttt>print()</texttt>, or we can call the <texttt>description</texttt> property directly.
 
@@ -597,10 +607,10 @@ By now you should have a basic idea of how to implement data structures in Swift
 - [n-dimensional tensors](https://en.wikipedia.org/wiki/Tensor_(machine_learning))
 
 Useful links:
-- [The code used in this tutorial](https://github.com/kasperengelen/tutorial_code/tree/main/linalg)
-- [Earlier tutorial on the Swift Package Manager](/posts/buildsystems/swift)
-- [The WWDC16 talk on Swift performance](https://developer.apple.com/videos/play/wwdc2016/416)
-- [The Advent of Computing episode on FORTRAN](https://www.youtube.com/watch?v=-1Cm2P5_KNY)
+- <smart-link linkType="ext" linkId="code_linalg">The code used in this tutorial</smart-link>
+- <smart-link linkType="int" linkId="swift_package_manager">Earlier tutorial on the Swift Package Manager</smart-link>
+- <smart-link linkType="ext" linkId="wwdc16_performance">The WWDC16 talk on Swift performance</smart-link>
+- <smart-link linkType="ext" linkId="podcast_fortran">The Advent of Computing episode on FORTRAN</smart-link>
 
 In the next tutorials we will be considering a number of algorithms from numerical linear algebra and how to implement them. Stay tuned!
 

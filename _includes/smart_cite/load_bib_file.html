@@ -18,7 +18,7 @@
     {% elsif bib_entry.type == "conferenceArticle" %}
         {% include smart_cite/add_entry_conference.html bib_entry=bib_entry %}
     {% else %}
-        console.error("ERROR: invalid bib entry type '{{ bib_entry.type }}'.")
+        console.error("Error: invalid bib entry type '{{ bib_entry.type }}'.")
     {% endif -%}
 {% endfor %}
 

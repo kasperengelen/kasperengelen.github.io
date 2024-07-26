@@ -1,0 +1,14 @@
+- identifier: wwdc16_performance
+  url: https://developer.apple.com/videos/play/wwdc2016/416
+
+- identifier: advent_of_computing
+  url: https://adventofcomputing.com
+
+- identifier: podcast_fortran
+  url: https://www.youtube.com/watch?v=-1Cm2P5_KNY
+
+- identifier: wiki_backus_naur
+  url: https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form
+
+- identifier: code_linalg
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/linalg

@@ -17,6 +17,7 @@ class UrlContainer {
      */
     addUrl(identifier, url) {
         if(this.hasUrl(identifier)) {
+            console.error("Error when adding URL: URL with id '" + identifier + "' already exists.");
             this.duplicateUrls.add(identifier);
             return;
         }
@@ -175,7 +176,7 @@ function renderSmartLinks(smartLinks, internalUrls, externalUrls) {
                 targetStr = "target=\"_blank\"";
             }
             $(smartLink.domObj).replaceWith(function(i, content) {
-                return "<strong><a href=\"" + urlContainer.getUrl(identifier) + "\"" + targetStr + ">" + label + "</a></strong>";
+                return "<a href=\"" + urlContainer.getUrl(identifier) + "\"" + targetStr + ">" + label + "</a>";
             });
         } else {
             $(smartLink.domObj).replaceWith(function(i, content) {
