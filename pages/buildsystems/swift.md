@@ -6,6 +6,9 @@ exclude: true
 referenceId: swift_package_manager
 ---
 
+<div>
+{% include smart_link/load_internal_urls.html %}
+</div>
 
 Swift is a statically typed and compiled programming language created by Apple in 2014, thereby drawing experience from existing programming languages such as Python, Rust, and C++. As you can see from the code below, the syntax looks very much like Python. However, as noted earlier, it also has the benefit of being as statically typed and compiled language.
 
