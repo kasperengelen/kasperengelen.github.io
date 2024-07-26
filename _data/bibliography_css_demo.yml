@@ -7,6 +7,12 @@
   publisher: Springer New York
   year: 2015
 
+- identifier: some_identifier
+  type: book
+  authors:
+    - Person 4
+  title: Different title
+
 - identifier: model_checking_book
   type: book
   authors:
@@ -28,13 +34,27 @@
     day: 23
 
 - identifier: hoeffding_ineq
-  type: conferenceArticle
+  type: journalArticle
   authors:
     - Wassily Hoeffding
   title: Probability Inequalities for Sums of Bounded Random Variables
-  conference: Journal of the American Statistical Association
+  journal: Journal of the American Statistical Association
   year: 1963
 
+- identifier: attention
+  type: conferenceArticle
+  authors:
+    - Ashish Vaswani
+    - Noam Shazeer
+    - Niki Parmar
+    - Jakob Uszkoreit
+    - Llion Jones
+    - Aidan N. Gomez
+    - Łukasz Kaiser
+    - Illia Polosukhin
+  title: Attention is All you Need
+  conference: NeurIPS
+  year: 2017
 
 - identifier: css_demo
   type: website
@@ -47,6 +67,12 @@
     month: 7
     day: 23
 
+- identifier: some_identifier
+  type: book
+  authors:
+    - Person 1
+    - Person 2
+  title: Another title
 
 - identifier: non_existing_type
   type: someType_123

@@ -17,6 +17,8 @@
         {% include smart_cite/add_entry_website.html bib_entry=bib_entry %}
     {% elsif bib_entry.type == "conferenceArticle" %}
         {% include smart_cite/add_entry_conference.html bib_entry=bib_entry %}
+    {% elsif bib_entry.type == "journalArticle" %}
+        {% include smart_cite/add_entry_journal.html bib_entry=bib_entry %}
     {% else %}
         console.error("Error: invalid bib entry type '{{ bib_entry.type }}'.")
     {% endif -%}

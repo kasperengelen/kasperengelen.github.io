@@ -625,10 +625,10 @@ cillum dolore eu fugiat nulla <smart-cite bibId="understanding_analysis"></smart
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+tempor incididunt <smart-cite bibId="some_reference"></smart-cite> ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur <smart-cite bibId="some_reference"></smart-cite> sint occaecat cupidatat non
+consequat. Duis aute irure dolor <smart-cite bibId="attention"></smart-cite> in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur <smart-cite bibId="hoeffding_ineq"></smart-cite> sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

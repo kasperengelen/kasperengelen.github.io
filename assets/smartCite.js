@@ -37,20 +37,15 @@ class AuthorList {
 class BibEntry {
 
     /**
-     * 
-     * A prefix "ref_" will be added to the specified identifier.
-     * 
      * Parameters:
      *  - identifier: string
      */
     constructor(identifier) {
-        this._identifier = "ref_" + identifier;
+        this._identifier = identifier;
     }
 
     /**
      * Return the identifier of the entry.
-     * 
-     * This is prefixed with "ref_".
      */
     get identifier() {
         return this._identifier;
@@ -186,18 +181,50 @@ class ConferenceArticleEntry extends BibEntry {
 
     /**
      * This will be formatted as:
-     *  [Article] <strong>TITLE</strong><br>
+     *  [Conference] <strong>TITLE</strong><br>
      *  Author 1, ..., and Author n. <i>CONFERENCE</i>, YEAR.
      */
     render() {
         var retval = "";
-        retval += "[Article] <strong>" + this.title + "</strong><br>";
+        retval += "[Conference] <strong>" + this.title + "</strong><br>";
         retval += this.authors.toString() + ". <i>" + this.conference + "</i>, " + this.year + ".<br>";
 
         return retval;
     }
 }
 
+/**
+ * A bibliography entry that refers to a journal article.
+ */
+class JournalArticleEntry extends BibEntry {
+    /**
+     * Parameters:
+     *  - authors: AuthorList object.
+     *  - title: string
+     *  - journal: string
+     *  - year: int
+     */
+    constructor(identifier, authors, title, journal, year) {
+        super(identifier);
+        this.authors = authors;
+        this.title = title;
+        this.journal = journal;
+        this.year = year;
+    }
+
+    /**
+     * This will be formatted as:
+     *  [Journal] <strong>TITLE</strong><br>
+     *  Author 1, ..., and Author n. <i>JOURNAL</i>, YEAR.
+     */
+    render() {
+        var retval = "";
+        retval += "[Journal] <strong>" + this.title + "</strong><br>";
+        retval += this.authors.toString() + ". <i>" + this.journal + "</i>, " + this.year + ".<br>";
+
+        return retval;
+    }
+}
 
 /**
  * Class that contains a bibliography.
@@ -342,8 +369,7 @@ class SmartCite {
 function collectSmartCites() {
     var smartCites = [];
     $("smart-cite").each(function(i) {
-        // we prefix all bib entry identifiers with "ref_"
-        let bibIdAttr = "ref_" + $(this).attr("bibId");
+        let bibIdAttr = $(this).attr("bibId");
         smartCites.push(new SmartCite(this, bibIdAttr));
     });
 
@@ -378,7 +404,7 @@ function renderSmartCites(smartCites, bibliography) {
         if(bibliography.hasBibEntry(identifier)) {
             // replace with <a href="#...">[NR]</a>
             $(smartCite.domObj).replaceWith(function(i, content) {
-                return "<strong><a href=\"#" + smartCite.bibId + "\">[" + bibliography.getReferenceNumberForIdentifier(identifier) + "]</a></strong>";
+                return "<strong><a href=\"#bibliography_list\">[" + bibliography.getReferenceNumberForIdentifier(identifier) + "]</a></strong>";
             });
         } else {
             $(smartCite.domObj).replaceWith(function(i, content) {
@@ -408,11 +434,11 @@ function renderBibliography(bibliography) {
             bibContent += errorMsg;
         }
 
-        bibContent += "<div class=\"bibList\"><ol>";
+        bibContent += "<div id=\"bibliography_list\" class=\"bibList\"><ol>";
         // NOTE: the numbering is done automatically using CSS. The bib entries are expected 
         //  to occur in the "bibEntries" list in the correct order.
         for(bibEntry of bibliography.getAllReferencedBibEntriesInOrder()) {
-            var entryContent = "<p id=\"" + bibEntry.identifier + "\">" + bibEntry.render() + "</p>";
+            var entryContent = "<p>" + bibEntry.render() + "</p>";
             bibContent += "<li>" + entryContent + "</li>";
         }
 

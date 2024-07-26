@@ -1,0 +1,7 @@
+        bib.addBibEntry(new JournalArticleEntry(
+            "{{ include.bib_entry.identifier }}",
+            new AuthorList([{{ author_list }}]),
+            "{{ include.bib_entry.title }}",
+            "{{ include.bib_entry.journal }}",
+            {{ include.bib_entry.year }},
+        ));
