@@ -7,6 +7,10 @@ referenceId: swift_package_manager
 ---
 
 <div>
+{% include smart_link/load_url_file.html url_file=site.data.external_urls_buildsystems_swift %}
+</div>
+
+<div>
 {% include smart_link/load_internal_urls.html %}
 </div>
 
