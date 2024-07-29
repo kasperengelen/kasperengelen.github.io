@@ -3,6 +3,7 @@ layout: page
 title: Matrix Datastructure in Swift
 permalink: /posts/linalg/matrix
 exclude: true
+referenceId: linalg_matrix_class
 ---
 
 <div>

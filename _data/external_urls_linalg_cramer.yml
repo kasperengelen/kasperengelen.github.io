@@ -1,0 +1,5 @@
+- identifier: wiki_sarrus_rule
+  url: https://en.wikipedia.org/wiki/Rule_of_Sarrus
+
+- identifier: code_linalg
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/linalg

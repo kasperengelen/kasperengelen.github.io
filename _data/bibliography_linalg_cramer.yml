@@ -1,2 +1,45 @@
 
-- identifier: 
+- identifier: six_proofs_cramer
+  type: journalArticle
+  authors:
+    - Maurizio Brunetti
+  title: Old and new proofs of Cramer's rule
+  journal: Applied Mathematical Sciences, Vol. 8
+  year: 2014
+
+- identifier: gustafson_diff_eq
+  type: book
+  authors:
+    - Grant B. Gustafson
+  title: Differential Equations and Linear Algebra, Vol. 1
+  year: 2022
+
+- identifier: cramers_rule_due_to_cramer
+  type: journalArticle
+  authors:
+    - A. A. Kosinski
+  title: Cramer's Rule Is Due to Cramer
+  journal: Mathematics Magazine, Vol. 74, No. 4
+  year: 2001
+
+- identifier: earlier_date_cramer
+  type: journalArticle
+  authors:
+    - Bruce Hedman
+  title: An Earlier Date for \"Cramer's Rule\"
+  journal: Historia Mathematica 26, Vol. 4, pp 365-368
+  year: 1999
+
+- identifier: wiki_invertible
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Invertible matrix
+  url: https://en.wikipedia.org/wiki/Invertible_matrix
+
+- identifier: wiki_orthogonal
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Orthogonal matrix
+  url: https://en.wikipedia.org/wiki/Orthogonal_matrix
