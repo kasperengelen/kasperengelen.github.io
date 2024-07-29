@@ -93,7 +93,7 @@ class BookEntry extends BibEntry {
         } else if (this.year == null) {
             return "<i>" + this.publisher + "</i>.";
         } else {
-            return "<i>" + this.publisher + "</i>, " + this.year + ".";
+            return "<i>" + this.publisher + "</i>. " + this.year + ".";
         }
     }
 
@@ -187,7 +187,7 @@ class ConferenceArticleEntry extends BibEntry {
     render() {
         var retval = "";
         retval += "[Conference] <strong>" + this.title + "</strong><br>";
-        retval += this.authors.toString() + ". <i>" + this.conference + "</i>, " + this.year + ".<br>";
+        retval += this.authors.toString() + ". <i>" + this.conference + "</i>. " + this.year + ".<br>";
 
         return retval;
     }
@@ -220,7 +220,7 @@ class JournalArticleEntry extends BibEntry {
     render() {
         var retval = "";
         retval += "[Journal] <strong>" + this.title + "</strong><br>";
-        retval += this.authors.toString() + ". <i>" + this.journal + "</i>, " + this.year + ".<br>";
+        retval += this.authors.toString() + ". <i>" + this.journal + "</i>. " + this.year + ".<br>";
 
         return retval;
     }
