@@ -25,10 +25,25 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+# seo
+tagline: Personal website
+
+social:
+  name: Kasper Engelen
+  links:
+    - https://www.linkedin.com/in/kasperengelen/
+    - https://www.uantwerpen.be/nl/personeel/kasper-engelen_24293/
+    - https://www.github.com/kasperengelen
+
+author:
+  name: Kasper Engelen
+  url: https://kasperengelen.github.io/
+
+
 # Build settings
 theme: minima
-plugins:
-  - jekyll-feed
+# plugins:
+  # - jekyll-feed
 
 # to allow future posts
 # future: true

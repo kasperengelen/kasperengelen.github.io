@@ -4,6 +4,8 @@ title: Cramer's rule
 permalink: /posts/linalg/cramer
 exclude: true
 referenceId: cramers_rule
+sitemap:
+    lastmod: 2024-07-29
 ---
 
 <warning-box>

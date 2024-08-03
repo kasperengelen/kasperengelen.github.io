@@ -4,6 +4,8 @@ title: Matrix Datastructure in Swift
 permalink: /posts/linalg/matrix
 exclude: true
 referenceId: linalg_matrix_class
+sitemap:
+    lastmod: 2024-07-05
 ---
 
 <div>

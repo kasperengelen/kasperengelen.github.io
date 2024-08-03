@@ -4,6 +4,8 @@ title: CSS Demo
 permalink: /css_demo/
 exclude: true
 referenceId: css_demo_page
+sitemap:
+    exlude: true
 ---
 
 <div>
