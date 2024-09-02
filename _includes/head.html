@@ -30,7 +30,8 @@
             TeX: {
                 Macros: {
                     adj: '\\mathrm{adj}',
-                    det: '\\mathrm{det}'
+                    det: '\\mathrm{det}',
+                    absLength: ["\\left\\lvert #1 \\right\\rvert", 1]
                 }
             }
             // for MathJax 3
@@ -44,10 +45,16 @@
         };
     </script>
 
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    MMLorHTML: { prefer: { Firefox: "MML" } }
+  });
+</script> -->
+
 <!--     <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
- -->
+</script> -->
+
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
         type="text/javascript">

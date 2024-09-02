@@ -75,7 +75,7 @@ $(document).ready(function () {
 
     /* NOTE: these come last, such that all custom stuff that uses math can make use of MathJAX.*/
     $("display-math").replaceWith(function(i, content) {
-        return "<div class=\"display-math-div\">$$" + content + "$$</div>"
+        return "$$" + content + "$$"
     });
 
     $("inline-math").replaceWith(function(i, content) {

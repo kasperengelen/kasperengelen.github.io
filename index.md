@@ -14,5 +14,6 @@ title:
     <ul>
         <li>2024-06-09: Added blogpost about the Swift package manager.</li>
         <li>2024-07-05: Added blogpost on coding matrices in Swift.</li>
+        <li>2024-07-29: Added blogpost on Cramer's rule.</li>
     </ul>
 </div>

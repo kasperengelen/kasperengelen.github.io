@@ -66,6 +66,17 @@ In this demo you can see different images position next to each other in a row. 
     </div>
 </div>
 
+### Single image (wide)
+
+<div class="fig-row">
+    <div class="fig-in-row">
+        <figure>
+            <img src="/assets/images/red_wide.png">
+            <figcaption>Wide image.</figcaption>
+        </figure>
+    </div>
+</div>
+
 ### Two images
 
 <div class="fig-row">
