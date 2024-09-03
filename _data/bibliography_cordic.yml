@@ -1,0 +1,26 @@
+
+- identifier: volder_paper
+  type: journalArticle
+  authors:
+    - Jack Volder
+  title: The CORDIC Computing Technique
+  journal: 1959 proceedings of the western joint computer conference
+  year: 1959
+
+- identifier: walther_paper
+  type: journalArticle
+  authors:
+    - J.S. Walther
+  title: A unified algorothm for elementary functions
+  journal: AFIPS '71 (Spring)
+  year: 1971
+
+- identifier: hu_paper
+  type: journalArticle
+  authors:
+    - Xiaobo Hu
+    - Ronald G. Harber
+    - Steven C. Bass
+  title: Expanding the Range of Convergence of the CORDIC Algorithm
+  journal: IEEE Transactions on computers, vol. 40, No. 1
+  year: 1999

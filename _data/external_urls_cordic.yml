@@ -1,0 +1,5 @@
+- identifier: wiki_cordic
+  url: https://en.wikipedia.org/wiki/CORDIC
+
+- identifier: code_cordic
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/cordic
