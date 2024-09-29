@@ -1,7 +1,7 @@
 
 
 /**
- * Replace all occurences of the specified tag with a "highlight box".
+ * Replace all occurrences of the specified tag with a "highlight box".
  * 
  * The specified tag can take an optional attribute "title". If specified, a <h3> element will be inserted with the title.
  */
@@ -20,7 +20,7 @@ function replaceCustomTagWithHighlightBox(tagName, highLightBoxClass) {
 };
 
 /**
- * Replace all occurences of the specified tag with a "fieldset" box.
+ * Replace all occurrences of the specified tag with a "fieldset" box.
  * 
  * The specified tag can take an optional attribute "title". If specified, a <legend> element will be inserted with the title. If not specified
  * a <fieldset> element will be inserted with the 'defaultTitle' argument.
@@ -81,7 +81,4 @@ $(document).ready(function () {
     $("inline-math").replaceWith(function(i, content) {
         return "\\(" + content + "\\)"
     });
-
-
 });
-

@@ -1,11 +1,11 @@
 ---
 layout: page
 title: CSS Demo
-permalink: /css_demo/
+permalink: /js_css_docs/css_demo/
 exclude: true
-referenceId: css_demo_page
+referenceId: js_css_docs_old
 sitemap:
-    exlude: true
+    exclude: true
 ---
 
 <div>
@@ -397,6 +397,20 @@ In this section we will demonstrate various LaTeX-like environments, implemented
 <strong>Source:</strong> These definitions and theorems all come from the book "Understanding Analysis" by Stephen Abbott.
 
 <definition envName="<inline-math>\varepsilon</inline-math>-neighborhood" envId="eps_neighborhood">
+Given <inline-math>a \in \mathbb{R}</inline-math> and <inline-math>\varepsilon > 0</inline-math>, the <inline-math>\varepsilon</inline-math>-neighborhood of <inline-math>a</inline-math> is the set
+<display-math>
+    V_\varepsilon(a) = \{ x \in \mathbb{R} : \left| x - a \right| < \varepsilon \}.
+</display-math>
+</definition>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.
+
+<definition envId="eps_neighborhood_2">
+    <envName><inline-math>\varepsilon</inline-math>-neighborhood, from <smart-cite bibId="understanding_analysis"></smart-cite></envName>
+    
 Given <inline-math>a \in \mathbb{R}</inline-math> and <inline-math>\varepsilon > 0</inline-math>, the <inline-math>\varepsilon</inline-math>-neighborhood of <inline-math>a</inline-math> is the set
 <display-math>
     V_\varepsilon(a) = \{ x \in \mathbb{R} : \left| x - a \right| < \varepsilon \}.

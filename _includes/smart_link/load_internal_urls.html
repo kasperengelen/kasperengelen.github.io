@@ -3,7 +3,7 @@
         let intUrls = new UrlContainer();
 {%- for page in site.pages -%}
     {%- if page.referenceId %}
-        intUrls.addUrl("{{ page.referenceId }}", "{{ site.url }}{{ page.url }}");
+        intUrls.addUrl("{{ page.referenceId }}", "{{ page.url }}");
     {%- endif -%}
 {%- endfor %}
     </script>

@@ -44,7 +44,9 @@ class EnvironmentInfo {
  * Iterates over all objects with the specified tag name, and collects information about them.
  * 
  * If the tag contains an "envId" attribute, this will be stored. The prefix "<idPrefix>_" will be added,
- * in order to group environment identifiers in namespaces.
+ * in order to group environment identifiers in namespaces. 
+ * 
+ * The name of the environment will depend on an envName attribute, or envName child element.
  * 
  * Returns an array of 'EnvironmentInfo' objects.
  */
@@ -61,15 +63,34 @@ function collectEnvironments(tagName, idPrefix) {
         }
 
         // retrieve optional environment name
+        //  => retrieve the environment name as an attribute
         environmentName = null;
         if(this.hasAttribute("envName")) {
             environmentName = $(this).attr("envName");
+        }
+
+        //  => retrieve the environment name as an <envName> tag.
+        if($(this).has("envName").length) {
+            var envNameElem = $(this).find("envName");
+
+            // Note: needs to be ".html()", otherwise it does not render properly.
+            environmentName = envNameElem.html();
         }
 
         envs.push(new EnvironmentInfo(this, environmentId, environmentName, environmentNumber));
     });
 
     return envs;
+}
+
+/**
+ * This will remove all <envName> elements from the HTML document.
+ */
+function removeEnvNameTags() {
+    $("envName").each(function(i) {
+        console.log($(this));
+        $(this).remove();
+    })
 }
 
 /**
@@ -94,11 +115,6 @@ function renderEnvironmentsAsFieldset(environments, titlePrefix, fieldsetParentD
             var environmentTitle = titlePrefix;
         }
 
-        if(env.envName != null) {
-            // example: "Definition 6 (Convexity)"
-            environmentTitle += " (" + env.envName + ")";
-        }
-
         if(env.envId == null) {
             // construct parent div
             var parentDivOpenTag = "<div class=\"" + fieldsetParentDivClass + "\">";
@@ -108,6 +124,13 @@ function renderEnvironmentsAsFieldset(environments, titlePrefix, fieldsetParentD
 
             // wrap title contents in a hyperlink
             environmentTitle =  "<a href=\"#" + env.envId + "\" style=\"color: white;\">" + environmentTitle + "</a>";
+        }
+
+        // Note: we add this outside of the link, such that the environment is not clickable. This is important in case
+        //  the environment name itself contains clickable links (e.g., smart refs, or smart cites).
+        if(env.envName != null) {
+            // example: "Definition 6 (Convexity)"
+            environmentTitle += " (" + env.envName + ")";
         }
 
         var duplicateId = false;
@@ -259,6 +282,9 @@ $(document).ready(function () {
     definitionEnvs = collectEnvironments("definition", "def");
     proofEnvs = collectEnvironments("proof", "proof");
     exampleEnvs = collectEnvironments("example", "example");
+
+    // remove redundant tags, once that information has been extracted
+    removeEnvNameTags();
 
     let renderAsFieldset = true;
 
