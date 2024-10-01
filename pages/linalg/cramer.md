@@ -24,10 +24,13 @@ In this article we will be implementing a numerical linear algebra algorithm by 
 {% include smart_link/load_internal_urls.html %}
 </div>
 
+<div>
+{% include enable_title_numbering.html %}
+</div>
+
 ## Contents
 
-* TOC 
-{:toc}
+<tableOfContents></tableOfContents>
 
 ## Introduction
 
