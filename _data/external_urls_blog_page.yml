@@ -1,0 +1,18 @@
+
+- identifier: buildsystems_swift_code
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/buildsystems/swift
+
+- identifier: buildsystems_gradle_code
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/buildsystems/gradle
+
+- identifier: linalg_swift_matrix_code
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/linalg
+
+- identifier: linalg_swift_cramer_code
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/linalg
+
+- identifier: cordic_trig_python_code
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/cordic
+
+- identifier: cordic_trig_viz_code
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/cordic

@@ -2,6 +2,7 @@
 layout: page
 title: Visualising CORDIC in Python
 permalink: /posts/cordic/trig_viz_python
+referenceId: cordic_trig_viz_python
 exclude: true
 ---
 
