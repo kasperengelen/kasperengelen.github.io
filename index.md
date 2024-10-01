@@ -17,5 +17,6 @@ exclude: true
         <li>2024-07-05: Added blogpost on coding matrices in Swift.</li>
         <li>2024-07-29: Added blogpost on Cramer's rule.</li>
         <li>2024-09-02: Added blogpost on CORDIC.</li>
+        <li>2024-10-01: Added blogpost on Gradle.</li>
     </ul>
 </div>

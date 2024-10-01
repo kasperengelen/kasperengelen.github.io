@@ -1,0 +1,23 @@
+- identifier: maven_central
+  url: https://mvnrepository.com/repos/central
+
+- identifier: jcommander_maven_central
+  url: https://mvnrepository.com/artifact/org.jcommander/jcommander/2.0
+
+- identifier: gradle_dep_configs
+  url: https://docs.gradle.org/current/userguide/dependency_configurations.html
+
+- identifier: jcommander_website
+  url: https://jcommander.org/
+
+- identifier: apache_commons_website
+  url: https://commons.apache.org/proper/commons-lang/
+
+- identifier: junit_4_website
+  url: https://junit.org/junit4/
+
+- identifier: shadow_plugin_website
+  url: https://gradleup.com/shadow/
+
+- identifier: gradle_tutorial_github_code
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/buildsystems/gradle
