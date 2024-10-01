@@ -178,7 +178,6 @@ In this demo you can see different images position next to each other in a row. 
     <display-math>I = \int f(x)\,dx</display-math>
 </div>
 
-
 <div class="highlight-box-blue">
     <h3>Title</h3>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -202,7 +201,6 @@ In this demo you can see different images position next to each other in a row. 
 
     <display-math>I = \int f(x)\,dx</display-math>
 </div>
-
 
 <div class="highlight-box-yellow">
     <h3>Title</h3>
