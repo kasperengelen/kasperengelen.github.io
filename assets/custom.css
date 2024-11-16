@@ -60,7 +60,11 @@
 
 /** CSS code for little buttons. Useful for links to publications */
 .publ_links {
-    margin-top: 10px;  
+    margin-bottom: 15px;  
+}
+
+.publ_section p {
+    margin-bottom: 7px
 }
 
 .button {

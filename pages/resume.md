@@ -48,15 +48,28 @@ permalink: /resume/
     </ul>
 </div>
 
-<div class="cv-section">
+<div class="cv-section publ_section">
 	<h2 id="publ">Publications</h2>
-	<h3>Graph-Based Reductions for Parametric and Weighted MDPs</h3>
+	<h3>Graph-Based Reductions for Parametric and Weighted MDPs</h3>
+    <p>
     Kasper Engelen, Guillermo A. Pérez, Shisha Rao <br>
     ATVA 2023, vol 1, pp 137–157
+    </p>
 
     <div class="publ_links">
         <a href="https://arxiv.org/abs/2305.05739" class="button" target="_blank">Arxiv</a>
         <a href="https://link.springer.com/chapter/10.1007/978-3-031-45329-8_7" class="button" target="_blank">Springer</a>
         <a href="https://zenodo.org/records/7915828" class="button" target="_blank">Zenodo</a>
+    </div>
+    <h3>Analyzing Value Functions of States in Parametric Markov Chains</h3>
+    <p>
+    Kasper Engelen, Guillermo A. Pérez, Shisha Rao <br>
+    Principles of Verification: Cycling the Probabilistic Landscape, part II, pp 145–165.<br>
+    2025.
+    </p>
+
+    <div class="publ_links">
+        <a href="https://link.springer.com/chapter/10.1007/978-3-031-75775-4_7" class="button" target="_blank">Springer</a>
+        <a href="https://zenodo.org/records/11474465" class="button" target="_blank">Zenodo</a>
     </div>
 </div>
