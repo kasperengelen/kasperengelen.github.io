@@ -1,0 +1,17 @@
+- identifier: julia_installation
+  url: https://docs.julialang.org/en/v1/manual/installation/
+
+- identifier: julia_version_format
+  url: https://pkgdocs.julialang.org/v1/compatibility/
+
+- identifier: julia_package_registry_git
+  url: https://github.com/JuliaRegistries/General
+
+- identifier: pkg_templates_github
+  url: https://github.com/JuliaCI/PkgTemplates.jl
+
+- identifier: julia_tutorial_github_code
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/buildsystems/julia
+
+- identifier: pluto_notebook_link
+  url: https://raw.githubusercontent.com/kasperengelen/tutorial_code/refs/heads/main/buildsystems/julia/notebook_dir/tutorial_notebook.jl

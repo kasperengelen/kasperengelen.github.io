@@ -22,14 +22,17 @@ permalink: /blog/
             <div class="series-picture-mobile">
                 <img src="/assets/images/blog_icons/icon_build_series_bin.png" alt="Build systems">
             </div>
-            <p>In this series we explore various build systems. Each tutorials explains how to create a new project, how to add source and test code, and how to compile the project into an executable.</p>
+            <p>In this series we explore various build systems. Each tutorial explains how to create a new project, how to add source and test code, and how to compile the project into an executable.</p>
             <ul>
                 <li>Swift Package Manager:
                     <smart-link linkType="int" linkId="swift_package_manager">post</smart-link>
                     <smart-link linkType="ext" linkId="buildsystems_swift_code">code</smart-link></li>
-                <li>Gradle: 
+                <li>Java projects with Gradle: 
                     <smart-link linkType="int" linkId="gradle">post</smart-link>
                     <smart-link linkType="ext" linkId="buildsystems_gradle_code">code</smart-link></li>
+                <li>Julia projects with Pkg: 
+                    <smart-link linkType="int" linkId="julia_pkg">post</smart-link>
+                    <smart-link linkType="ext" linkId="buildsystems_julia_code">code</smart-link></li>
             </ul>
         </div>
     </div>
