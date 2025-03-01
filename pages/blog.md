@@ -64,7 +64,7 @@ permalink: /blog/
     </div>
 </div>
 
-<div class="series-container series-section" id="linear_algebra_swift">
+<div class="series-container series-section" id="cordic">
     <div class="series-top-layer">
         <div class="series-picture">
             <img src="/assets/images/blog_icons/icon_cordic.png" alt="CORDIC">
@@ -84,6 +84,26 @@ permalink: /blog/
                 <li>Visualising CORDIC in Python: 
                     <smart-link linkType="int" linkId="cordic_trig_viz_python">post</smart-link>
                     <smart-link linkType="ext" linkId="cordic_trig_viz_code">code</smart-link></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="series-container series-section" id="ode_numeric">
+    <div class="series-top-layer">
+        <div class="series-picture">
+            <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="ode_numeric">
+        </div>
+        <div class="series-explanation">
+            <h3>Numerical methods for ODEs</h3>
+            <div class="series-picture-mobile">
+                <img src="" alt="ode_numeric">
+            </div>
+            <p>We explore different methods to numerically solve ordinary differential equations, covering both theory and implementations.</p>
+            <ul>
+                <li>Intro + Forward Euler's method: 
+                    <smart-link linkType="int" linkId="forward_euler">post</smart-link>
+                    <smart-link linkType="ext" linkId="num_ode_code">code</smart-link></li>
             </ul>
         </div>
     </div>
