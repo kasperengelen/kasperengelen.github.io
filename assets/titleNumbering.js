@@ -151,7 +151,6 @@ $(document).ready(function () {
             var h2Titles = retrieveTitles();
             addNumberToTitles(h2Titles, "");
             let tocHtml = renderTableOfContents(h2Titles, "");
-            console.log(tocHtml);
 
             $("tableOfContents").replaceWith(function(i, content) {
                 return tocHtml;

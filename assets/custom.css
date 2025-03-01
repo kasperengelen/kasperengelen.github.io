@@ -301,6 +301,10 @@ p {
     margin-left: 15px;
 }
 
+.fs-blue fieldset legend a {
+    color: #fff;
+}
+
 .fs-blue p {
     font-size: 16px;
 }
@@ -329,6 +333,10 @@ p {
     font-size: 17px;
     border-radius: 5px;
     margin-left: 15px;
+}
+
+.fs-green fieldset legend a {
+    color: #fff;
 }
 
 .fs-green p {
@@ -361,6 +369,10 @@ p {
     margin-left: 15px;
 }
 
+.fs-red fieldset legend a {
+    color: #fff;
+}
+
 .fs-red p {
     font-size: 16px;
 }
@@ -389,6 +401,10 @@ p {
     font-size: 17px;
     border-radius: 5px;
     margin-left: 15px;
+}
+
+.fs-yellow fieldset legend a {
+    color: #fff;
 }
 
 .fs-yellow p {
@@ -421,6 +437,10 @@ p {
     margin-left: 15px;
 }
 
+.fs-purple fieldset legend a {
+    color: #fff;
+}
+
 .fs-purple p {
     font-size: 16px;
 }
@@ -450,16 +470,28 @@ p {
     margin-left: 15px;
 }
 
+.fs-orange fieldset legend a {
+    color: #fff;
+}
+
 .fs-orange p {
     font-size: 16px;
 }
 
 table {
+
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+
     border:1px solid black;
-    width: 70%;
+/*    width: 70%;*/
     margin-left:auto;
     margin-right:auto;
     margin-bottom: 10px; 
+/*  margin: 0 auto;*/
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 table th {
@@ -472,6 +504,8 @@ table tr:nth-child(odd) td{
 table tr:nth-child(even) td{
     background-color: #e3e3e3;
 }
+
+
 
 .MathJax_Display {
     overflow-x: auto;

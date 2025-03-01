@@ -47,6 +47,7 @@ $(document).ready(function () {
 
     replaceCustomTagWithHighlightBox("todo-box", "highlight-box-blue");
     replaceCustomTagWithFieldset("warning-box", "fs-yellow", "Warning");
+    replaceCustomTagWithFieldset("note-box", "fs-blue", "Note");
 
 
     /* Make each h2 with an 'id' attribute clickable */

@@ -88,7 +88,6 @@ function collectEnvironments(tagName, idPrefix) {
  */
 function removeEnvNameTags() {
     $("envName").each(function(i) {
-        console.log($(this));
         $(this).remove();
     })
 }
@@ -281,7 +280,7 @@ $(document).ready(function () {
     theoremEnvs = collectEnvironments("theorem", "thm");
     definitionEnvs = collectEnvironments("definition", "def");
     proofEnvs = collectEnvironments("proof", "proof");
-    exampleEnvs = collectEnvironments("example", "example");
+    exampleEnvs = collectEnvironments("example", "ex");
 
     // remove redundant tags, once that information has been extracted
     removeEnvNameTags();
