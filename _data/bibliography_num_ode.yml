@@ -1,0 +1,49 @@
+
+- identifier: gustafson_diff_eq
+  type: book
+  authors:
+    - Grant B. Gustafson
+  title: Differential Equations and Linear Algebra, Vol. 1
+  year: 2022
+
+- identifier: wiki_forward_euler
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Euler Method
+  url: https://en.wikipedia.org/wiki/Euler_method
+
+- identifier: wiki_big_o
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Big O notation
+  url: https://en.wikipedia.org/wiki/Big_O_notation
+
+- identifier: wiki_trunc_error
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Truncation error (numerical integration)
+  url: https://en.wikipedia.org/wiki/Truncation_error_(numerical_integration) 
+
+  
+
+- identifier: burden_and_faires
+  type: book
+  authors:
+    - Richard L. Burden
+    - J. Douglas Faires
+  title: Numerical Analysis, Ninth Edition
+  year: 2010
+
+- identifier: two_ode_examples
+  type: website
+  authors:
+    - Tobias von Petersdorff
+  title: Euler Method for unstable and stable ODEs
+  url: https://www.math.umd.edu/~petersd/460/html/stableODEex.html
+  accessed:
+    year: 2025
+    month: 1
+    day: 18

@@ -19,3 +19,7 @@
 
 - identifier: cordic_trig_viz_code
   url: https://github.com/kasperengelen/tutorial_code/tree/main/cordic
+
+- identifier: num_ode_code
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/num_ode
+  

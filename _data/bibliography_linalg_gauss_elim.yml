@@ -1,0 +1,19 @@
+
+- identifier: lang_intro_lin_alg
+  type: book
+  authors:
+    - Serge Lang
+  title: Introduction to Linear Algebra (2nd ed.)
+  publisher: Springer New York
+  year: 1986
+
+- identifier: towers_course_rref
+  type: website
+  authors:
+    - Matthew Towers
+  title: 3.10 RREF existence and uniqueness
+  url: https://www.ucl.ac.uk/~ucahmto/0005_2021/Ch3.S10.html
+  accessed:
+    year: 2024
+    month: 8
+    day: 4
