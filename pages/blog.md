@@ -108,3 +108,16 @@ permalink: /blog/
         </div>
     </div>
 </div>
+
+<div class="highlight-box-white">
+    <h2>Changelog</h2>
+    <ul>
+        <li>2024-06-09: Added blogpost about the Swift package manager.</li>
+        <li>2024-07-05: Added blogpost on coding matrices in Swift.</li>
+        <li>2024-07-29: Added blogpost on Cramer's rule.</li>
+        <li>2024-09-02: Added blogpost on CORDIC.</li>
+        <li>2024-10-01: Added blogpost on Gradle.</li>
+        <li>2024-11-27: Added blogpost on creating Julia projects.</li>
+        <li>2025-03-01: Added blogpost on the forward Euler method.</li>
+    </ul>
+</div>
