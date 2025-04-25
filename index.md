@@ -11,7 +11,7 @@ exclude: true
     </div>
     <div class="about-me">
         <h2>About Me</h2>
-        <p>I'm pursuing a PhD at the University of Antwerp in the lab of Prof. Guillermo A. Pérez. My research focusses on applying techniques from formal methods to reinforcement learning. Aside from research I also teach four courses on compilers, software engineering, and computer architecture.</p>
+        <p>I'm pursuing a PhD at the University of Antwerp in the lab of Prof. Guillermo A. Pérez. My research focusses on applying techniques from formal methods to AI and dynamical systems. Aside from research I also teach four courses on compilers, software engineering, and computer architecture.</p>
     </div>
 </div>
 
