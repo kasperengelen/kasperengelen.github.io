@@ -35,7 +35,7 @@ exclude: true
     </p>
 
     <div class="publ_links">
-        <a href="..." class="button" target="_blank">Arxiv</a>
+        <a href="https://arxiv.org/abs/2504.17020" class="button" target="_blank">Arxiv</a>
         <a href="https://link.springer.com/chapter/10.1007/978-3-031-75775-4_7" class="button" target="_blank">Springer</a>
         <a href="https://zenodo.org/records/11474465" class="button" target="_blank">Zenodo</a>
     </div>
