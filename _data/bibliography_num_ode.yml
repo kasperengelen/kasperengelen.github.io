@@ -27,6 +27,17 @@
   title: Truncation error (numerical integration)
   url: https://en.wikipedia.org/wiki/Truncation_error_(numerical_integration) 
 
+- identifier: wiki_riccati
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Riccati equation
+  url: https://en.wikipedia.org/wiki/Riccati_equation
+  accessed:
+    year: 2025
+    month: 7
+    day: 6
+
   
 
 - identifier: burden_and_faires
@@ -47,3 +58,27 @@
     year: 2025
     month: 1
     day: 18
+
+- identifier: math1902_stiff_examples
+  type: website
+  authors:
+    - John Burkardt
+  title: "The STIFF ODE: Backward Euler and implicit ODE solvers"
+  url: https://people.sc.fsu.edu/~jburkardt/classes/math1902_2020/stiff/stiff.pdf
+  accessed:
+    year: 2025
+    month: 6
+    day: 14
+
+- identifier: cleve_moler_blogpost
+  type: website
+  authors:
+    - Cleve Moler
+  title: "Ordinary Differential Equations, Stiffness"
+  url: https://blogs.mathworks.com/cleve/2014/06/09/ordinary-differential-equations-stiffness/
+  accessed:
+    year: 2025
+    month: 6
+    day: 14
+
+
