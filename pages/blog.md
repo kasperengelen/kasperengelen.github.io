@@ -97,7 +97,7 @@ permalink: /blog/
         <div class="series-explanation">
             <h3>Numerical methods for ODEs</h3>
             <div class="series-picture-mobile">
-                <img src="" alt="ode_numeric">
+                <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="ode_numeric">
             </div>
             <p>We explore different methods to numerically solve ordinary differential equations, covering both theory and implementations.</p>
             <ul>
