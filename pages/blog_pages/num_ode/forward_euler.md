@@ -16,7 +16,7 @@ referenceId: forward_euler
 
 
 <div>
-{% include smart_link/load_url_file.html url_file=site.data.bibliography_num_ode %}
+{% include smart_link/load_url_file.html url_file=site.data.external_urls_num_ode %}
 </div>
 
 <div>
