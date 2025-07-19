@@ -45,27 +45,40 @@ exclude: true
     <h2>Mobility</h2>
 
     <h3>ESSLLI 2023 summer school</h3>
+    <i>Ljubliana, Slovenia</i><br>
     August 2023<br>
     <p>
         This was a summer school on logic, language, and computation. I attended courses on linear arithmetic, formal language theory applied to RNNs, PAC learning of logical formulas, natural language parsing, etc.
     </p>
 
     <h3>MOVEP 2024 summer school</h3>
+    <i>Rennes, France</i><br>
     May 2024<br>
     <p>
         There were courses on SMT-solving, model checking, and reinforcement learning. This was also a great opportunity to meet other people in the field of theoretical computer science.
     </p>
 
     <h3>BNAIC 2024 conference</h3>
+    <i>Utrecht, Netherlands</i><br>
     Nov 2024<br>
     <p>
         I attended talks on reinforcement learning and SAT-solving and had the opportunity to meet many interesting people doing research in AI.
     </p>
 
     <h3>Storm days 2025</h3>
+    <i>Nijmegen, Netherlands</i><br>
     March - April 2025<br>
     <p>
         This event brought together researchers that make use of the Storm model checker. People presented their Storm-related research during various talks and we brainstormed (pun!) on how to further improve Storm. 
+    </p>
+
+    <h3>BeNeRL 2025</h3>
+    <i>Eindhoven, Netherlands</i><br>
+    July 2025<br>
+    <p>
+        This was a workshop that brings together reinforcement learning researchers from across Belgium and the Netherlands. People could attend
+        a number of talks by invited speakers and also had the opportunity to present their own poster. In between the talks there were various
+        opportunities to network and meet interesting people.
     </p>
 </div>
 
@@ -74,6 +87,7 @@ exclude: true
     <ul>
         <li>Organising committee CONFEST 2023 (CONCUR, FORMATS, QEST, FMICS)</li>
         <li>External reviewer for AAMAS 2024</li>
+        <li>External reviewer for ECAI 2025</li>
     </ul>
 </div>
 
