@@ -81,4 +81,10 @@
     month: 6
     day: 14
 
-
+- identifier: tsit2011_solver
+  type: journalArticle
+  authors:
+    - Ch. Tsitouras
+  title: Runge–Kutta pairs of order 5(4) satisfying only the first column simplifying assumption
+  journal: Computers & Mathematics with Applications
+  year: 2011

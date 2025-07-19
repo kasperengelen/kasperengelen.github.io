@@ -107,6 +107,9 @@ permalink: /blog/
                 <li>Backward Euler's method: 
                     <smart-link linkType="int" linkId="backward_euler">[post]</smart-link>
                     <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
+                <li>An interface for ODE solvers: 
+                    <smart-link linkType="int" linkId="solver_interface">[post]</smart-link>
+                    <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
             </ul>
         </div>
     </div>
@@ -123,5 +126,6 @@ permalink: /blog/
         <li>2024-11-27: Added blogpost on creating Julia projects.</li>
         <li>2025-03-01: Added blogpost on the forward Euler method.</li>
         <li>2025-07-08: Added blogpost on the backward Euler method.</li>
+        <li>2025-07-19: Added blogpost on a user-friendly interface for ODE solvers.</li>
     </ul>
 </div>

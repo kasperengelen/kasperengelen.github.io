@@ -1,2 +1,9 @@
+
+- identifier: diffeq_home
+  url: https://docs.sciml.ai/DiffEqDocs/stable
+
 - identifier: wiki_forward_euler
   url: https://en.wikipedia.org/wiki/Euler_method
+
+- identifier: diffeq_tutorial
+  url: https://docs.sciml.ai/DiffEqDocs/stable/getting_started
