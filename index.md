@@ -19,7 +19,7 @@ exclude: true
 	<h2 id="publ">Publications</h2>
 	<h3>Graph-Based Reductions for Parametric and Weighted MDPs</h3>
     <p>
-    Kasper Engelen, Guillermo A. Pérez, Shisha Rao <br>
+    Kasper Engelen, Guillermo A. Pérez, Shisha Rao<br>
     ATVA 2023, vol 1, pp 137–157
     </p>
 
@@ -30,7 +30,7 @@ exclude: true
     </div>
     <h3>Analyzing Value Functions of States in Parametric Markov Chains</h3>
     <p>
-    Kasper Engelen, Guillermo A. Pérez, Shisha Rao <br>
+    Kasper Engelen, Guillermo A. Pérez, Shisha Rao<br>
     Principles of Verification: Cycling the Probabilistic Landscape, part II, pp 145–165. 2024.
     </p>
 
@@ -39,13 +39,24 @@ exclude: true
         <a href="https://link.springer.com/chapter/10.1007/978-3-031-75775-4_7" class="button" target="_blank">Springer</a>
         <a href="https://zenodo.org/records/11474465" class="button" target="_blank">Zenodo</a>
     </div>
+    <h3>Data-Efficient Safe Policy Improvement Using Parametric Structure</h3>
+    <p>
+    Kasper Engelen, Guillermo A. Pérez, Marnix Suilen<br>
+    <i>To be published.</i>
+    </p>
+
+    <div class="publ_links">
+        <a href="https://arxiv.org/abs/2507.15532" class="button" target="_blank">Arxiv</a>
+        <a href="https://zenodo.org/records/16884207" class="button" target="_blank">Zenodo</a>
+    </div>
+
 </div>
 
 <div class="cv-section" id="mobility_phd">
     <h2>Mobility</h2>
 
     <h3>ESSLLI 2023 summer school</h3>
-    <i>Ljubliana, Slovenia</i><br>
+    <i>Ljubljana, Slovenia</i><br>
     August 2023<br>
     <p>
         This was a summer school on logic, language, and computation. I attended courses on linear arithmetic, formal language theory applied to RNNs, PAC learning of logical formulas, natural language parsing, etc.
@@ -80,6 +91,13 @@ exclude: true
         a number of talks by invited speakers and also had the opportunity to present their own poster. In between the talks there were various
         opportunities to network and meet interesting people.
     </p>
+
+    <h3>CAV 2025</h3>
+    <i>Zagreb, Croatia</i><br>
+    July 2025<br>
+    <p>
+        The 37th International Conference on Computer Aided Verification was an event that brought together researchers in formal methods from around the world. People attended talks and expanded their network during the various coffee breaks and social events. I am also a big fan of Croatian food, so this event was an excellent opportunity to enjoy some Ćevapi and Štrukli!
+    </p>
 </div>
 
 <div class="cv-section" id="extra_phd">
@@ -98,10 +116,11 @@ exclude: true
      <p>
         I oversee the lab sessions of multiple courses:
         <ul>
-            <li><b>Computer systems and architecture:</b> a course where students build their own CPU in Logisim, a simulator for digital circuits.</li>
             <li><b>Project software engineering:</b> a project over the course of an entire semester where students have to put together a software system. In doing so, the students have to pay attention to project management, software testing, quality control, and object oriented programming principles.</li>
             <li><b>Compilers:</b> groups of students build a compiler that translates C code into LLVM IR, MIPS, and native binary code.</li>
             <li><b>Software engineering:</b> in this course we cover a different topic in each lab session. Topics include formal methods, software testing, software architecture, quality control, etc.</li>
+            <li><b>Introduction to databases:</b> In this course students get taught the basic principles of databases: relational databases, SQL, relational algebra, normal forms, concurrency, etc. </li>
+            <li><b>(2023-2025) Computer systems and architecture:</b> a course where students build their own CPU in Logisim, a simulator for digital circuits.</li>
         </ul>
     </p>
 
