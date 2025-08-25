@@ -96,7 +96,7 @@ exclude: true
     <i>Zagreb, Croatia</i><br>
     July 2025<br>
     <p>
-        The 37th International Conference on Computer Aided Verification was an event that brought together researchers in formal methods from around the world. People attended talks and expanded their network during the various coffee breaks and social events. I am also a big fan of Croatian food, so this event was an excellent opportunity to enjoy some Ćevapi and Štrukli!
+        The 37th International Conference on Computer Aided Verification was an event that brought together researchers in formal methods from around the world. People attended talks and expanded their network during the various coffee breaks and social events. I am also a big fan of Balkan food, so this event was an excellent opportunity to enjoy some Ćevapi and Štrukli!
     </p>
 </div>
 
@@ -106,6 +106,7 @@ exclude: true
         <li>Organising committee CONFEST 2023 (CONCUR, FORMATS, QEST, FMICS)</li>
         <li>External reviewer for AAMAS 2024</li>
         <li>External reviewer for ECAI 2025</li>
+        <li>External reviewer for AAAI 2026</li>
     </ul>
 </div>
 
