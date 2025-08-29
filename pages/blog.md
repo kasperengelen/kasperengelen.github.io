@@ -110,6 +110,9 @@ permalink: /blog/
                 <li>An interface for ODE solvers: 
                     <smart-link linkType="int" linkId="solver_interface">[post]</smart-link>
                     <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
+                <li>Runge-Kutta methods: 
+                    <smart-link linkType="int" linkId="runge_kutta">[post]</smart-link>
+                    <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
             </ul>
         </div>
     </div>
@@ -127,5 +130,6 @@ permalink: /blog/
         <li>2025-03-01: Added blogpost on the forward Euler method.</li>
         <li>2025-07-08: Added blogpost on the backward Euler method.</li>
         <li>2025-07-19: Added blogpost on a user-friendly interface for ODE solvers.</li>
+        <li>2025-08-29: Added blogpost on Runge-Kutta methods.</li>
     </ul>
 </div>

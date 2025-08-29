@@ -88,3 +88,72 @@
   title: Runge–Kutta pairs of order 5(4) satisfying only the first column simplifying assumption
   journal: Computers & Mathematics with Applications
   year: 2011
+
+- identifier: butcher96_rk_history
+  type: journalArticle
+  authors:
+    - John C. Butcher
+  title: A history of Runge-Kutta methods
+  journal: Applied Numerical Mathematics
+  year: 1996
+
+- identifier: heun1900
+  type: journalArticle
+  authors:
+    - Karl Heun
+  title: Neue Methode zur Approximativen Integration der Differentialgleichungen einer Unabhangigen Veranderlichen
+  journal: Mathematical Physics
+  year: 1900
+
+- identifier: runge1895
+  type: journalArticle
+  authors:
+    - Carl Runge
+  title: Über die numerische Auflösung von Differentialgleichungen
+  journal: Mathematische Annalen
+  year: 1895
+
+- identifier: kutta1901
+  type: journalArticle
+  authors:
+    - Martin Kutta
+  title: Beitrag zur Naherungsweisen Integration von Differentialgleichungen
+  journal: Mathematical Physics
+  year: 1901
+
+
+- identifier: butcher_book
+  type: book
+  authors:
+    - John C. Butcher
+  title: Numerical Methods for Ordinary Differential Equations
+  year: 2013
+
+- identifier: wiki_runge_kutta
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Runge–Kutta methods
+  url: https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods
+
+- identifier: butcher1964_implicit
+  type: journalArticle
+  authors:
+    - John C. Butcher
+  title: Implicit Runge-Kutta Processes
+  journal: Mathematics of Computation, Vol. 18
+  year: 1964
+
+- identifier: wiki_simpson_integration
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Simpson's rule
+  url: https://en.wikipedia.org/wiki/Simpson%27s_rule
+
+- identifier: wiki_midpoint_method
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Midpoint method
+  url: https://en.wikipedia.org/wiki/Midpoint_method

@@ -63,7 +63,7 @@ For an initial-value problem we thus know the rate of change $y'$ given by $f$, 
 ### Backward Euler method
 
 We are now ready to formally define the backward Euler method:
-<definition envId="forward_euler">
+<definition envId="backward_euler">
 <envName>Backward Euler method</envName>
 <p>Given are an ODE $y'(t) = f(t, y(t))$ and an initial condition $y(t_0) = y_0$, which together make up an initial value problem. We assume $f(t, y)$ to be Lipschitz-continuous in $y$. Additionally, we select a sufficiently small step size $h$.</p>
 
