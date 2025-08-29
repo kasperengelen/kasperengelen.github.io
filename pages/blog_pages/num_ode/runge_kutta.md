@@ -32,11 +32,11 @@ In this article we will be implementing a numerical ODE solver by hand. Note tha
 
 Differential equations are often hard or impossible to solve symbolically. Such equations are, however, widely used in science and engineering, finding applications in physics, chemistry, biology, and epidemiology <smart-cite bibId="gustafson_diff_eq"></smart-cite>. As a result, much work has gone into developing algorithms that approximate solutions to differential equations.
 
-In this article, we will be covering the Runge-Kutta method, which is a method for approximating solutions to ordinary differential equations. The history of the Runge-Kutta method began in 1895 when Carl Runge published a paper in which he generalised the forward Euler method <smart-cite bibId="runge1895"></smart-cite><smart-cite bibId="butcher96_rk_history"></smart-cite>. His generalisation involved sampling the ODE $f(t,y)$ at multiple points $(t,y)$ and then combining those samples into approximations of function values. This lead to so-called higher order methods, that are more accurate then the forward Euler method. In particular, Runge introduced the midpoint method <smart-cite bibId="butcher96_rk_history"></smart-cite>.
+In this article, we will be covering the Runge-Kutta method, which is a method for approximating solutions to ordinary differential equations. The history of the Runge-Kutta method began in 1895 when Carl Runge published a paper in which he generalised the forward Euler method <smart-cite bibId="runge1895"></smart-cite><smart-cite bibId="butcher96_rk_history"></smart-cite>. His generalisation involved sampling the ODE $f(t,y)$ at multiple points $(t,y)$ and then combining those samples into approximations of function values. This led to so-called higher order methods, that are more accurate than the forward Euler method. In particular, Runge introduced the midpoint method <smart-cite bibId="butcher96_rk_history"></smart-cite>.
 
 Shortly afterwards, other researchers picked up on his idea and published additional methods <smart-cite bibId="butcher96_rk_history"></smart-cite>. These include Karl Heun, who published Heun's predictor-corrector method in 1900 <smart-cite bibId="heun1900"></smart-cite>, and Martin Kutta, who published his now-famous paper in 1901 <smart-cite bibId="kutta1901"></smart-cite>. In the present day, these methods are all referred to as <em>Runge-Kutta methods</em>.
 
-One of the main advantanges of the Runge-Kutta methods is that they allow for greater accuracy at a lower computational cost. Additionally, they only make use of the ODE itself (i.e., the first-order derivative) and do not involve higher-order derivatives. This is remarkable, since higher order Taylor polynomials do make use of such higher-order derivatives <smart-cite bibId="burden_and_faires"></smart-cite>. Note that using higher order derivatives would require us to either symbolically or numerically compute the higher derivatives, which can be computationally intesive.
+One of the main advantages of the Runge-Kutta methods is that they allow for greater accuracy at a lower computational cost. Additionally, they only make use of the ODE itself (i.e., the first-order derivative) and do not involve higher-order derivatives. This is remarkable, since higher order Taylor polynomials do make use of such higher-order derivatives <smart-cite bibId="burden_and_faires"></smart-cite>. Note that using higher order derivatives would require us to either symbolically or numerically compute the higher derivatives, which can be computationally intensive.
 
 ## Overview
 
@@ -87,13 +87,13 @@ where $\vec{c} \in \mathbb{R}^n$ is a vector with $c_0=0$, and $[a_{ij}] \in \ma
 
 Aside from the number of stages, a Runge-Kutta method also has an <em>order</em>. The difference between the number of stages and the order, is that the number of stages refers to the number of values $k_1, \dots, k_n$ that are computed. The order, on the other hand, refers to the accuracy of the method (i.e., how closely the method will approximate the actual solution). The order, however, is more difficult to determine. It depends on the coefficients that are used, and the number of stages might be higher than the order of a method <smart-cite bibId="butcher_book"></smart-cite>.
 
-<p>Note that in the above definition we only consider strictly lower-triangular matrices. However, there also exist Runge-Kutta methods with any matrix $[a_{ij}]$. If the values $a_{ij}$ are non-zero for $i \leq j$, then we are dealing with an <em>implicit</em> Runge-Kutta method. In that case, the values $k_i$ can be inter-dependent (e.g., $k_1$ depends on $k_2$ and vice-versa). Such a scheme then forms forms a system of non-linear equations <smart-cite bibId="wiki_runge_kutta"></smart-cite>.</p>
+<p>Note that in the above definition we only consider strictly lower-triangular matrices. However, there also exist Runge-Kutta methods with any matrix $[a_{ij}]$. If the values $a_{ij}$ are non-zero for $i \leq j$, then we are dealing with an <em>implicit</em> Runge-Kutta method. In that case, the values $k_i$ can be inter-dependent (e.g., $k_1$ depends on $k_2$ and vice-versa). Such a scheme then forms a system of non-linear equations <smart-cite bibId="wiki_runge_kutta"></smart-cite>.</p>
 
 In this article we will only deal with explicit Runge-Kutta methods. The value $k_{i}$ will only depend on values $k_{j}$ with $j < i$. The resulting formulas can be solved using simple arithmetic and without solving a system of equations.
 
 ## Choosing coefficients
 
-<p>In the previous section, the general formula for Runge-Kutta methods was introduced. We can see that there are many possiblities of choosing $n, [a_{ij}], \vec{b}, \vec{c}$, with each combination of values producing its own Runge-Kutta method. A so-called <em>Butcher tableau</em> can be used to arrange these values in a standardised and easy to use format. This format is named after John C. Butcher who introduced such tables in 1964 <smart-cite bibId="butcher1964_implicit"></smart-cite>.</p>
+<p>In the previous section, the general formula for Runge-Kutta methods was introduced. We can see that there are many possibilities of choosing $n, [a_{ij}], \vec{b}, \vec{c}$, with each combination of values producing its own Runge-Kutta method. A so-called <em>Butcher tableau</em> can be used to arrange these values in a standardised and easy to use format. This format is named after John C. Butcher who introduced such tables in 1964 <smart-cite bibId="butcher1964_implicit"></smart-cite>.</p>
 
 In the general case, for a Runge-Kutta method with $n$ stages, we get the following table:
 <display-math>
@@ -243,7 +243,7 @@ k_4 &= f(t_i + h, y_i + hk_3).\\
 
 Even though these formulas might look complicated at first, it is clear that each $k_s$ is a value of the ODE $f(t,y)$ at some point, which are also the derivatives $y'(t)$ of the solution $y(t)$. First of all, if we look at the time values, we can see that the derivative is computed at four points in time: once at $t_i$, twice at $t_i + \frac{h}{2}$, and once at $t_i + h$.
 
-The values for $y$ are more complicated, however. If we look closely they are always of the form $y_i + a \cdot k_s$, where $a$ is some real number and the $k_s$ is equal to some value of the ODE $f(t,y)$. We therefore have that each of these values are actually linear approximations of $y$ at various points in time, where some value of $f(t,y)$ is used instead of the actual derivative of $y$. Clever!
+The values for $y$ are more complicated, however. If we look closely, they are always of the form $y_i + a \cdot k_s$, where $a$ is some real number and the $k_s$ is equal to some value of the ODE $f(t,y)$. We therefore have that each of these values are actually linear approximations of $y$ at various points in time, where some value of $f(t,y)$ is used instead of the actual derivative of $y$. Clever!
 
 To get a more systematic overview, consider the following table:
 <table>
@@ -322,7 +322,7 @@ Let us reconsider the general formula for $k_s$:
     k_{s} = f\left(t_i + c_s h, y_i + h\sum_{j=1}^{s-1} a_{sj}k_{j}\right),
 </display-math>
 
-This value $k_s$ approximates the derivative $y'(t_i + c_s h) = f(t_i + c_s h, y(t_i + c_s h))$. Since the value $y(t_i + c_s h)$ is unknown because we only know $y(t)$ for $t \in \\{t_0, \dots, t_i\\}$, we instead approximate it using $y_i + h\sum_{j=1}^{s-1} a_{sj}k_{s}$. This can be seen as a linear approxination using a weighted average of derivatives.
+This value $k_s$ approximates the derivative $y'(t_i + c_s h) = f(t_i + c_s h, y(t_i + c_s h))$. Since the value $y(t_i + c_s h)$ is unknown because we only know $y(t)$ for $t \in \\{t_0, \dots, t_i\\}$, we instead approximate it using $y_i + h\sum_{j=1}^{s-1} a_{sj}k_{s}$. This can be seen as a linear approximation using a weighted average of derivatives.
 
 ## Implementation
 
@@ -417,7 +417,7 @@ end
 
 The above code implements the formulas from <smart-ref targetId="rk_general" targetType="def"></smart-ref>, which we also explored in-depth in the section on quadrature. We can see that at every step a value $k_s$ is produced with $s \in \\{1, \dots, n\\}$ for an $n$-stage Runge-Kutta method by making a call to `ivp.diffEq` which is the ODE $f(t,y)$. 
 
-At every iteration of the for-loop, we first compute the value $t_i + c_s h$, which is the time-step at which we evaluate the ODE. Next, we retrieve the values from the $[a_{ij}]$ matrix. We also check that this matrix is strictly lower diagonal by calling `iszero()` on the coeffients above or on the diagonal. We then compute a dot-product between the values $a_{ij}$ and the previously computed $k_s$ in order to approximate the value $y(t_i + c_s h)$. Finally, the time-value and approximated $y$-value are used to evaluate the ODE, resulting in the value `k_val`.
+At every iteration of the for-loop, we first compute the value $t_i + c_s h$, which is the time-step at which we evaluate the ODE. Next, we retrieve the values from the $[a_{ij}]$ matrix. We also check that this matrix is strictly lower diagonal by calling `iszero()` on the coefficients above or on the diagonal. We then compute a dot-product between the values $a_{ij}$ and the previously computed $k_s$ in order to approximate the value $y(t_i + c_s h)$. Finally, the time-value and approximated $y$-value are used to evaluate the ODE, resulting in the value `k_val`.
 
 Once all values $k_s$ are produced for $s \in \\{1, \dots, n\\}$, we take the dot-product between the weights $b$ and the vector of $k$-values, resulting in the value $y_{i+1}$, which is returned by the function.
 
