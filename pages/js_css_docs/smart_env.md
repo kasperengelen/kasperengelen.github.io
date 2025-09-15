@@ -8,13 +8,13 @@ sitemap:
     exclude: true
 ---
 
-Last updated: 2025-09-13
+Last updated: 2025-09-15
 
 <div>
 {% include smart_link/load_internal_urls.html %}
 </div>
 
-The software comes with so-called "smart environments". These are useful to typeset mathematical definitions, theorems, lemmas, and proofs. A smart environment comes with custom HTML tags and is rendered as a <smart-link linkType="int" linkId="js_css_docs_fieldsets">fieldset</smart-link>. 
+The software comes with so-called "smart environments". These are useful to typeset mathematical definitions, theorems, lemmas, examples, and proofs. A smart environment comes with custom HTML tags and is rendered as a <smart-link linkType="int" linkId="js_css_docs_fieldsets">fieldset</smart-link>. 
 
 The smart environments are inspired by the mathematical environments LaTeX, for example:
 ```latex
@@ -27,7 +27,7 @@ In this document we will first give an overview of the different smart environme
 
 ## Overview
 
-There are currently four different smart enviroments: lemma, theorem, definition. Below we can see an overview of what they look like:
+There are currently five different smart enviroments: lemma, theorem, definition, example, and proof. Below we can see an overview of what they look like:
 
 <definition>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, id sodales risus enim eget arcu.
@@ -107,12 +107,34 @@ There are currently four different smart enviroments: lemma, theorem, definition
     </display-math>
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </proof>
+```
+
+<example>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, 
+    id sodales risus enim eget arcu.
+    <display-math>
+        I = \int f(x)\,dx
+    </display-math>
+    Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
+</example>
+
+```html
+<example>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, 
+    id sodales risus enim eget arcu.
+    <display-math>
+        I = \int f(x)\,dx
+    </display-math>
+    Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
+</example>
 ```
 
 
 ## Automatic numbering
 
-As you might have noticed, the definition, theorem, and lemma environments all have numbering. Note that the numbering is separate for every environment.
+As you might have noticed, the definition, theorem, lemma, and example environments all have numbering. Note that the numbering is separate for every environment.
 
 Below we consider some more environments to see the numbering in action.
 
@@ -190,7 +212,7 @@ For example:
 </definition>
 ```
 
-The label can thus be specified by adding an `envId` attribute to the `definition` tag. Labelling also works for theorems and lemmas.
+The label can thus be specified by adding an `envId` attribute to the `definition` tag. Labelling also works for theorems, lemmas, and examples.
 
 Another interesting feature is that when an environment is labelled, then the title becomes clickable. 
 
@@ -214,6 +236,7 @@ All this functionality is implemented in the Javascript file `smartEnvironments.
 - theorem: `thm_`
 - lemma: `lem_`
 - definition: `def_`
+- example: `ex_`
 
 The smart environment software also ensures that all specified labels within one document are unique. In case of a duplicated label, an error message is displayed. For example:
 

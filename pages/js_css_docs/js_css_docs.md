@@ -21,7 +21,7 @@ This is the homepage for the documentation of the custom CSS and Javascript code
 - <smart-link linkType="int" linkId="js_css_docs_smart_cite">[TODO] Smart citations</smart-link>
 - <smart-link linkType="int" linkId="js_css_docs_smart_env">Smart environments</smart-link>
 - <smart-link linkType="int" linkId="js_css_docs_smart_link">[TODO] Smart links</smart-link>
-- <smart-link linkType="int" linkId="js_css_docs_smart_ref">[TODO] Smart references</smart-link>
+- <smart-link linkType="int" linkId="js_css_docs_smart_ref">Smart references</smart-link>
 - <smart-link linkType="int" linkId="js_css_docs_images">Images</smart-link>
 - <smart-link linkType="int" linkId="js_css_docs_highlight_boxes">Highlight boxes</smart-link>
 - <smart-link linkType="int" linkId="js_css_docs_fieldsets">Custom fieldsets</smart-link>
