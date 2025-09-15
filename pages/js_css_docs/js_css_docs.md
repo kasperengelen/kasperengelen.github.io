@@ -25,8 +25,7 @@ This is the homepage for the documentation of the custom CSS and Javascript code
 - <smart-link linkType="int" linkId="js_css_docs_images">Images</smart-link>
 - <smart-link linkType="int" linkId="js_css_docs_highlight_boxes">Highlight boxes</smart-link>
 - <smart-link linkType="int" linkId="js_css_docs_fieldsets">Custom fieldsets</smart-link>
-
-- [TODO] tables
+- <smart-link linkType="int" linkId="js_css_docs_tables">[TODO] tables</smart-link>
 
 
 
