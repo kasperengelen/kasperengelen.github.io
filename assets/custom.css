@@ -619,3 +619,9 @@ table tr:nth-child(even) td{
         margin-bottom: 10px;
     }
 }
+
+.footer-col-right { 
+    float: right; 
+    margin-bottom: 15px; 
+    padding-left: 15px; 
+}
