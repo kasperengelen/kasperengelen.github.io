@@ -1,0 +1,9 @@
+
+- identifier: wikipedia
+  url: https://www.wikipedia.org
+
+- identifier: google
+  url: https://www.google.com
+
+- identifier: wiki_mathematics
+  url: https://en.wikipedia.org/wiki/Mathematics
