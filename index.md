@@ -25,6 +25,7 @@ exclude: true
     </p>
     <div class="publ_links">
         <a href="https://arxiv.org/abs/2507.15532" class="button" target="_blank">Arxiv</a>
+        <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA251392" class="button" target="_blank">IOS Press</a>
         <a href="https://zenodo.org/records/16884207" class="button" target="_blank">Zenodo</a>
     </div>
 
@@ -53,6 +54,13 @@ exclude: true
 
 <div class="cv-section" id="mobility_phd">
     <h2>Mobility</h2>
+
+    <h3>ECAI 2025</h3>
+    <i>Bologna, Italy</i><br>
+    October 2025<br>
+    <p>
+        I had the pleasure of presenting my paper at the 28th European Conference on Artificial Intelligence in Bologna, Italy. Aside for sharing my research and meeting other AI researchers, I had to opportunity to visit the many excellent restaurants and bookstores that Bologna has to offer!
+    </p>
 
     <h3>CAV 2025</h3>
     <i>Zagreb, Croatia</i><br>
