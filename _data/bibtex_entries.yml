@@ -1,0 +1,41 @@
+ECAI25_pmdp_learning: |
+  @inproceedings{EngelenPS25,
+    author       = {Kasper Engelen and Guillermo A. P{\'e}rez and Marnix Suilen},
+    title        = {Data-Efficient Safe Policy Improvement Using Parametric Structure},
+    year         = {2025},
+    booktitle    = {28th {E}uropean {C}onference on {A}rtificial {I}ntelligence},
+    editor       = {Inês Lynce and Nello Murano and Mauro Vallati and Serena Villata and Federico Chesani and Michela Milano and Andrea Omicini and Mehdi Dastani},
+    publisher    = {IOS},
+    series       = {{F}rontiers in {A}rtificial {I}ntelligence and {A}pplications},
+    volume       = {413},
+    pages        = {4832 -- 4839},
+    doi          = {10.3233/FAIA251392}
+  }
+
+JPK24_nwr2: |
+  @inbook{EngelenPR24,
+    author    = {Engelen, Kasper and P{\'e}rez, Guillermo A. and Rao, Shrisha},
+    editor    = {Jansen, Nils and Junges, Sebastian and Kaminski, Benjamin Lucien and Matheja, Christoph and Noll, Thomas and Quatmann, Tim and Stoelinga, Mari{\"e}lle and Volk, Matthias},
+    title     = {Analyzing Value Functions of States in Parametric Markov Chains},
+    year      = {2024},
+    booktitle = {Principles of Verification: Cycling the Probabilistic Landscape: Essays Dedicated to Joost-Pieter Katoen on the Occasion of His 60th Birthday, Part {II}},
+    publisher = {Springer},
+    series    = {{L}ecture {N}otes in {C}omputer {S}cience},
+    volume    = {15261},
+    pages     = {145--165},
+    doi       = {10.1007/978-3-031-75775-4_7},
+  }
+
+ATVA23_nwr: |
+  @inproceedings{EngelenPR23,
+    author    = {Engelen, Kasper and P{\'e}rez, Guillermo A. and Rao, Shrisha},
+    editor    = {Andr{\'e}, {\'E}tienne and Sun, Jun},
+    title     = {Graph-Based Reductions for Parametric and Weighted MDPs},
+    year      = {2023},
+    booktitle = {{A}utomated {T}echnology for {V}erification and {A}nalysis - 21st International Symposium, {ATVA} 2023, Singapore, October 24-27, 2023, Proceedings, Part {I}},
+    publisher = {Springer},
+    series    = {{L}ecture {N}otes in {C}omputer {S}cience},
+    volume    = {14215},
+    pages     = {137--157},
+    doi       = {10.1007/978-3-031-45329-8_7}
+  }

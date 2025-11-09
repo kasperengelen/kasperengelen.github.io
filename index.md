@@ -4,7 +4,6 @@ title: Homepage
 exclude: true
 ---
 
-
 <div class="profile-container cv-section" id="about">
     <div class="profile-picture">
         <img src="/assets/images/profile_picture_20240605.jpeg" alt="Me!">
@@ -27,6 +26,7 @@ exclude: true
         <a href="https://arxiv.org/abs/2507.15532" class="button" target="_blank">Arxiv</a>
         <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA251392" class="button" target="_blank">IOS Press</a>
         <a href="https://zenodo.org/records/16884207" class="button" target="_blank">Zenodo</a>
+        <a href="#" open-popup-target="ECAI25_pmdp_learning" class="button">BibTeX</a>
     </div>
 
     <h3>Analyzing Value Functions of States in Parametric Markov Chains</h3>
@@ -38,6 +38,7 @@ exclude: true
         <a href="https://arxiv.org/abs/2504.17020" class="button" target="_blank">Arxiv</a>
         <a href="https://link.springer.com/chapter/10.1007/978-3-031-75775-4_7" class="button" target="_blank">Springer</a>
         <a href="https://zenodo.org/records/11474465" class="button" target="_blank">Zenodo</a>
+        <a href="#" open-popup-target="JPK24_nwr2" class="button">BibTeX</a>
     </div>
 
     <h3>Graph-Based Reductions for Parametric and Weighted MDPs</h3>
@@ -49,6 +50,7 @@ exclude: true
         <a href="https://arxiv.org/abs/2305.05739" class="button" target="_blank">Arxiv</a>
         <a href="https://link.springer.com/chapter/10.1007/978-3-031-45329-8_7" class="button" target="_blank">Springer</a>
         <a href="https://zenodo.org/records/7915828" class="button" target="_blank">Zenodo</a>
+        <a href="#" open-popup-target="ATVA23_nwr" class="button">BibTeX</a>
     </div>
 </div>
 
@@ -160,3 +162,7 @@ exclude: true
         <li>Elective courses on neural networks, functional programming, and data science ethics.</li>
     </ul>
 </div>
+
+<!-- this handles all the popups with the bibtex code -->
+{% include bibtex_popup_mechanics.html %}
+

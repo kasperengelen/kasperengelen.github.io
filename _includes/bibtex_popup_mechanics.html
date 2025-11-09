@@ -1,0 +1,157 @@
+
+<!-- This retrieves all bibtex entries and generates a popup div for each one. -->
+{% for entry in site.data.bibtex_entries %}
+  {% assign key = entry[0] %}
+  {% assign bibtex = entry[1] %}
+<div class="bibtex-popup" id="{{ key }}">
+  <h3>BibTeX</h3>
+  <pre class="bibtex-box" id="bibtex-{{ key }}">{{ bibtex }}</pre>
+  
+  <button copy-bibtex-target="bibtex-{{ key }}">Copy BibTeX</button>
+
+  <button close-popup-target="{{ key }}">Close</button>
+</div>
+{% endfor %}
+
+<!-- this is the gray background when a popup is active -->
+<div class="bibtex-popup-overlay" id="bibtex-popup-overlay"></div>
+
+
+<style>
+    /* this "freezes" the rest of the webpage if a popup is open */
+    body.bibtex-popup-open {
+        /* disable text selection */
+        user-select: none;       
+        /* disable scrolling */
+        overflow: hidden;        
+    }
+
+    /* the div of the popup  */
+    .bibtex-popup {
+        /* hidden by default */
+        display: none;
+
+        /* center */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* some styling */
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        text-align: center;
+
+        /* allow selection inside popup, even if <body> is frozen */
+        user-select: text;     
+    }
+
+
+    /* this is the monospace text box for the bibtex code */
+    .bibtex-box {
+        text-align: left;
+        background-color: #f5f5f5;
+        padding: 10px;
+        font-family: monospace;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        white-space: pre;
+        margin: 10px 0;
+        white-space: pre-wrap;
+
+        /* Scroll only if too tall */
+        /* max height = 40% of viewport */
+        max-height: 40vh;
+        
+        /* vertical scroll */
+        overflow-y: auto;
+
+        /* drag to resize */
+        resize: both;
+    }
+
+    /* gray background when popup is active */
+    .bibtex-popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+</style>
+
+<!-- Javascript code that handles opening and closing popups, as well as the copy-to-clipboard button -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // gray background html element
+        const overlay = document.getElementById('bibtex-popup-overlay');
+
+        // Open buttons
+        const openButtons = document.querySelectorAll('[open-popup-target]'); // select all elemets with the "open-popup-target" attribute.
+        openButtons.forEach(button => {
+            // each button gets a listener. When the button is clicked this JS code handles opening the correct popup
+            button.addEventListener('click', () => {
+                // retrieve the specific popup that needs to be opened
+                const popupId = button.getAttribute('open-popup-target');
+                const popup = document.getElementById(popupId);
+
+                // activate popup and gray background
+                popup.style.display = 'block';
+                overlay.style.display = 'block';
+                
+                // Freeze background to prevent scrolling and selection
+                document.body.classList.add('bibtex-popup-open');
+            });
+        });
+
+        // Close buttons
+        const closeButtons = document.querySelectorAll('[close-popup-target]'); // select all elemets with the "close-popup-target" attribute.
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // retrieve the specific popup that needs to be closed
+                const popupId = button.getAttribute('close-popup-target');
+                const popup = document.getElementById(popupId);
+
+                // hide popup and background
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+
+                // Unfreeze background
+                document.body.classList.remove('bibtex-popup-open');
+            });
+        });
+
+        // Close when clicking outside
+        overlay.addEventListener('click', () => {
+            // iterate over all popups and adjust visibility
+            document.querySelectorAll('.bibtex-popup').forEach(popup => popup.style.display = 'none');
+            overlay.style.display = 'none';
+
+            // Unfreeze background
+            document.body.classList.remove('bibtex-popup-open');
+        });
+
+        // copy BibTeX button
+        const copyButtons = document.querySelectorAll('[copy-bibtex-target]'); // select all elemets with the "close-popup-target" attribute.
+        copyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('copy-bibtex-target');
+                const bibtex = document.getElementById(targetId).innerText;
+
+                navigator.clipboard.writeText(bibtex).then(() => {
+                    button.innerText = 'Copied!';
+                    setTimeout(() => button.innerText = 'Copy BibTeX', 1500);
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                });
+            });
+        });
+    });
+</script>
