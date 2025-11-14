@@ -537,6 +537,10 @@ table tr:nth-child(even) td{
     top: 0;
 }
 
+.bibList p {
+    text-align: left;
+}
+
 .docs-test p {
     display: inline-block;
     margin: 0;
