@@ -404,7 +404,7 @@ function renderSmartCites(smartCites, bibliography) {
         if(bibliography.hasBibEntry(identifier)) {
             // replace with <a href="#...">[NR]</a>
             $(smartCite.domObj).replaceWith(function(i, content) {
-                return "<strong><a href=\"#bibliography_list\">[" + bibliography.getReferenceNumberForIdentifier(identifier) + "]</a></strong>";
+                return "<strong><a href=\"#bibEntry_" + identifier + "\">[" + bibliography.getReferenceNumberForIdentifier(identifier) + "]</a></strong>";
             });
         } else {
             $(smartCite.domObj).replaceWith(function(i, content) {
@@ -438,7 +438,8 @@ function renderBibliography(bibliography) {
         // NOTE: the numbering is done automatically using CSS. The bib entries are expected 
         //  to occur in the "bibEntries" list in the correct order.
         for(bibEntry of bibliography.getAllReferencedBibEntriesInOrder()) {
-            var entryContent = "<p>" + bibEntry.render() + "</p>";
+            var bibEntryId = bibEntry.identifier
+            var entryContent = "<p id=\"bibEntry_" + bibEntryId + "\">" + bibEntry.render() + "</p>";
             bibContent += "<li>" + entryContent + "</li>";
         }
 
