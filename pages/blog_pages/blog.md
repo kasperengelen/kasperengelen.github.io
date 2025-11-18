@@ -132,5 +132,6 @@ referenceId: blog_overview
         <li>2025-07-08: Added blogpost on the backward Euler method.</li>
         <li>2025-07-19: Added blogpost on a user-friendly interface for ODE solvers.</li>
         <li>2025-08-29: Added blogpost on Runge-Kutta methods.</li>
+        <li>2025-11-18: Added blogpost on the Runge-Kutta-Fehlberg method.</li>
     </ul>
 </div>
