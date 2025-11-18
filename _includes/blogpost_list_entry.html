@@ -1,0 +1,17 @@
+  <li>
+    <div class="blogpost-list-line">
+        <span class="blogpost-list-text">{{ include.title }}</span>
+        <span class="blogpost-list-dots" aria-hidden="true"></span>
+        <span class="blogpost-list-text">
+        {% if include contains "post_url_id" %}
+            <smart-link linkType="int" linkId="{{ include.post_url_id }}">[post]</smart-link> 
+        {% endif %}
+        {% if include contains "code_url_id" %}
+            <smart-link linkType="ext" linkId="{{ include.code_url_id }}">[code]</smart-link>
+        {% else %}
+            <!-- this is such that the [post] is aligned with all other [post] links, even if [code] is not present -->
+            <span style="visibility: hidden">[code]</span>
+        {% endif %}
+        </span>
+    </div>
+  </li>

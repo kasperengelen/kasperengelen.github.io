@@ -568,7 +568,10 @@ table tr:nth-child(even) td{
 
 .series-picture img {
     width: 100px;
-    height: 100px;
+
+    /* this causes the picture to be aligned with the top paragraph of the explanation */
+    margin-top: 3.7rem;
+    display: block;
 }
 
 .series-explanation {
@@ -586,7 +589,7 @@ table tr:nth-child(even) td{
     .series-top-layer {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: start;
     }
 
     .series-picture {
@@ -628,4 +631,34 @@ table tr:nth-child(even) td{
     float: right; 
     margin-bottom: 15px; 
     padding-left: 15px; 
+}
+
+
+/* blog homepage bullet points */
+.blogpost-list {
+  list-style-type: disc;   /* bullet • */
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+/* each row */
+.blogpost-list-line {
+  display: flex;
+  align-items: center;
+  width: 100%;            /* important so flex children use full row width */
+  gap: 8px;               /* small space between dotted line and text */
+}
+
+/* left and right shouldn't grow or shrink */
+.blogpost-list-text {
+  flex: 0 0 auto;         /* do not grow; keep their intrinsic size */
+  white-space: nowrap;    /* prevents line-wrapping of labels/values */
+}
+
+/* dots take all remaining space */
+.blogpost-list-dots {
+  flex: 1 1 auto;         /* grow to fill available gap */
+  border-bottom: 1px dotted #999;
+  min-width: 8px;         /* ensures a visible leader even if space is tiny */
+  transform: translateY(0.25em); /* vertically align the dots with text baseline */
 }

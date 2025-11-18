@@ -24,16 +24,10 @@ referenceId: blog_overview
                 <img src="/assets/images/blog_icons/icon_build_series_bin.png" alt="Build systems">
             </div>
             <p>In this series we explore various build systems. Each tutorial explains how to create a new project, how to add source and test code, and how to compile the project into an executable.</p>
-            <ul>
-                <li>Swift Package Manager:
-                    <smart-link linkType="int" linkId="swift_package_manager">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="buildsystems_swift_code">[code]</smart-link></li>
-                <li>Java projects with Gradle: 
-                    <smart-link linkType="int" linkId="gradle">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="buildsystems_gradle_code">[code]</smart-link></li>
-                <li>Julia projects with Pkg: 
-                    <smart-link linkType="int" linkId="julia_pkg">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="buildsystems_julia_code">[code]</smart-link></li>
+            <ul class="blogpost-list">
+            {% include blogpost_list_entry.html title="Swift Package Manager" post_url_id="swift_package_manager" code_url_id="buildsystems_swift_code"%}
+            {% include blogpost_list_entry.html title="Java projects with Gradle" post_url_id="gradle" code_url_id="buildsystems_gradle_code" %}
+            {% include blogpost_list_entry.html title="Julia projects with Pkg" post_url_id="julia_pkg" code_url_id="buildsystems_julia_code" %}
             </ul>
         </div>
     </div>
@@ -50,13 +44,9 @@ referenceId: blog_overview
                 <img src="/assets/images/blog_icons/icon_linalg_swift.png" alt="Linear algebra in Swift">
             </div>
             <p>We cover multiple topics in linear algebra. In each tutorial we first explore the theory behind a technique, and afterwards we implement it using the Swift programming language.</p>
-            <ul>
-                <li>Matrix class:
-                    <smart-link linkType="int" linkId="linalg_matrix_class">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="linalg_swift_matrix_code">[code]</smart-link></li>
-                <li>Cramer's rule:
-                    <smart-link linkType="int" linkId="cramers_rule">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="linalg_swift_cramer_code">[code]</smart-link></li>
+            <ul class="blogpost-list">
+            {% include blogpost_list_entry.html title="Matrix class" post_url_id="linalg_matrix_class" code_url_id="linalg_swift_matrix_code"%}
+            {% include blogpost_list_entry.html title="Cramer's rule" post_url_id="cramers_rule" code_url_id="linalg_swift_cramer_code" %}
             </ul>
         </div>
     </div>
@@ -73,15 +63,10 @@ referenceId: blog_overview
                 <img src="/assets/images/blog_icons/icon_cordic.png" alt="CORDIC">
             </div>
             <p>The articles below cover various aspects of the CORDIC algorithm. We cover both the theory and the practical implementation of the algorithm. Due to the strong link with trigonometry, we also provide visualisations.</p>
-            <ul>
-                <li>Sine and Cosine using CORDIC: 
-                    <smart-link linkType="int" linkId="cordic_trig_theory">[post]</smart-link></li>
-                <li>Implementing CORDIC in Python: 
-                    <smart-link linkType="int" linkId="cordic_trig_python">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="cordic_trig_python_code">[code]</smart-link></li>
-                <li>Visualising CORDIC in Python: 
-                    <smart-link linkType="int" linkId="cordic_trig_viz_python">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="cordic_trig_viz_code">[code]</smart-link></li>
+            <ul class="blogpost-list">
+            {% include blogpost_list_entry.html title="Sine and Cosine using CORDIC" post_url_id="cordic_trig_theory" %}
+            {% include blogpost_list_entry.html title="Implementing CORDIC in Python" post_url_id="cordic_trig_python" code_url_id="cordic_trig_python_code" %}
+            {% include blogpost_list_entry.html title="Visualising CORDIC in Python" post_url_id="cordic_trig_viz_python" code_url_id="cordic_trig_viz_code" %}
             </ul>
         </div>
     </div>
@@ -98,22 +83,12 @@ referenceId: blog_overview
                 <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="Numerical methods for ODEs">
             </div>
             <p>We explore different methods to numerically solve ordinary differential equations, covering both theory and implementations.</p>
-            <ul>
-                <li>Intro + Forward Euler's method: 
-                    <smart-link linkType="int" linkId="forward_euler">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
-                <li>Backward Euler's method: 
-                    <smart-link linkType="int" linkId="backward_euler">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
-                <li>An interface for ODE solvers: 
-                    <smart-link linkType="int" linkId="solver_interface">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
-                <li>Runge-Kutta methods: 
-                    <smart-link linkType="int" linkId="runge_kutta">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
-                <li>Adaptive-step Runge-Kutta: 
-                    <smart-link linkType="int" linkId="adaptive_rk">[post]</smart-link>
-                    <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
+            <ul class="blogpost-list">
+            {% include blogpost_list_entry.html title="Intro + Forward Euler's method" post_url_id="forward_euler" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="Backward Euler's method" post_url_id="backward_euler" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="An interface for ODE solvers" post_url_id="solver_interface" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="Runge-Kutta methods" post_url_id="runge_kutta" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="Adaptive-step Runge-Kutta" post_url_id="adaptive_rk" code_url_id="num_ode_code" %}
             </ul>
         </div>
     </div>
