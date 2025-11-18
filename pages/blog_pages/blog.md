@@ -2,6 +2,7 @@
 layout: page
 title: Maths and Computation
 permalink: /blog/
+referenceId: blog_overview
 ---
 
 <div>
@@ -36,9 +37,6 @@ permalink: /blog/
             </ul>
         </div>
     </div>
-    <!-- <div class="series-post-list">
-
-    </div> -->
 </div>
 
 <div class="series-container series-section" id="linear_algebra_swift">
@@ -92,12 +90,12 @@ permalink: /blog/
 <div class="series-container series-section" id="ode_numeric">
     <div class="series-top-layer">
         <div class="series-picture">
-            <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="ode_numeric">
+            <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="Numerical methods for ODEs">
         </div>
         <div class="series-explanation">
             <h3>Numerical methods for ODEs</h3>
             <div class="series-picture-mobile">
-                <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="ode_numeric">
+                <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="Numerical methods for ODEs">
             </div>
             <p>We explore different methods to numerically solve ordinary differential equations, covering both theory and implementations.</p>
             <ul>
@@ -112,6 +110,9 @@ permalink: /blog/
                     <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
                 <li>Runge-Kutta methods: 
                     <smart-link linkType="int" linkId="runge_kutta">[post]</smart-link>
+                    <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
+                <li>Adaptive-step Runge-Kutta: 
+                    <smart-link linkType="int" linkId="adaptive_rk">[post]</smart-link>
                     <smart-link linkType="ext" linkId="num_ode_code">[code]</smart-link></li>
             </ul>
         </div>

@@ -7,3 +7,6 @@
 
 - identifier: diffeq_tutorial
   url: https://docs.sciml.ai/DiffEqDocs/stable/getting_started
+
+- identifier: num_ode_code
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/num_ode

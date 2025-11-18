@@ -38,8 +38,6 @@
     month: 7
     day: 6
 
-  
-
 - identifier: burden_and_faires
   type: book
   authors:
@@ -157,3 +155,59 @@
     - Wikipedia Contributors
   title: Midpoint method
   url: https://en.wikipedia.org/wiki/Midpoint_method
+
+- identifier: wiki_taylor_series
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Taylor series
+  url: https://en.wikipedia.org/wiki/Taylor_series
+
+- identifier: hairer_vol1
+  type: book
+  authors:
+    - Ernst Hairer
+    - Gerhard Wanner
+    - Syvert P. Nørsett
+  title:  "Solving Ordinary Differential Equations I: Nonstiff Problems"
+  year: 1992
+
+- identifier: wiki_dormand_prince
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Dormand–Prince method
+  url: https://en.wikipedia.org/wiki/Dormand%E2%80%93Prince_method
+
+- identifier: wiki_rkf
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Runge–Kutta–Fehlberg method
+  url: https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta%E2%80%93Fehlberg_method
+
+- identifier: steep_example
+  type: website
+  authors:
+    - Tobin A. Driscoll
+    - Richard J. Braun
+  title: Home - Fundamentals of Numerical Computation
+  url: https://tobydriscoll.net/fnc-julia/ivp/adaptive-rk.html
+  accessed:
+    year: 2025
+    month: 10
+    day: 5
+
+- identifier: nasa_paperclip
+  type: book
+  authors:
+    - Charles Lundquist
+  title: Transplanted Rocket Pioneers
+  year: 2015
+
+- identifier: wiki_fehlberg_de
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Erwin Fehlberg
+  url: https://de.wikipedia.org/wiki/Erwin_Fehlberg
