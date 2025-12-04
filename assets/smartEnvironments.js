@@ -276,6 +276,7 @@ function renderProofInLaTeXStyle(environments, useQED) {
 
 
 $(document).ready(function () {
+    console.log("Loading smart environments...");
     lemmaEnvs = collectEnvironments("lemma", "lem");
     theoremEnvs = collectEnvironments("theorem", "thm");
     definitionEnvs = collectEnvironments("definition", "def");
@@ -288,13 +289,14 @@ $(document).ready(function () {
     let renderAsFieldset = true;
 
     if(renderAsFieldset) {
+        console.log("\tRendering as fieldset.");
         renderEnvironmentsAsFieldset(lemmaEnvs, "Lemma", "fs-green", true);
         renderEnvironmentsAsFieldset(theoremEnvs, "Theorem", "fs-green", true);
         renderEnvironmentsAsFieldset(definitionEnvs, "Definition", "fs-green", true);
         renderEnvironmentsAsFieldset(proofEnvs, "Proof", "fs-purple", false);
         renderEnvironmentsAsFieldset(exampleEnvs, "Example", "fs-blue", true);
     } else {
-
+        console.log("\tRendering in LaTeX style.");
         renderEnvironmentsInLaTeXStyle(lemmaEnvs, "Lemma", true);
         renderEnvironmentsInLaTeXStyle(theoremEnvs, "Theorem", true);
         renderEnvironmentsInLaTeXStyle(definitionEnvs, "Definition", true);
@@ -303,6 +305,7 @@ $(document).ready(function () {
 
         renderEnvironmentsInLaTeXStyle(exampleEnvs, "Example", true);
     }
+    console.log("Loaded smart environments.");
 });
 
 

@@ -147,6 +147,7 @@ $(document).ready(function () {
 
     // opt-in for title numbering
     if (typeof enableTitleNumbering !== 'undefined') {
+        console.log("Numbering titles...");
         if (enableTitleNumbering) {
             var h2Titles = retrieveTitles();
             addNumberToTitles(h2Titles, "");
@@ -156,7 +157,7 @@ $(document).ready(function () {
                 return tocHtml;
             });
         }
+        console.log("Titles numbered...");
     }
-
 });
 

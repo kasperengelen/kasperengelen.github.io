@@ -157,6 +157,22 @@ function addFiguresToReferenceContainer(container, figures) {
     }
 }
 
+
+/**
+ * Add the tables to the reference target container. For each table a ReferenceTarget object
+ * will be constructed.
+ */
+function addTablesToReferenceContainer(container, tables) {
+    for (tab of tables) {
+        if(tab.tabId == null) {
+            continue;
+        }
+        let refTarget = new ReferenceTarget("Table", tab.tabNumber, null);
+        container.addRefTarget("tab", tab.tabId, refTarget);
+    }
+}
+
+
 /**
  * Traverses the HTML document to find "smart-ref" tags. A list of
  * SmartRef objects is returned.
@@ -239,21 +255,26 @@ function renderSmartRefs(smartRefs, referenceContainer) {
 
 
 $(document).ready(function () {
+    console.log("Loading smart references...");
     refTargetContainer = new ReferenceTargetContainer();
     refTargetContainer.addTargetType("lem");
     refTargetContainer.addTargetType("thm");
     refTargetContainer.addTargetType("def");
     refTargetContainer.addTargetType("proof");
     refTargetContainer.addTargetType("fig");
+    refTargetContainer.addTargetType("tab");
     refTargetContainer.addTargetType("ex");
 
+    // NOTE: the variables "lemmaEnvs", "figures", etc. are created when the other javascript files are ran
     addEnvironmentsToReferenceContainer(refTargetContainer, lemmaEnvs, "lem", "Lemma");
     addEnvironmentsToReferenceContainer(refTargetContainer, theoremEnvs, "thm", "Theorem");
     addEnvironmentsToReferenceContainer(refTargetContainer, definitionEnvs, "def", "Definition");
     addEnvironmentsToReferenceContainer(refTargetContainer, proofEnvs, "proof", "Proof");
     addEnvironmentsToReferenceContainer(refTargetContainer, exampleEnvs, "ex", "Example");
     addFiguresToReferenceContainer(refTargetContainer, figures);
+    addTablesToReferenceContainer(refTargetContainer, tables);
 
     smartRefs = collectSmartReferences();
     renderSmartRefs(smartRefs, refTargetContainer);
+    console.log("Loaded smart references.");
 });

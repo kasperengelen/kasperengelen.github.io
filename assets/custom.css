@@ -478,33 +478,54 @@ p {
     font-size: 16px;
 }
 
-table {
-
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-
-    border:1px solid black;
-/*    width: 70%;*/
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom: 10px; 
-/*  margin: 0 auto;*/
-  display: block;
-  overflow-x: auto;
-  white-space: nowrap;
+.smart-table-div {
+    text-align: center; /* center the table and caption */
+    margin-bottom: 20px; /* space below caption */
 }
 
-table th {
+/*table {*/
+    /*border: none;*/
+/*}*/
+
+.smart-table-div table {
+    max-width: -moz-fit-content; /* expand table to fit content */
+    max-width: fit-content; /* expand table to fit content */
+    border: 1px solid black;
+    margin-left: auto; /* horizontal centering */
+    margin-right: auto; /* horizontal centering */
+    display: block; /* horizontal centering */
+    margin-bottom: 0px;  /* space below table */
+    overflow-x: auto; /* horizontal scrollbar if needed */
+    white-space: nowrap; /* no line breaks in cells */
+    color: #000;
+}
+
+.smart-table-div table th {
     background-color: #cccccc;
+    border: none;
 }
 
-table tr:nth-child(odd) td{
+.smart-table-div table tr:nth-child(odd) td{
     background-color: #ededed;
+    border: none;
 }
-table tr:nth-child(even) td{
+.smart-table-div table tr:nth-child(even) td{
     background-color: #e3e3e3;
+    border: none;
 }
 
+.table-caption {
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.table-caption span.text {
+    font-style: italic;
+}
+
+.table-caption span.label {
+    font-weight: bold;
+}
 
 
 .MathJax_Display {

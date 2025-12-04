@@ -97,6 +97,8 @@ function processFigures(figures) {
 }
 
 $(document).ready(function () {
+    console.log("Loading smart figures...");
     figures = collectFigures();
     processFigures(figures);
+    console.log("Loaded smart figures.");
 });

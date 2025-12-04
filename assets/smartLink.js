@@ -196,7 +196,7 @@ function renderSmartLinks(smartLinks, internalUrls, externalUrls) {
 
 
 $(document).ready(function () {
-
+    console.log("Loading smart links...");
     // the internal and external url containers are optional and might not be present
     intUrls = typeof(intUrls) == 'undefined' ? null : intUrls;
     extUrls = typeof(extUrls) == 'undefined' ? null : extUrls;
@@ -206,4 +206,5 @@ $(document).ready(function () {
 
     // render all smart links
     renderSmartLinks(smartLinks, intUrls, extUrls);
+    console.log("Loaded smart links.");
 });

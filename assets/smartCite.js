@@ -454,6 +454,7 @@ function renderBibliography(bibliography) {
 $(document).ready(function () {
 
     if (typeof bib !== 'undefined') {
+        console.log("Loading smart citations...");
 
         // collect all smart-cite tags
         var smartCites = collectSmartCites();
@@ -469,6 +470,7 @@ $(document).ready(function () {
 
         // render the bibliograpy
         renderBibliography(bib);
+        console.log("Loaded smart citations.");
     }
 });
 

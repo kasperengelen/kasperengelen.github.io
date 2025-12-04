@@ -396,90 +396,93 @@ Just like with the local error, we will once again demonstrate this error bound 
 \absLength{y(t_{i}) - y_{i}} \leq \frac{h}{2}\left(e^{t_{i}} - 1\right).
 </display-math></p>
 
-<p>We will now compute some error bounds for solutions with $t \in [0, 10]$. We will use different step-sizes $h \in \{0.001, 0.1, 0.5\}$. In the table we can see that a smaller step-size results in a lower error, but that it is also computationally more intensive due to the higher number of iterations.</p>
+<p>We will now compute some error bounds for solutions with $t \in [0, 10]$. We will use different step-sizes $h \in \{0.001, 0.1, 0.5\}$. In <smart-ref targetId="step_size_error_bound" targetType="tab"></smart-ref> we can see that a smaller step-size results in a lower error, but that it is also computationally more intensive due to the higher number of iterations.</p>
 
-<table>
-    <thead><tr>
-        <th>Step-size</th>
-        <th>No of iterations</th>
-        <th>$t_i$</th>
-        <th>Error $\absLength{y(t_{i}) - y_{i}}$</th>
-    </tr></thead>
-    <tbody>
-        <tr>
-            <td>0.5</td>
-            <td>2</td>
-            <td>1</td>
-            <td>0.4295704571147613</td>
-        </tr>
-        <tr>
-            <td>0.5</td>
-            <td>4</td>
-            <td>2</td>
-            <td>1.5972640247326626</td>
-        </tr>
-        <tr>
-            <td>0.5</td>
-            <td>10</td>
-            <td>5</td>
-            <td>36.85328977564415</td>
-        </tr>
-        <tr>
-            <td>0.5</td>
-            <td>20</td>
-            <td>10</td>
-            <td>5506.3664487016795</td>
-        </tr>
-        <tr>
-            <td>0.1</td>
-            <td>10</td>
-            <td>1</td>
-            <td>0.08591409142295225</td>
-        </tr>
-        <tr>
-            <td>0.1</td>
-            <td>20</td>
-            <td>2</td>
-            <td>0.31945280494653255</td>
-        </tr>
-        <tr>
-            <td>0.1</td>
-            <td>50</td>
-            <td>5</td>
-            <td>7.370657955128831</td>
-        </tr>
-        <tr>
-            <td>0.1</td>
-            <td>100</td>
-            <td>10</td>
-            <td>1101.273289740336</td>
-        </tr>
-        <tr>
-            <td>0.001</td>
-            <td>1000</td>
-            <td>1</td>
-            <td>0.0008591409142295226</td>
-        </tr>
-        <tr>
-            <td>0.001</td>
-            <td>2000</td>
-            <td>2</td>
-            <td>0.0031945280494653254</td>
-        </tr>
-        <tr>
-            <td>0.001</td>
-            <td>5000</td>
-            <td>5</td>
-            <td>0.0737065795512883</td>
-        </tr>
-        <tr>
-            <td>0.001</td>
-            <td>10000</td>
-            <td>10</td>
-            <td>11.012732897403358</td>
-        </tr>
-    </tbody>
-</table>
+<smartTable tabId="step_size_error_bound">
+    <tableCaption>Different step-sizes and error bounds.</tableCaption>
+    <table>
+        <thead><tr>
+            <th>Step-size</th>
+            <th>No of iterations</th>
+            <th>$t_i$</th>
+            <th>Error $\absLength{y(t_{i}) - y_{i}}$</th>
+        </tr></thead>
+        <tbody>
+            <tr>
+                <td>0.5</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0.4295704571147613</td>
+            </tr>
+            <tr>
+                <td>0.5</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1.5972640247326626</td>
+            </tr>
+            <tr>
+                <td>0.5</td>
+                <td>10</td>
+                <td>5</td>
+                <td>36.85328977564415</td>
+            </tr>
+            <tr>
+                <td>0.5</td>
+                <td>20</td>
+                <td>10</td>
+                <td>5506.3664487016795</td>
+            </tr>
+            <tr>
+                <td>0.1</td>
+                <td>10</td>
+                <td>1</td>
+                <td>0.08591409142295225</td>
+            </tr>
+            <tr>
+                <td>0.1</td>
+                <td>20</td>
+                <td>2</td>
+                <td>0.31945280494653255</td>
+            </tr>
+            <tr>
+                <td>0.1</td>
+                <td>50</td>
+                <td>5</td>
+                <td>7.370657955128831</td>
+            </tr>
+            <tr>
+                <td>0.1</td>
+                <td>100</td>
+                <td>10</td>
+                <td>1101.273289740336</td>
+            </tr>
+            <tr>
+                <td>0.001</td>
+                <td>1000</td>
+                <td>1</td>
+                <td>0.0008591409142295226</td>
+            </tr>
+            <tr>
+                <td>0.001</td>
+                <td>2000</td>
+                <td>2</td>
+                <td>0.0031945280494653254</td>
+            </tr>
+            <tr>
+                <td>0.001</td>
+                <td>5000</td>
+                <td>5</td>
+                <td>0.0737065795512883</td>
+            </tr>
+            <tr>
+                <td>0.001</td>
+                <td>10000</td>
+                <td>10</td>
+                <td>11.012732897403358</td>
+            </tr>
+        </tbody>
+    </table>
+</smartTable>
 
 </example>
 
