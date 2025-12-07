@@ -140,6 +140,7 @@ In this demo you can see different images position next to each other in a row. 
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     $$I = \int f(x)\,dx$$
+    
 </div>
 
 <div class="highlight-box-gray">
@@ -152,6 +153,7 @@ In this demo you can see different images position next to each other in a row. 
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     $$I = \int f(x)\,dx$$
+
 </div>
 
 <div class="highlight-box-purple">
@@ -164,6 +166,7 @@ In this demo you can see different images position next to each other in a row. 
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     $$I = \int f(x)\,dx$$
+
 </div>
 
 <div class="highlight-box-red">
@@ -188,6 +191,7 @@ In this demo you can see different images position next to each other in a row. 
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     $$I = \int f(x)\,dx$$
+
 </div>
 
 <div class="highlight-box-green">
@@ -200,6 +204,7 @@ In this demo you can see different images position next to each other in a row. 
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     $$I = \int f(x)\,dx$$
+
 </div>
 
 <div class="highlight-box-yellow">
@@ -212,6 +217,7 @@ In this demo you can see different images position next to each other in a row. 
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     $$I = \int f(x)\,dx$$
+
 </div>
 
 ## Custom fieldsets
@@ -227,6 +233,7 @@ In this demo you can see different images position next to each other in a row. 
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -241,6 +248,7 @@ In this demo you can see different images position next to each other in a row. 
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -255,6 +263,7 @@ In this demo you can see different images position next to each other in a row. 
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -269,6 +278,7 @@ In this demo you can see different images position next to each other in a row. 
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -283,6 +293,7 @@ In this demo you can see different images position next to each other in a row. 
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -297,6 +308,7 @@ In this demo you can see different images position next to each other in a row. 
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -313,6 +325,7 @@ The following is accessible with `<example envName="Some example">...</example>`
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     $$I = \int f(x)\,dx$$
+
 </example>
 
 <example>
@@ -324,6 +337,7 @@ The following is accessible with `<example envName="Some example">...</example>`
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     $$I = \int f(x)\,dx$$
+
 </example>
 
 The following is accessible with `<warning-box title="Warning!">...</warning-box>`.
@@ -337,6 +351,7 @@ The following is accessible with `<warning-box title="Warning!">...</warning-box
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     $$I = \int f(x)\,dx$$
+
 </warning-box>
 
 The following is accessible with `<todo-box>...</todo-box>`.
@@ -347,34 +362,38 @@ Some text about something that needs to be done ...
 
 Paragraph before table.
 
-<table>
-    <thead><tr>
-        <th>X</th>
-        <th>Y</th>
-        <th>Z</th>
-    </tr></thead>
-    <tbody>
-        <tr>
-            <td>x1</td>
-            <td>y1</td>
-            <td>z1</td>
-        </tr>
-        <tr>
-            <td>x2</td>
-            <td>y2</td>
-            <td>z2</td>
-        </tr>
-        <tr>
-            <td>$\sqrt{x_3}$</td>
-            <td>$\sqrt{y_3}$</td>
-            <td>$\sqrt{z_3}$</td>
-        </tr>
-    </tbody>
-</table>
+<smartTable>
+    <tableCaption>Some information about the table.</tableCaption>
+    <table>
+        <thead><tr>
+            <th>X</th>
+            <th>Y</th>
+            <th>Z</th>
+        </tr></thead>
+        <tbody>
+            <tr>
+                <td>x1</td>
+                <td>y1</td>
+                <td>z1</td>
+            </tr>
+            <tr>
+                <td>x2</td>
+                <td>y2</td>
+                <td>z2</td>
+            </tr>
+            <tr>
+                <td>$\sqrt{x_3}$</td>
+                <td>$\sqrt{y_3}$</td>
+                <td>$\sqrt{z_3}$</td>
+            </tr>
+        </tbody>
+    </table>
+</smartTable>
 
 Paragraph after table.
 
 This is a normal paragraph with a <texttt>monospace</texttt> word in it. This is text with some inline maths $\frac{S}{dx} = S\cdot I$ as well as display maths:
+
 $$f(x) = x^2 + 3568x$$
 
 Display maths are done using `$$...$$`, inline maths can be styled using `$...$`.
@@ -385,7 +404,9 @@ The following is accessible with `<warning-box>...</warning-box>`. The `title` a
 All of this also works within a highlight box.
 
 This is a different text with a <texttt>typewriter</texttt> word in it. This is text with some inline maths $\frac{R}{dx} = S\cdot I$ as well as display maths:
+
 $$\mathbf{E}(x) = \int \mathbf{P}(\omega) d\omega$$
+
 </warning-box>
 
 ## Definition, Theorem, Lemma, and Proof using jQuery
@@ -396,9 +417,11 @@ In this section we will demonstrate various LaTeX-like environments, implemented
 
 <definition envName="$\varepsilon$-neighborhood" envId="eps_neighborhood">
 Given $a \in \mathbb{R}$ and $\varepsilon > 0$, the $\varepsilon$-neighborhood of $a$ is the set
+
 $$
     V_\varepsilon(a) = \{ x \in \mathbb{R} : \left| x - a \right| < \varepsilon \}.
 $$
+
 </definition>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -410,9 +433,11 @@ consequat.
     <envName>$\varepsilon$-neighborhood, from <smart-cite bibId="understanding_analysis"></smart-cite></envName>
     
 Given $a \in \mathbb{R}$ and $\varepsilon > 0$, the $\varepsilon$-neighborhood of $a$ is the set
+
 $$
     V_\varepsilon(a) = \{ x \in \mathbb{R} : \left| x - a \right| < \varepsilon \}.
 $$
+
 </definition>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -597,6 +622,7 @@ This also works in combination with custom environments, such as `theorem`.
 
 <theorem>
 <p>Nunc interdum porttitor erat, in fermentum nisl ultricies tincidunt. Integer auctor purus id metus tempor, ac lacinia nibh dapibus. Nulla sed magna et lacus rhoncus mollis. Praesent quis sem eget purus sagittis ullamcorper. Morbi quis imperdiet ipsum. Nunc vehicula scelerisque magna sit amet ornare. Nulla sed porttitor mauris, id laoreet lacus. Nam vel sapien sit amet ipsum placerat dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam vel urna felis. Duis auctor, orci eget ultrices efficitur, massa mi mattis dui, ullamcorper iaculis orci orci in augue. Curabitur id diam tincidunt, viverra lacus in, tincidunt purus. Quisque neque odio, viverra in posuere congue, mollis mollis lorem. </p>
+
 $$
 \mathrm{adj}(A)b = \begin{bmatrix}
 A & B & \dots & C \\
@@ -635,6 +661,7 @@ D & E & \dots & F \\
 G & H & \dots & I
 \end{bmatrix} 
 $$
+
 </theorem>
 
 ## Bibliography

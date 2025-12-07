@@ -122,20 +122,17 @@ function processTables(tables) {
             $(tab.tableDomObj).after(captionCode);
         }
 
-        // TODO: 
-        //  - rename <smartTable> to <table> this has to be done
-        //  by creating a new <table> with all the original sub-elements
-
         // create new <table> element
-        //  the "border: none" is weird. It prevents a border that is too thick. No idea why...
-        const newTable = $("<table style=\"border: none\" id=\"" + tab.tabId + "\"></table>"); // TODO: id="..."
+        const newTable = $("<table id=\"" + tab.tabId + "\"></table>"); // TODO: id="..."
 
-        // move children
-        newTable.append($(tab.tableDomObj).contents());
+        // retrieve the <table> component of the smart table
+        const tableElement = $(tab.tableDomObj).find("table");
+
+        // move children of the table to the new table
+        newTable.append($(tableElement).contents());
 
         // replace <smartTable> with <table>
         $(tab.tableDomObj).replaceWith(newTable);
-
     }
 }
 

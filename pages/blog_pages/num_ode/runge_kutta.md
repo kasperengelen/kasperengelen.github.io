@@ -269,35 +269,39 @@ Even though these formulas might look complicated at first, it is clear that eac
 The values for $y$ are more complicated, however. If we look closely, they are always of the form $y_i + a \cdot k_s$, where $a$ is some real number and the $k_s$ is equal to some value of the ODE $f(t,y)$. We therefore have that each of these values are actually linear approximations of $y$ at various points in time, where some value of $f(t,y)$ is used instead of the actual derivative of $y$. Clever!
 
 To get a more systematic overview, consider the following table:
-<table>
-    <thead><tr>
-        <th>$k_s$</th>
-        <th>Meaning</th>
-        <th>Used approximation of $y(t)$</th>
-    </tr></thead>
-    <tbody>
-        <tr>
-            <td>$k_1$</td>
-            <td>$f(t_i, y(t_i))$</td>
-            <td>$y(t_i) \approx y_i$</td>
-        </tr>
-        <tr>
-            <td>$k_2$</td>
-            <td>$f\left(t_i + \frac{h}{2}, y\left(t_i + \frac{h}{2}\right)\right)$</td>
-            <td>$y\left(t_i + \frac{h}{2}\right) \approx y_i + \frac{h}{2} k_1 \approx y_i + \frac{h}{2} f(t_i, y(t_i))$</td>
-        </tr>
-        <tr>
-            <td>$k_3$</td>
-            <td>$f\left(t_i + \frac{h}{2}, y\left(t_i + \frac{h}{2}\right)\right)$</td>
-            <td>$y\left(t_i + \frac{h}{2}\right) \approx y_i + \frac{h}{2} k_2 \approx y_i + \frac{h}{2} f\left(t_i + \frac{h}{2}, y\left(t_i + \frac{h}{2}\right)\right)$</td>
-        </tr>
-        <tr>
-            <td>$k_4$</td>
-            <td>$f(t_i + h, y(t_i + h)$</td>
-            <td>$y(t_i + h) \approx y_i + h k_3 \approx y_i + h f\left(t_i + \frac{h}{2}, y\left(t_i + \frac{h}{2}\right)\right)$</td>
-        </tr>
-    </tbody>
-</table>
+<smartTable tabid="intermediate_approx_explanation">
+    <tableCaption>Meaning of the different $k_i$.</tableCaption>
+    <table>
+        <thead><tr>
+            <th>$k_s$</th>
+            <th>Meaning</th>
+            <th>Used approximation of $y(t)$</th>
+        </tr></thead>
+        <tbody>
+            <tr>
+                <td>$k_1$</td>
+                <td>$f(t_i, y(t_i))$</td>
+                <td>$y(t_i) \approx y_i$</td>
+            </tr>
+            <tr>
+                <td>$k_2$</td>
+                <td>$f\left(t_i + \frac{h}{2}, y\left(t_i + \frac{h}{2}\right)\right)$</td>
+                <td>$y\left(t_i + \frac{h}{2}\right) \approx y_i + \frac{h}{2} k_1 \approx y_i + \frac{h}{2} f(t_i, y(t_i))$</td>
+            </tr>
+            <tr>
+                <td>$k_3$</td>
+                <td>$f\left(t_i + \frac{h}{2}, y\left(t_i + \frac{h}{2}\right)\right)$</td>
+                <td>$y\left(t_i + \frac{h}{2}\right) \approx y_i + \frac{h}{2} k_2 \approx y_i + \frac{h}{2} f\left(t_i + \frac{h}{2}, y\left(t_i + \frac{h}{2}\right)\right)$</td>
+            </tr>
+            <tr>
+                <td>$k_4$</td>
+                <td>$f(t_i + h, y(t_i + h)$</td>
+                <td>$y(t_i + h) \approx y_i + h k_3 \approx y_i + h f\left(t_i + \frac{h}{2}, y\left(t_i + \frac{h}{2}\right)\right)$</td>
+            </tr>
+        </tbody>
+    </table>
+</smartTable>
+
 In the table above we can see in the first column the value $k_s$ that is being computed. In the second column, we see the value of $f(t,y)$ that $k_s$ is supposed to approximate. Finally, in the third column, we can see how the unknown value of $y(t)$ is approximated to compute the ODE value at that point in time.
 
 Let us consider each $k_s$ in detail now. The first value, $k_1$, computes the derivative $f(t_i, y(t_i))$ by approximating $y(t_i)$ with $y_i$.
