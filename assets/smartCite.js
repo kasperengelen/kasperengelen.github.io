@@ -341,10 +341,12 @@ class SmartCite {
      * Parameters:
      * - domObj: the HTML object of the quick ref tag.
      * - bibId: string
+     * - extraText: string or null
      */
-    constructor(domObj, bibId) {
+    constructor(domObj, bibId, extraText) {
         this._domObj = domObj;
         this._bibId = bibId;
+        this._extraText = extraText;
     }
 
     /**
@@ -360,6 +362,13 @@ class SmartCite {
     get bibId() {
         return this._bibId;
     }
+
+    /**
+     * Optional extra text associated with the citation.
+     */
+    get extraText() {
+        return this._extraText;
+    }
 }
 
 
@@ -370,7 +379,14 @@ function collectSmartCites() {
     var smartCites = [];
     $("smart-cite").each(function(i) {
         let bibIdAttr = $(this).attr("bibId");
-        smartCites.push(new SmartCite(this, bibIdAttr));
+
+        // get text in between tags
+        let extraText = $(this).text();
+        if (!extraText) {
+            extraText = null;
+        }
+
+        smartCites.push(new SmartCite(this, bibIdAttr, extraText));
     });
 
     return smartCites;
@@ -402,9 +418,19 @@ function renderSmartCites(smartCites, bibliography) {
         let identifier = smartCite.bibId;
 
         if(bibliography.hasBibEntry(identifier)) {
-            // replace with <a href="#...">[NR]</a>
+            let citeLabel = "[";
+            citeLabel += bibliography.getReferenceNumberForIdentifier(identifier);
+
+            // only add a comma and extra text if the string is not empty
+            if (smartCite.extraText) {
+                citeLabel += ", " + smartCite.extraText;
+            }
+
+            citeLabel += "]";
+
+            // replace with <a href="#...">[NR, Optional Text]</a>
             $(smartCite.domObj).replaceWith(function(i, content) {
-                return "<strong><a href=\"#bibEntry_" + identifier + "\">[" + bibliography.getReferenceNumberForIdentifier(identifier) + "]</a></strong>";
+                return "<strong><a href=\"#bibEntry_" + identifier + "\">" + citeLabel + "</a></strong>";
             });
         } else {
             $(smartCite.domObj).replaceWith(function(i, content) {
