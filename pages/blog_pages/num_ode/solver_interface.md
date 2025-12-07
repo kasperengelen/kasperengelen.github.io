@@ -237,12 +237,12 @@ The function above is very similar to our original `solveAndPlotForwardEuler`. I
 Now that we have finished writing our code, we want to see it in action. The interfaces that are more easy-to-use and the reduced code duplication can only be seen when reading and writing the code. However, it is now also possible to put different ODE solvers in the same plot, and this is something we can demonstrate visually.
 
 As a demonstration we will use the following IVP from a previous article:
-<display-math>
+$$
 \begin{align*}
 y'(t) &= 50(\cos(t) - y)\\
 y(0) &= 0.
 \end{align*}
-</display-math>
+$$
 
 In the previous article we saw that the forward and backward Euler methods performed differently on this IVP, even for different step-sizes. We will now use our new solver and plotting interface to compare both methods in the same plot.
 

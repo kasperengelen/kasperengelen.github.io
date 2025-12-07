@@ -31,9 +31,11 @@ There are currently five different smart enviroments: lemma, theorem, definition
 
 <definition>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, id sodales risus enim eget arcu.
-    <display-math>
+
+    $$
         I = \int f(x)\,dx
-    </display-math>
+    $$
+
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </definition>
 
@@ -42,18 +44,22 @@ There are currently five different smart enviroments: lemma, theorem, definition
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, 
     id sodales risus enim eget arcu.
-    <display-math>
+
+    $$
         I = \int f(x)\,dx
-    </display-math>
+    $$
+    
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </definition>
 ```
 
 <theorem>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, id sodales risus enim eget arcu.
-    <display-math>
+
+    $$
         I = \int f(x)\,dx
-    </display-math>
+    $$
+
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </theorem>
 
@@ -62,18 +68,22 @@ There are currently five different smart enviroments: lemma, theorem, definition
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, 
     id sodales risus enim eget arcu.
-    <display-math>
+
+    $$
         I = \int f(x)\,dx
-    </display-math>
+    $$
+
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </theorem>
 ```
 
 <lemma>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, id sodales risus enim eget arcu.
-    <display-math>
+
+    $$
         I = \int f(x)\,dx
-    </display-math>
+    $$
+    
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </lemma>
 
@@ -82,18 +92,22 @@ There are currently five different smart enviroments: lemma, theorem, definition
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, 
     id sodales risus enim eget arcu.
-    <display-math>
+
+    $$
         I = \int f(x)\,dx
-    </display-math>
+    $$
+
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </lemma>
 ```
 
 <proof>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, id sodales risus enim eget arcu.
-    <display-math>
+
+    $$
         I = \int f(x)\,dx
-    </display-math>
+    $$
+
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </proof>
 
@@ -102,9 +116,11 @@ There are currently five different smart enviroments: lemma, theorem, definition
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, 
     id sodales risus enim eget arcu.
-    <display-math>
+
+    $$
         I = \int f(x)\,dx
-    </display-math>
+    $$
+
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </proof>
 ```
@@ -113,9 +129,11 @@ There are currently five different smart enviroments: lemma, theorem, definition
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, 
     id sodales risus enim eget arcu.
-    <display-math>
+
+    $$
         I = \int f(x)\,dx
-    </display-math>
+    $$
+
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </example>
 
@@ -124,9 +142,11 @@ There are currently five different smart enviroments: lemma, theorem, definition
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Cras luctus, turpis quis pulvinar auctor, diam ipsum euismod augue, 
     id sodales risus enim eget arcu.
-    <display-math>
+
+    $$
         I = \int f(x)\,dx
-    </display-math>
+    $$
+    
     Vivamus erat est, elementum a nulla ac, feugiat volutpat est.
 </example>
 ```

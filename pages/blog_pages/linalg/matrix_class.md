@@ -32,12 +32,12 @@ sitemap:
 
 ## Storing matrices in memory
 
-<p>As you might already know, matrices are two-dimensional structures with rows and columns. Below you can see a matrix <inline-math>M</inline-math> with two rows and 3 columns:</p>
+<p>As you might already know, matrices are two-dimensional structures with rows and columns. Below you can see a matrix $M$ with two rows and 3 columns:</p>
 
-<display-math>M = \begin{bmatrix}
+$$M = \begin{bmatrix}
 1 & -2 & 34\\
 46 & 500 & -60
-\end{bmatrix}.</display-math>
+\end{bmatrix}.$$
 
 <p>However, computers store everything in memory sequentially. That is, all data in memory is represented as a single sequence of bytes. As such, we will have to devise a way to store two-dimensional elements in one-dimensional memory. Traditionally, there are two important ways of doing so: row-major and column-major. This is illustrated by the figure below:</p>
 
@@ -61,11 +61,11 @@ sitemap:
 <!-- <example-box>
 <example-title>Example</example-title>
 
-<p>Consider the matrix <inline-math>M</inline-math> as defined earlier:
-<display-math>M = \begin{bmatrix}
+<p>Consider the matrix $M$ as defined earlier:
+$$M = \begin{bmatrix}
 1 & -2 & 34\\
 46 & 500 & -60
-\end{bmatrix}.</display-math>
+\end{bmatrix}.$$
 When stored in memory, the matrix will look like below:</p>
 
 <table>
@@ -124,10 +124,10 @@ When stored in memory, the matrix will look like below:</p>
 
 <p>Let us once again consider the following matrix:</p>
 
-<display-math>M = \begin{bmatrix}
+$$M = \begin{bmatrix}
 1 & -2 & 34\\
 46 & 500 & -60
-\end{bmatrix}.</display-math>
+\end{bmatrix}.$$
 
 <p>If we wish to access the element <texttt>-60</texttt> at row <texttt>r=1</texttt> and column <texttt>c=2</texttt>, using row-major or column-major, we'll need to apply the respective formulas:</p>
 
@@ -148,7 +148,7 @@ When stored in memory, the matrix will look like below:</p>
 
 ## Column-major and the legacy of FORTRAN
 
-<p>Now that we have learned how matrices can be stored in memory, we need to choose whether our own matrix will make use of row-major or column-major ordering. When making this choice we need to take into account how we will use our matrix, as well as the libraries that we want to interact with. Note that converting between row-major and column-major might take as much as <inline-math>\mathcal{O}(n^2)</inline-math> operations in the worst case, although there are more efficient tricks to implement such a conversion.</p>
+<p>Now that we have learned how matrices can be stored in memory, we need to choose whether our own matrix will make use of row-major or column-major ordering. When making this choice we need to take into account how we will use our matrix, as well as the libraries that we want to interact with. Note that converting between row-major and column-major might take as much as $\mathcal{O}(n^2)$ operations in the worst case, although there are more efficient tricks to implement such a conversion.</p>
 
 <p>For the necessary context, we first need to go back to 1957 when John Backus invented the FORTRAN language. This language was the first "modern" programming language that was more high-level and user friendly than binary or assembly. Its primary purpose was to simplify the job of programming numerical algorithms in mainframes, which up until then had been mostly done by manually flipping bits. Its main contribution was allowing programmers to specify machine instructions using plain language, using keywords such as <texttt>for</texttt> and <texttt>if</texttt>, as opposed to implementing programs in binary or assembly.</p>
 
@@ -516,11 +516,11 @@ This will produce the following result in the terminal:
 
 If we render this with LaTeX, we get the full contents of the matrix in a nice and clean format:
 
-<display-math>\begin{bmatrix}
+$$\begin{bmatrix}
 1.0 & 2.0 & 3.0\\
 4.0 & 2464.0 & 6.0\\
 7.0 & 8.0 & 9.0\\
-\end{bmatrix}</display-math>
+\end{bmatrix}$$
 
 ## Tests
 

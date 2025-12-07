@@ -52,9 +52,11 @@ When we say that we want to solve an ODE, we usually mean that we want to solve 
 <definition>
 <envName>Initial-value problem</envName>
 An initial-value problem (IVP) consists of an ODE
-<display-math>
+
+$$
 \frac{dy}{dt}(t) = f(t, y(t)),
-</display-math>
+$$
+
 and an <em>initial condition</em> $y_0$ at time $t_0$.
 
 The <em>solution</em> of an IVP is a function $y$ such that $y(t_0) = y_0$ and $y'(t) = f(t, y(t))$ for all $t$.
@@ -87,9 +89,11 @@ We first give a formal definition:
 
 <p>
 Using an iterative scheme defined as
-<display-math>
+
+$$
 y_{i+1} = y_i + h f(t_i, y_i),\,\text{with}\,i \in \{0, 1, \dots\},
-</display-math> 
+$$ 
+
 we can approximate the unique solution $y(t)$ of the IVP with values $y_i \approx y(t_i)$ and $t_i = t_0 + ih$.
 </p>
 </definition>
@@ -149,31 +153,37 @@ Let us start by deriving the forward Euler method using Taylor series. The Taylo
 <theorem envId="taylor_polynom">
     <envName>First-order Taylor approximation.</envName>
     Let $y(x)$ be a function with derivative $y'(a)$ at $a \in \mathbb{R}$. The first-order Taylor approximation of $y(x)$ is defined as 
-    <display-math>
+
+    $$
         y(x) = y(a) + y'(a)(x-a) + R_a(x).
-    </display-math>
+    $$
 
     Here, $R_a(x)$ is the <em>remainder</em>, which is defined as
 
-    <display-math>
+    $$
         R_a(x) = \frac{f''(\xi)}{2}(x-a)^2,
-    </display-math>
+    $$
+
     for some real number $\xi \in [a, x]$.
 </theorem>
 
 We already see a familiar structure emerging. If we take the initial point to be $a=t_0$, and we evaluate at $x=t_1$, then we also have that $y(a) = y(t_0) = y_0$. We also take $x - a = t_1 - t_0 = h$. Finally, $y'(t_0) = f'(t_0, y_0)$. We then get the following:
-<display-math>
+
+$$
 y(t_1) = y_0 + hf(t_0, y_0) + R_{t_0}(t_1).
-</display-math>
+$$
+
 If we ignore the error term $R_{t_0}(t_1)$, we get the first step of the forward Euler method:
-<display-math>
+
+$$
 y(t_1) \approx y_1 =  y_0 + hf(t_0, y_0).
-</display-math>
+$$
 
 More generally, we can also derive the $i$-th step of the forward Euler method:
-<display-math>
+
+$$
 y(t_{i+1}) \approx y_{i+1} = y_i + (t_{i+1} - t_i)y'(t_{i}) =  y_i + hf(t_i, y_i).
-</display-math>
+$$
 
 We can thus conclude that the forward Euler method consists of iteratively approximating the ODE using a first-order Taylor polynomial. In the literature, the forward Euler method is sometimes also derived using the finite-difference formula. Note that the finite-difference formula is actually a first-order Taylor approximation in disguise!
 
@@ -182,18 +192,19 @@ We can thus conclude that the forward Euler method consists of iteratively appro
 Another, distinct, way to derive the forward Euler method, is by applying quadrature. Quadrature is a technique to numerically approximate integrals. In this case, we will solve the ODE by integrating it, motivated by the fact that $y(t) = y(t_0) + \int_{t_0}^{t} y'(\tau) d\tau$. We will, however, only apply a very simple quadrature technique where we approximate the integral between $t_i$ and $t_{i+1}$ using a rectangle of width $h = t_{i+1} - t_i$ and height equal to $f(t_i, y_i) \approx y'(t_i)$. The idea is that the ODE does not vary too much across the time interval $[t_i, t_{i+1}]$ if we keep the step size $h$ small enough.
 
 Formally, the forward Euler method is derived using quadrature as follows:
-<display-math>
+
+$$
 \begin{aligned}
 y(t_{i+1}) &= y(t_i) + \int_{t_i}^{t_{i+1}} y'(\tau) d\tau \\
 &\approx y_i + h f(t_i, y_i)
 \end{aligned}
-</display-math>
+$$
 
 In <smart-ref targetId="forward_euler_quadrature" targetType="fig"></smart-ref> we can see an illustration of this integration process. The green curve on top is the actual ODE given by $f(t, y(t))$. In blue, we can see a line $f(t_i, y_i)$ with which we approximate the ODE. The blue shaded area below $f(t_i, y_i)$ has area $h \cdot f(t_{i}, y_{i})$ and is our approximation of the integral
 
-<display-math>
+$$
 \int_{t_i}^{t_{i+1}} y'(\tau) d\tau = \int_{t_i}^{t_{i+1}} f(\tau, y(\tau)) d\tau.
-</display-math>
+$$
 
 The area shaded in red is the error, which is the difference between the exact integral and our approximation.
 
@@ -229,9 +240,11 @@ We first consider the local truncation error (LTE). This is the error that our m
 <theorem envId="local_error">
 <envName>Local error, from <smart-cite bibId="burden_and_faires"></smart-cite></envName>
 We assume that the solution at the start of the $i$-th iteration is exactly known, such that $y(t_i) = y_i$. We also assume that an upper bound $M \geq \absLength{y''(t)}$ exists on the second derivative of the unique solution $y$. Let $h$ be the step size. The error introduced at the $i$-th iteration is bounded as follows:
-<display-math>
+
+$$
     \absLength{y(t_{i+1}) - y_{i+1}} \leq \frac{h^2M}{2}.
-</display-math>
+$$
+
 </theorem>
 
 <proof>
@@ -239,47 +252,55 @@ We assume that the solution at the start of the $i$-th iteration is exactly know
 
 <p>
     In the forward Euler method, the solution $y$ to the initial value problem, is approximated between $t_i$ and $t_{i+1}$ using a first-order Taylor approximation. From <smart-ref targetId="taylor_polynom" targetType="thm"></smart-ref> we know that 
-    <display-math>
+
+    $$
         y(t_{i+1}) = y(t_i) + hf(t_i, y(t_i)) + R_{t_i}(t_{i+1}),
-    </display-math>
+    $$
+
     where $R_{t_i}(t_{i+1})$ is the remainder.</p>
 
 <p>
     If we subtract the first-order approximation from the actual function, we get
-    <display-math>
+    
+    $$
         y(t_{i+1}) - (y(t_i) + hf(t_i, y(t_i))) = R_{t_i}(t_{i+1}),
-    </display-math>
+    $$
+
     which implies
-    <display-math>
+
+    $$
         y(t_{i+1}) - y_{i+1} = R_{t_i}(t_{i+1}),
-    </display-math>
+    $$
+
     due to the way that the forward Euler method is defined in <smart-ref targetType="def" targetId="forward_euler"></smart-ref>.
 </p>
 
 <p>
     In <smart-ref targetId="taylor_polynom" targetType="thm"></smart-ref> we saw that the remainder is defined as     
-    <display-math>
+    
+    $$
         R_{t_i}(t_{i+1}) = \frac{y''(\xi)}{2}(t_{i+1} - t_i)^2 = \frac{h^2y''(\xi)}{2},
-    </display-math>
+    $$
+
     for some real number $\xi \in [t_i, t_{i+1}]$.
 
     Since we don't know this value $\xi$, we will instead assume there exists an upper-bound $M$ on the absolute value of the second derivative, such that $M \geq \absLength{y''(t)}$ for all $t \in [t_i, t_{i+1}]$. We then get
 
 
-    <display-math>
+    $$
         \begin{align*}
         \absLength{R_{t_i}(t_{i+1})} &= \absLength{\frac{h^2y''(\xi)}{2}} = \frac{h^2}{2}\absLength{y''(\xi)} \\
                                      &\leq \frac{h^2}{2}M, \\
         \end{align*}
-    </display-math>
+    $$
 
     and therefore,
 
-    <display-math>
+    $$
         \begin{align*}
             \absLength{y(t_{i+1}) - y_{i+1}} &\leq \frac{h^2M}{2} .
         \end{align*}
-    </display-math>
+    $$
 </p>
 
 </proof>
@@ -287,9 +308,12 @@ We assume that the solution at the start of the $i$-th iteration is exactly know
 To illustrate the LTE bound, we will compute an upper bound on the LTE of an example initial-value problem <smart-cite bibId="two_ode_examples"></smart-cite>.
 <example>
 <p>Let $y'(t) = f(t, y) = y - sin(t) - cos(t)$ be an ODE and $y(0)=1$ be an initial value. This IVP has the exact solution $y(t) = cos(t)$. We therefore have that $y''(t) = -cos(t)$ with $\absLength{-cos(t)} \leq 1$. Therefore, the local error is bounded as follows:
-<display-math>
+
+$$
     \absLength{y(t_{i+1}) - y_{i+1}} \leq \frac{h^2}{2}.
-</display-math></p>
+$$
+
+</p>
 
 <p>If we take step-size $h=0.5$ we get an LTE bound of $0.125$, and with a smaller step-size of $h=0.1$ the error is bounded by $0.005$.</p>
 </example>
@@ -301,9 +325,11 @@ As noted earlier, the global error is the error $\absLength{y_i - y(t_i)}$, assu
 <theorem envId="global_error">
 <envName>Global error, from <smart-cite bibId="burden_and_faires"></smart-cite></envName>
 Let $y' = f(t,y)$, $y(t_0) = y_0$, and let $f$ be Lipschitz continuous in $y$ with Lipschitz constant $L$. We also assume an upper bound $M \geq \absLength{y''(t)}$ exists on the second derivative of the solution $y$. The following is true for all $i > 0$:
-<display-math>
+
+$$
 \absLength{y(t_{i}) - y_{i}} \leq \frac{hM}{2L}\left(e^{L(t_{i} - t_0)} - 1\right).
-</display-math>
+$$
+
 </theorem>
 The theorem above says that if (a) our function $f$, which describes our system of ODEs, is Lipschitz-continuous and (b) the second derivative of our solution, denoted as $y''$, has an upper bound, then we also have an upper bound on the error caused by applying the forward Euler method. Below we sketch a formal proof in order to convey some intuition as to why this is true.
 
@@ -314,13 +340,17 @@ In the proof we will be leveraging the following lemma, which provides an upper 
 <lemma envId="decreasing_sequence_bound">
     <envName>from <smart-cite bibId="burden_and_faires"></smart-cite></envName>
     Let $s, t > 0$ be positive real numbers, and let $\{a_i\}_{i=0}^k$ be a sequence with $a_0 \geq -t/s$, and 
-    <display-math>
+    
+    $$
         a_{i+1} \leq (1+s) a_i + t,\,\,i \in \{0,1,2, \dots, k-1\}.
-    </display-math>
+    $$
+    
     The following holds:
-    <display-math>
+    
+    $$
         a_{i+1} \leq e^{(i+1)s} \left( a_0 + \frac{t}{s} \right) - \frac{t}{s}.
-    </display-math>
+    $$
+
 </lemma>
 
 A proof of <smart-ref targetType="lem" targetId="decreasing_sequence_bound"></smart-ref> can be found in the book by Burden and Faires <smart-cite bibId="burden_and_faires"></smart-cite>. We are now ready to formally prove <smart-ref targetType="thm" targetId="global_error"></smart-ref>.
@@ -329,57 +359,70 @@ A proof of <smart-ref targetType="lem" targetId="decreasing_sequence_bound"></sm
 <envName><smart-ref targetType="thm" targetId="global_error"></smart-ref>, from <smart-cite bibId="burden_and_faires"></smart-cite></envName>
 
 <p>We first characterise what happens to the local error if $\absLength{y(t_i) - y_i} \geq 0$. If we take the difference between $y(t_{i+1})$ and $y_{i+1}$, given by the first-order Taylor polynomial and forward Euler formula, respectively, we get the following:
-    <display-math>
+    
+    $$
     (y(t_{i+1}) - y_{i+1}) = (y(t_i) - y_i) + (hf(t_i, y(t_i)) - hf(t_i, y_i)) + \frac{y''(\xi)}{2}h^2,
-    </display-math>
+    $$
+    
     for some real number $\xi \in [t_i, t_{i+1}]$. Just like in the proof of <smart-ref targetType="thm" targetId="local_error"></smart-ref> we will assume that there exists an upper-bound on the second derivative: $\absLength{y''(t)} \leq M$ for all $t \in [t_i, t_{i+1}]$.
 
     We also apply the triangle inequality by turning all the differences into absolute values:
 
-    <display-math>
+    $$
     \absLength{y(t_{i+1}) - y_{i+1}} \leq \absLength{y(t_i) - y_i} + \absLength{hf(t_i, y(t_i)) - hf(t_i, y_i)} + \frac{M}{2}h^2.
-    </display-math>
+    $$
 
     We then apply a crucial property of Lipschitz continuous functions:
     $\absLength{f(x) - f(y)} \leq L\absLength{x - y}$. The value $L$ is called the <em>Lipschitz constant</em>. The formula then becomes
 
-    <display-math>
+    $$
     \begin{align*}
     \absLength{y(t_{i+1}) - y_{i+1}} &\leq \absLength{y(t_i) - y_i} + \absLength{hf(t_i, y(t_i)) - hf(t_i, y_i)} + \frac{M}{2}h^2 \\
     &\leq \absLength{y(t_i) - y_i} + hL\absLength{y(t_i) - y_i} + \frac{M}{2}h^2 \\
     &\leq (1+hL) \absLength{y(t_i) - y_i} + \frac{M}{2}h^2
     \end{align*}
-    </display-math>
+    $$
+
 </p>
 
 <p>Now that we have a way of going from $\absLength{y(t_i) - y_i}$ to $\absLength{y(t_{i+1}) - y_{i+1}}$, we can use <smart-ref targetType="lem" targetId="decreasing_sequence_bound"></smart-ref> to "march" this error across all iterations $\{0, \dots, i\}$, resulting in a bound on the accumulated errors. Recall that in order to apply the lemma, we first need to satisfy the following inequality:
-<display-math>
+
+$$
 a_{i+1} \leq (1+s) a_i + t.
-</display-math>
+$$
+
 </p>
 
 <p>If we take $s = hL$, $t=\frac{h^2M}{2}$, and $a_i = \absLength{y(t_i) - y_i}$, then we obtain the following:
-<display-math>
+
+$$
 \absLength{y(t_{i+1}) - y_{i+1}} \leq (1 + hL) \absLength{y(t_i) - y_i}  + \frac{h^2M}{2},
-</display-math>
+$$
+
 and this holds since we just demonstrated it above.
 </p>
 
 <p>Now that we have satisfied the required conditions of <smart-ref targetType="lem" targetId="decreasing_sequence_bound"></smart-ref>, the resulting inequality holds:
-<display-math>
+
+$$
 a_{i+1} \leq e^{(i+1)s} \left( a_0 + \frac{t}{s} \right) - \frac{t}{s}
-</display-math>
+$$
+
 If we again take $s = hL$, $t=\frac{h^2M}{2}$, and $a_{i+1} = \absLength{y(t_{i+1}) - y_{i+1}}$, we obtain
-<display-math>
+
+$$
 \begin{align*}
 \absLength{y(t_{i+1}) - y_{i+1}} &\leq e^{(i+1)hL} \left(\frac{h^2M}{2hL} \right) - \frac{h^2M}{2hL} \\
 &= \frac{hM}{2L}\left(e^{L(t_{i+1} - t_0)} - 1\right).
 \end{align*}
-</display-math>
+$$
+
 The latter being true since $a_0 = \absLength{y(t_{0}) - y_{0}} = 0$ and also $(i+1)h = (t_{i+1} - t_0)$ due to the fact that 
-<display-math>
+
+$$
 k\cdot h = (t_{k} - t_{k-1}) + (t_{k-1} - t_{k-2}) + \dots + (t_1 - t_0) = t_k - t_0,
-</display-math>
+$$
+
 for all integers $k > 0$. We thus have proven the global error bound. Q.E.D.
 </p>
 </proof>
@@ -392,9 +435,12 @@ Just like with the local error, we will once again demonstrate this error bound 
 
 
 <p>If we put this all together, the global error is bounded as follows:
-<display-math>
+
+$$
 \absLength{y(t_{i}) - y_{i}} \leq \frac{h}{2}\left(e^{t_{i}} - 1\right).
-</display-math></p>
+$$
+
+</p>
 
 <p>We will now compute some error bounds for solutions with $t \in [0, 10]$. We will use different step-sizes $h \in \{0.001, 0.1, 0.5\}$. In <smart-ref targetId="step_size_error_bound" targetType="tab"></smart-ref> we can see that a smaller step-size results in a lower error, but that it is also computationally more intensive due to the higher number of iterations.</p>
 
@@ -514,9 +560,9 @@ Since it is important to be precise when describing mathematical concepts, we gi
 <definition envId="big_o_limsup">
 <envName>Infinitesimal big-O, from <smart-cite bibId="wiki_big_o"></smart-cite></envName>
 Let $f(x)$ and $g(x)$ be functions. We then say that $f(x) \in \mathcal{O}(g(x))$ as $x \to 0$ if there exist $c > 0$ and $\delta > 0$ such that 
-<display-math>
+$$
 \absLength{f(x)} \leq c \absLength{g(x)}\,\text{for all}\, 0 < x < \delta.
-</display-math>
+$$
 </definition>
 
 Note that in this definition, we specifically have $x$ going to 0 and not towards infinity. We may thus reasonably assume that $x$ is less than one. Formally, this definition says that if $x$ is sufficiently small (i.e., less than $\delta$), then the function $f$ is bounded by $g$, up to a constant factor $c$. To illustrate this, we will give two small examples.
@@ -535,16 +581,19 @@ We have that $5x^2 + x^3 \in \mathcal{O}(x^2)$. This is true since if we take $c
 <example>
 <envName>Big-O for forward Euler</envName>
 <p>Recall that in <smart-ref targetType="thm" targetId="local_error"></smart-ref> we obtained the following bound for the local error:
-<display-math>
+
+$$
 \absLength{y(t_{i+1}) - y_{i+1}} \leq \frac{h^2M}{2}
-</display-math>
+$$
 
 We have that $\frac{h^2M}{2} \in \mathcal{O}(h^2)$.</p>
 
 <p>Similarly, we obtained a bound for the global error:
-<display-math>
+
+$$
 \absLength{y(t_{i}) - y_{i}} \leq \frac{hM}{2L}\left(e^{L(t_i - t_0)} - 1\right),
-</display-math>
+$$
+
 for which it is true that $\frac{hM}{2L}\left(e^{L(t_i - t_0)} - 1\right) \in \mathcal{O}(h)$. Do note that while an error of order $\mathcal{O}(h)$ might seem small since it is linear in $h$, the global error bound is actually exponential in $t_i - t_0$ and therefore explodes as $t_i$ increases.
 </p>
 </example>
@@ -556,9 +605,11 @@ We can see that the local truncation error of the forward Euler method scales wi
 Let $n$ be the number of iterations, and let $\mathcal{O}(h^2)$ be the size of the local error introduced at every iteration. We then have that the total amount of error scales with $\mathcal{O}(n \cdot h^2)$, since we just add all errors across the different iterations.
 
 <p>The number of steps is given by $n = \frac{t_n - t_0}{h}$, since we integrate the ODE from $t_0$ until $t_n$ in steps of size $h$. This number scales with $\mathcal{O}\left(\frac{1}{h}\right)$. If we combine this with the local truncation error, we get 
-<display-math>
+
+$$
 \mathcal{O}\left(nh^2\right) = \mathcal{O}\left(\frac{1}{h}h^2\right) = \mathcal{O}(h).
-</display-math>
+$$
+
 </p>
 
 The Euler method is a <em>first-order method</em>, which means that the local error is of order $\mathcal{O}(h^2)$, and the global error is of order $\mathcal{O}(h)$. Generally, a method with local error $\mathcal{O}(h^{k+1})$ is said to be of the $k$-th order <smart-cite bibId="wiki_forward_euler"></smart-cite>.
@@ -626,12 +677,12 @@ We will now consider some initial value problems by way of example. What is inte
 
 Concretely, we will first consider an <em>unstable</em> ODE <smart-cite bibId="two_ode_examples"></smart-cite>, given by
 
-<display-math>
+$$
 \begin{array}{rl}
 y'(t) &= y - \sin(t) - \cos(t), \\
 y(0) &= 1.
 \end{array}
-</display-math>
+$$
 
 In Julia, this IVP can be implemented as follows:
 
@@ -660,12 +711,12 @@ plot!(cos, 0, 5, label="cos(t)")
 
 Next, we consider a <em>stable</em> ODE <smart-cite bibId="two_ode_examples"></smart-cite>, given by
 
-<display-math>
+$$
 \begin{array}{rl}
 y'(t) &= - y - \sin(t) + \cos(t), \\
 y(0) &= 1.
 \end{array}
-</display-math>
+$$
 
 In similar fashion to the previous ODE, we can implement this equation in Julia:
 

@@ -26,7 +26,7 @@ The following colors are supported:
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 
@@ -34,7 +34,7 @@ The following colors are supported:
 <div class="highlight-box-white">
     <h3>Title</h3>
     <p>...</p>
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 ```
 
@@ -49,7 +49,7 @@ The following colors are supported:
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 
@@ -57,7 +57,7 @@ The following colors are supported:
 <div class="highlight-box-gray">
     <h3>Title</h3>
     <p>...</p>
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 ```
 ## Purple
@@ -71,7 +71,7 @@ The following colors are supported:
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 
@@ -79,7 +79,7 @@ The following colors are supported:
 <div class="highlight-box-purple">
     <h3>Title</h3>
     <p>...</p>
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 ```
 ## Red
@@ -93,7 +93,7 @@ The following colors are supported:
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 
@@ -101,7 +101,7 @@ The following colors are supported:
 <div class="highlight-box-red">
     <h3>Title</h3>
     <p>...</p>
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 ```
 ## Blue
@@ -115,7 +115,7 @@ The following colors are supported:
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 
@@ -123,7 +123,7 @@ The following colors are supported:
 <div class="highlight-box-blue">
     <h3>Title</h3>
     <p>...</p>
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 ```
 ## Green
@@ -137,7 +137,7 @@ The following colors are supported:
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 
@@ -145,7 +145,7 @@ The following colors are supported:
 <div class="highlight-box-green">
     <h3>Title</h3>
     <p>...</p>
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 ```
 ## Yellow
@@ -159,7 +159,7 @@ The following colors are supported:
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 
@@ -167,6 +167,6 @@ The following colors are supported:
 <div class="highlight-box-yellow">
     <h3>Title</h3>
     <p>...</p>
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 ```

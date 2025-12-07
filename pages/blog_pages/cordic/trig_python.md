@@ -176,10 +176,11 @@ Let us first explore what a fixed-point number looks like. It is similar to a de
     </div>
 </div>
 
-The base-10 value of $b$ is equal to
-<display-math>
+The base-10 value of $b$ is equal to:
+
+$$
 \mathrm{base10}(b) = b_n 2^{n-k} + \dots + b_{k+1} 2^0 + b_{k} 2^{-1} + \dots + b_1 2^{-k} = \sum_{i=1}^n b_{i} 2^{i-k-1}.
-</display-math>
+$$
 
 Since fixed-point numbers are simply strings of binary numbers, we can store them as integers. This allows us to easily implement addition and subtraction using binary adders. Multiplication and division by 2 can also be implemented using bit-shifts. Compare this to floating-point numbers, which require advanced circuitry in order to make arithmetic possible. We can see that fixed-point arithmetic is efficient and easy to implement, which makes this a major advantage of the CORDIC algorithm.
 

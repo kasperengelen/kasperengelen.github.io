@@ -49,9 +49,11 @@ Before we introduce the Runge-Kutta method, we will first recall the definition 
 <definition>
 <envName>Initial-value problem</envName>
 An initial-value problem (IVP) consists of an ODE
-<display-math>
+
+$$
 \frac{dy}{dt}(t) = f(t, y(t)),
-</display-math>
+$$
+
 and an <em>initial condition</em> $y_0$ at time $t_0$.
 
 The <em>solution</em> of an IVP is a function $y$ such that $y(t_0) = y_0$ and $y'(t) = f(t, y(t))$ for all $t$.
@@ -67,18 +69,22 @@ One way to approximate the solution $y$ of the initial-value problem, is to empl
 
 <p>
 Using an iterative scheme defined as
-<display-math>
+
+$$
 y_{i+1} = y_i + h \sum_{s=1}^n b_s k_s,
-</display-math> 
+$$ 
+
 we can approximate the unique solution $y(t)$ of the IVP with values $y_i \approx y(t_i)$ and $t_i = t_0 + ih$.
 Here, $n \in \mathbb{N}$ is the number of stages of the Runge-Kutta method and $\vec{b} \in \mathbb{R}^n$ is a vector.
 </p>
 
 <p>
 The values $k_s$ for $s \in \{1, \dots, n\}$ are given by
-<display-math>
+
+$$
 	k_{s} = f\left(t_i + c_s h, y_i + h\sum_{j=1}^{s-1} a_{sj}k_{j}\right),
-</display-math>
+$$
+
 where $\vec{c} \in \mathbb{R}^n$ is a vector with $c_0=0$, and $[a_{ij}] \in \mathbb{R}^{n \times n}$ is a (strictly lower-triangular) matrix.
 </p>
 </definition>
@@ -96,7 +102,8 @@ In this article we will only deal with explicit Runge-Kutta methods. The value $
 <p>In the previous section, the general formula for Runge-Kutta methods was introduced. We can see that there are many possibilities of choosing $n, [a_{ij}], \vec{b}, \vec{c}$, with each combination of values producing its own Runge-Kutta method. A so-called <em>Butcher tableau</em> can be used to arrange these values in a standardised and easy to use format. This format is named after John C. Butcher who introduced such tables in 1964 <smart-cite bibId="butcher1964_implicit"></smart-cite>.</p>
 
 In the general case, for a Runge-Kutta method with $n$ stages, we get the following table:
-<display-math>
+
+$$
 \begin{array}
 {c|ccccc}
 0 \\
@@ -108,39 +115,43 @@ c_n     & a_{n,1}   & a_{n,2}    & \cdots & a_{n,n-2} & a_{n,n-1}\\
 \hline
         & b_1       & b_2       & \cdots & b_{n-1} & b_n
 \end{array}
-</display-math>
+$$
 
 We can now consider specific Runge-Kutta methods by fixing values for $n$, $[a_{ij}]$, $\vec{b}$, and $\vec{c}$. If we take $n=1$ we arrive at the forward Euler method:
-<display-math>
+
+$$
 y_{i+1} = y_i + hf(t_i, y_i),
-</display-math>
+$$
+
 since $c_1 = 0$ and the sum over $a_{sj}$ falls away. Also note that $\sum_s b_s = 1$. This leads to a very tiny Butcher tableau:
-<display-math>
+
+$$
 \begin{array}
 {c|c}
 0\\
 \hline
 & 1
 \end{array}
-</display-math>
+$$
 
 The forward Euler method is quite simple and has been covered in an <smart-link linkType="int" linkId="forward_euler">earlier article</smart-link>. We can also obtain more complicated Runge-Kutta methods by choosing a higher value for $n$. If we fix $n=4$ together with a specific set of coefficients <smart-cite bibId="kutta1901">end of section III</smart-cite>, we get the well known 4th order Runge-Kutta method:
 
-<display-math>
+$$
 y_{i+1} = y_i + h \frac{k_1 + 2k_2 + 2k_3 + k_4}{6},
-</display-math>
+$$
 
-<display-math>
+$$
 \begin{align*}
 k_1 &= f(t_i, y_i)\\
 k_2 &= f(t_i + \frac{h}{2}, y_i + k_1\frac{h}{2})\\
 k_3 &= f(t_i + \frac{h}{2}, y_i + k_2\frac{h}{2})\\
 k_4 &= f(t_i + h, y_i + hk_3)\\
 \end{align*}
-</display-math>
+$$
 
 We can once again represent this as a Butcher tableau:
-<display-math>
+
+$$
 \begin{array}
 {c|cccc}
 0\\
@@ -150,7 +161,8 @@ We can once again represent this as a Butcher tableau:
 \hline
 & \frac{1}{6} &\frac{1}{3} &\frac{1}{3} &\frac{1}{6} 
 \end{array}
-</display-math>
+$$
+
 The above coefficients are well-known and widely used.
 
 As noted earlier, many values for $n$, $[a_{ij}]$, $\vec{b}$, and $\vec{c}$ can be chosen with quite some degrees of freedom. However, each combination of values must satisfy the so-called <em>order conditions</em>, which differ for each value of $n$. In the beginning of the 20th century it was standard practice to derive these conditions by investigating the Taylor series of the Runge-Kutta formula. In the 1960s, J.C. Butcher developed a generalised theory for Runge-Kutta methods <smart-cite bibId="butcher96_rk_history"></smart-cite>.
@@ -162,21 +174,26 @@ In future articles we will investigate these order conditions more in-depth. For
 While the Runge-Kutta formulas may look quite abstract, they can be quite intuitively explained using numerical integration techniques. In this section we will use Simpson's rule <smart-cite bibId="wiki_simpson_integration"></smart-cite> to motivate the 4th order Runge-Kutta method with Kutta's coefficients. In the literature, numerical integration is also referred to as <em>quadrature</em>.
 
 The idea of using numerical integration is motivated by the fact that an initial-value problem of the form
-<display-math>
+
+$$
 \begin{align*}
     y'(t) &= f(t, y), \\
     y(t_0) &= y_0,
 \end{align*}
-</display-math>
+$$
+
 can be solved using integration. Let $t_a$ and $t_b$ be time values such that $t_0 \leq t_a \leq t_b$. We then have that
-<display-math>
+
+$$
 y(t_b) = y(t_a) + \int_{t_a}^{t_b} f(\tau, y(\tau)) d\tau.
-</display-math>
+$$
 
 When applying our numerical integration technique, we approximate this integral with a sum such that 
-<display-math>
+
+$$
 \int_{t_a}^{t_b} f(\tau, y(\tau)) d\tau \approx \sum_s b_s f(t_s, y(t_s)),
-</display-math>
+$$
+
 where the $b_s$ are the weights and the values $t_s$ are the time values at which we sample the integrand (i.e., our ODE $f(t,y)$). Our integral is thus approximated with a weighted sum of function values.
 
 In this section we will use the above principle to intuitively explain fourth order Runge-Kutta with Kutta's coefficients. Note, however, that this does not constitute a rigorous proof of the method. In a future article we will dive into a more formal motivation for the correctness of the Runge-Kutta method.
@@ -186,22 +203,24 @@ In this section we will use the above principle to intuitively explain fourth or
 Let us first introduce Simpson's rule <smart-cite bibId="wiki_simpson_integration"></smart-cite>. In the general case, this technique is used to approximate definite integrals $\int_{a}^{b}f(\tau)d\tau$ by splitting the integration interval $[a,b]$ into $n$ sub-intervals, where $n$ is an even number. We then approximate the function $f$ across this interval using $\frac{n}{2}$ quadratic polynomials, one for each pair of intervals. The final integral is then the sum of the integrals of the quadratic polynomials.
 
 Consider the general formula
-<display-math>
+
+$$
 \begin{align*}
   \int_a^b f(t) dt
   &\approx \frac{b-a}{6} \sum_{i = 1}^{n/2} \left[f(t_{2i - 2}) + 4f(t_{2i - 1}) + f(t_{2i})\right]\\
   &= \frac{b-a}{6} \left[f(t_0) + 4f(t_1) + 2f(t_2) + 4f(t_3) + 2f(t_4)\right. \\
   &\quad\quad\quad \left.  + \dots + 2f(t_{n - 2}) + 4f(t_{n - 1}) + f(t_n)\right].
 \end{align*}
-</display-math>
+$$
 
 If we evaluate this rule for $n=2$, we get
-<display-math>
+
+$$
 \begin{align*}
   \int_a^b f(t) dt
   &\approx \frac{b-a}{6} \left[f(t_{0}) + 4f(t_{1}) + f(t_{2})\right].
 \end{align*}
-</display-math>
+$$
 
 We can see that the fraction $\frac{b-a}{6}$ appears in the formula above. In the literature, however, the formula will sometimes instead contain $\frac{h}{3}$ with $h=\frac{b-a}{2}$ <smart-cite bibId="wiki_simpson_integration"></smart-cite>. This can be confusing, since in the Runge-Kutta literature we have $h=b-a$.
 
@@ -210,36 +229,40 @@ We can see that the fraction $\frac{b-a}{6}$ appears in the formula above. In th
 We will first cover the case where the ODE $f(t,y)$ does not depend on $y$, such that $y'(t) = f(t)$. Solving this formula is then a simple matter of integration.
 
 If we take the ODE $y'(t) = f(t)$ and we use 4th order Runge-Kutta with a classic choice of coefficients <smart-cite bibId="kutta1901"></smart-cite>, we get
-<display-math>
+
+$$
 \begin{align*}
 y_{i+1} &= y_i + h \frac{1}{6} \left[f(t_i) + 2f\left(t_i + \frac{h}{2}\right) + 2f\left(t_i + \frac{h}{2}\right) + f(t_i + h)\right] \\
 &= y_i + h \frac{1}{6} \left[f(t_i) + 4f\left(t_i + \frac{h}{2}\right) + f(t_i + h)\right].
 \end{align*}
-</display-math>
+$$
 
 This is exactly Simpson's formula for $n=2$ with points $t_0 = t_i, t_1 = t_i + \frac{h}{2}$, and $t_2 = t_i + h$ to approximate $\int_{t_i}^{t_i + h} f(t) dt$.
 
 ### General case
 
 Let us now turn to a differential equation where the derivative depends on both $y$ and $t$. That is, $y'(t) = f(t, y)$. Recall the $y$-independent Runge-Kutta formula from earlier:
-<display-math>
+
+$$
 y_{i+1} = y_i + h \frac{1}{6} \left[f(t_i) + 4f\left(t_i + \frac{h}{2}\right) + f(t_i)\right].
-</display-math>
+$$
 
 If we want to include a dependency on $y$, we get something of the form
-<display-math>
+
+$$
 y_{i+1} = y_i + h \frac{1}{6} \left[f(t_i, y(t_i)) + 4f\left(t_i + \frac{h}{2}, y\left(t_i + \frac{h}{2}\right)\right) + f\left(t_i + h, y\left(t_i + h\right)\right)\right].
-</display-math>
+$$
 
 However, we do not know $y(t)$ for $t > t_i$ and we thus need to come up with an approximation. To solve this, the Runge-Kutta method uses various intermediate values $k_s$ for which 
-<display-math>
+
+$$
 \begin{align*}
 k_1 &= f(t_i, y_i),\\
 k_2 &= f\left(t_i + \frac{h}{2}, y_i + k_1\frac{h}{2}\right),\\
 k_3 &= f\left(t_i + \frac{h}{2}, y_i + k_2\frac{h}{2}\right), \\
 k_4 &= f(t_i + h, y_i + hk_3).\\
 \end{align*}
-</display-math>
+$$
 
 Even though these formulas might look complicated at first, it is clear that each $k_s$ is a value of the ODE $f(t,y)$ at some point, which are also the derivatives $y'(t)$ of the solution $y(t)$. First of all, if we look at the time values, we can see that the derivative is computed at four points in time: once at $t_i$, twice at $t_i + \frac{h}{2}$, and once at $t_i + h$.
 
@@ -286,9 +309,10 @@ The next values of $k_s$ are a bit less straightforward. The value $k_3$ again a
 The value $k_4$ approximates the derivative at $t_i + h$. It does this by approximating $y(t_i + h)$ with $y_i + hk_3$, where $k_3$ in turn is an approximation of the derivative at $t_i + \frac{h}{2}$.
 
 Finally, all these values are plugged into the Simpson's rule, in order to obtain the Runge-Kutta step we saw earlier:
-<display-math>
+
+$$
 y_{i+1} = y_i + h \frac{k_1 + 2k_2 + 2k_3 + k_4}{6}.
-</display-math>
+$$
 
 We can thus conclude that the Runge-Kutta method samples the ODE at various points, and then aggregates them into $y_{i+1} \approx y(t_{i+1})$. To illustrate this, we consider the following figures:
 
@@ -318,9 +342,10 @@ To gain more insight into the intermediate values $k_s$ that Runge-Kutta uses to
 Up until now, we focussed on explaining the fourth order Runge-Kutta method with Kutta's coefficients. However, as we saw earlier, many other possible coefficients exist. Even though those can be harder to illustrate, the same principle still applies.
 
 Let us reconsider the general formula for $k_s$:
-<display-math>
+
+$$
     k_{s} = f\left(t_i + c_s h, y_i + h\sum_{j=1}^{s-1} a_{sj}k_{j}\right),
-</display-math>
+$$
 
 This value $k_s$ approximates the derivative $y'(t_i + c_s h) = f(t_i + c_s h, y(t_i + c_s h))$. Since the value $y(t_i + c_s h)$ is unknown because we only know $y(t)$ for $t \in \\{t_0, \dots, t_i\\}$, we instead approximate it using $y_i + h\sum_{j=1}^{s-1} a_{sj}k_{s}$. This can be seen as a linear approximation using a weighted average of derivatives.
 
@@ -422,7 +447,8 @@ At every iteration of the for-loop, we first compute the value $t_i + c_s h$, wh
 Once all values $k_s$ are produced for $s \in \\{1, \dots, n\\}$, we take the dot-product between the weights $b$ and the vector of $k$-values, resulting in the value $y_{i+1}$, which is returned by the function.
 
 Now that everything is in place, it is time to think of some coefficients that our Runge-Kutta method will use. We start with some coefficients for a second order method, called the Midpoint method <smart-cite bibId="wiki_midpoint_method"></smart-cite>:
-<display-math>
+
+$$
 \begin{array}
 {c|cccc}
 0\\
@@ -430,7 +456,7 @@ Now that everything is in place, it is time to think of some coefficients that o
 \hline
 & 0 & 1
 \end{array}
-</display-math>
+$$
 
 These can neatly be passed to the `solveRungeKuttaExplicit` function. In the following piece of code, we create a function `RK2Midpoint` that creates an `IVPSolver` object. This object contains the solver with the appropriate coefficients, as well as a label `RK2 Midpoint h=$(stepSize)` that will be used during plotting. The refactoring of the code that we did in the <smart-link linkType="int" linkId="solver_interface">previous article</smart-link> is really paying off!
 ```julia
@@ -446,7 +472,8 @@ end
 ```
 
 For the third order method, we use Kutta's original third order coefficients <smart-cite bibId="kutta1901"></smart-cite>:
-<display-math>
+
+$$
 \begin{array}
 {c|cccc}
 0\\
@@ -455,7 +482,7 @@ For the third order method, we use Kutta's original third order coefficients <sm
 \hline
             & \frac{1}{6} & \frac{2}{3} &\frac{1}{6}
 \end{array}
-</display-math>
+$$
 
 The implementation is again very straight-forward:
 ```julia
@@ -471,7 +498,8 @@ end
 ```
 
 We also add the famous fourth order Runge-Kutta method with classic coefficients <smart-cite bibId="kutta1901"></smart-cite>:
-<display-math>
+
+$$
 \begin{array}
 {c|cccc}
 0\\
@@ -481,7 +509,7 @@ We also add the famous fourth order Runge-Kutta method with classic coefficients
 \hline
 & \frac{1}{6} &\frac{1}{3} &\frac{1}{3} &\frac{1}{6} 
 \end{array}
-</display-math>
+$$
 
 These coefficients are also passed in the same way. Note the Julia syntax for encoding a matrix, which uses semi-colons `;` and no commas!
 ```julia
@@ -503,17 +531,19 @@ In this last and final chapter, we will apply our code to some initial-value pro
 - RQ2: "What is the effect of the step size?"
 
 Note that since we are using explicit Runge-Kutta methods, we will only consider non-stiff problems. We will start with the following initial-value problem <smart-cite bibId="wiki_runge_kutta"></smart-cite>:
-<display-math>
+
+$$
 \begin{align*}
 y'(t) &= \sin(t)^2 \cdot y\\
 y(0) &= 1.
 \end{align*}
-</display-math>
+$$
 
 For this IVP we know the exact solution:
-<display-math>
+
+$$
 y(t) = e^{\frac{1}{2}(t - \cos(t)\sin(t))}.
-</display-math>
+$$
 
 We first plot forward Euler (i.e., first order Runge-Kutta), the RK2 Midpoint method, and the third-order RK3 method.
 <div class="fig-row">
@@ -547,12 +577,13 @@ We can see that the fourth order RK method aligns nicely with the exact solution
 We again compare our higher-order Runge-Kutta method against forward Euler. This time we have $h=0.5$ for RK4 and $h=\frac{0.5}{4}$ for forward Euler. Even though both methods make the same amount of calls to the ODE, the fourth order method is more accurate. Therefore, increasing the order is more effective than using smaller step-sizes.
 
 Before we draw any conclusions, we will also apply our methods to the stable version of the "cosine" IVP <smart-cite bibId="two_ode_examples"></smart-cite> from an <smart-link linkType="int" linkId="forward_euler">earlier article</smart-link>:
-<display-math>
+
+$$
 \begin{array}{rl}
 y'(t) &= - y - \sin(t) + \cos(t), \\
 y(0) &= 1.
 \end{array}
-</display-math>
+$$
 
 We plot the forward Euler method with $h=0.5$ and $h=0.1$ as well as second, third, and fourth order Runge-Kutta methods, each with $h=0.5$.
 
@@ -570,12 +601,12 @@ We can see that for this IVP, all Runge-Kutta methods work quite well. Note that
 
 Likewise, we also apply Runge-Kutta to the unstable version of the IVP <smart-cite bibId="two_ode_examples"></smart-cite>:
 
-<display-math>
+$$
 \begin{array}{rl}
 y'(t) &= y - \sin(t) - \cos(t), \\
 y(0) &= 1.
 \end{array}
-</display-math>
+$$
 
 <div class="fig-row">
     <div class="fig-in-row">

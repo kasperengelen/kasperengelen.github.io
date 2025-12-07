@@ -73,13 +73,4 @@ $(document).ready(function () {
     $("texttt").replaceWith(function(i, content) {
         return "<code>" + content + "</code>"
     });
-
-    /* NOTE: these come last, such that all custom stuff that uses math can make use of MathJAX.*/
-    $("display-math").replaceWith(function(i, content) {
-        return "$$" + content + "$$"
-    });
-
-    $("inline-math").replaceWith(function(i, content) {
-        return "\\(" + content + "\\)"
-    });
 });

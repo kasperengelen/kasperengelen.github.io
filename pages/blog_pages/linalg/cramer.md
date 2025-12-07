@@ -42,18 +42,18 @@ In this article we will talk about Cramer's rule, which was discovered by <stron
 
 We'll start with a small example. Let's consider a system of linear equations with 2 unknowns, and 2 equations:
 
-<display-math>
+$$
 \left\{
 \begin{array}{*{3}{rC}l}
    a_{11} x_1 & + &  a_{12} x_2 & = & b_1 \\
    a_{21} x_1 & + &  a_{22} x_2 & = & b_2.
 \end{array}
 \right.
-</display-math>
+$$
 
 <p>In matrix notation this is written as $Ax = b$ with</p>
 
-<display-math>
+$$
 A = \begin{bmatrix}
 a_{11} & a_{12} \\
 a_{21} & a_{22}
@@ -64,11 +64,11 @@ b_2
 x_1 \\
 x_2
 \end{bmatrix}.
-</display-math>
+$$
 
 <p>To solve this system of equations, we will use Cramer's rule. For this we first need some more notation. Recall that $\det(A)$ is the determinant of $A$, and let $A[j \leftarrow b]$ be the matrix A with its $j$-th column replaced with the vector $b$:</p>
 
-<display-math>
+$$
 A[1 \leftarrow b] = \begin{bmatrix}
 b_1 & a_{12} \\
 b_2 & a_{22}
@@ -76,14 +76,14 @@ b_2 & a_{22}
 a_{11} & b_1 \\
 a_{21} & b_2
 \end{bmatrix}.
-</display-math>
+$$
 
 <p>We then have that the solution $x = \left[\begin{array}{@{}c@{}}
     x_{1} \\
     x_{2} 
     \end{array} \right]$ can be written as the fraction of determinants:</p>
 
-<display-math>
+$$
 x_1 = \frac{\det(A[1 \leftarrow b])}{\det(A)} = \frac{\begin{vmatrix}
 b_1 & a_{12} \\
 b_2 & a_{22}
@@ -95,9 +95,9 @@ b_1 a_{22} - b_2 a_{12}
 }{
 a_{11} a_{22} - a_{21} a_{12}
 }
-</display-math>
+$$
 
-<display-math>
+$$
 x_2 = \frac{\det(A[2 \leftarrow b])}{\det(A)} = \frac{\begin{vmatrix}
 a_{11} & b_1 \\
 a_{21} & b_2
@@ -109,7 +109,7 @@ a_{11} b_2 - a_{21} b_1
 }{
 a_{11} a_{22} - a_{21} a_{12}
 }
-</display-math>
+$$
 
 Note that the formulas above for the determinant of a 2-by-2 matrix are due to the <smart-link linkType="ext" linkId="wiki_sarrus_rule">rule of Sarrus</smart-link>.
 
@@ -134,13 +134,17 @@ We will now turn the example from the introduction into a general statement. Rec
 
 <theorem envId="cramers_rule" envName="Cramer's rule">
 Let $A$ be a non-singular $n$-by-$n$ matrix and let $b$ be a vector with $n$ elements. The system of equations given by
-<display-math>
+
+$$
 Ax = b,
-</display-math>
+$$
+
 has a unique solution $x$ such that the $j$-th element of $x$ is given by 
-<display-math>
+
+$$
 x_j = \frac{\det(A[j \leftarrow b])}{\det(A)},\text{ with } 1 \leq j \leq n.
-</display-math>
+$$
+
 </theorem>
 
 ### Proof 1
@@ -151,18 +155,18 @@ In the first proof we will make use of a clever trick I found in the book "Diffe
 
 <p>Let us first consider a 2-by-2 matrix. We then have the following system of linear equalities:</p>
 
-<display-math>
+$$
 \left\{
 \begin{array}{*{3}{rC}l}
    a_{11} x_1 & + &  a_{12}x_2 & = & b_1 \\
    a_{21} x_1 & + &  a_{22}x_2 & = & b_2.
 \end{array}
 \right.
-</display-math>
+$$
 
 <p>In matrix notation this is </p>
 
-<display-math>
+$$
 \begin{bmatrix}
 a_{11} & a_{12} \\
 a_{21} & a_{22}
@@ -173,11 +177,11 @@ x_2
 b_1 \\
 b_2
 \end{bmatrix}
-</display-math>
+$$
 
 <p>Let us now rewrite this equation using $I_2[1 \leftarrow x]$, which is the identity matrix with its first column replaced by $x$:</p>
 
-<display-math>
+$$
 \begin{bmatrix}
 a_{11} & a_{12} \\
 a_{21} & a_{22}
@@ -188,11 +192,11 @@ x_2 & 1
 b_1 & a_{12} \\
 b_2 & a_{22}
 \end{bmatrix}
-</display-math>
+$$
 
 <p>We can now see the matrix $A[1 \leftarrow b]$ appear on the right-hand-side (RHS). To see why the equality (*) is true, we'll have to take a closer look at how matrix multiplication is performed. In matrix multiplication, the matrix on the RHS is constructed element by element: </p>
 
-<display-math>
+$$
 \begin{bmatrix}
 a_{11} x_1 + a_{12} x_2 & a_{11} \cdot 0 + a_{12} \cdot 1 \\
 a_{21} x_1 + a_{22} x_2 & a_{21} \cdot 0 + a_{22} \cdot 1
@@ -200,16 +204,16 @@ a_{21} x_1 + a_{22} x_2 & a_{21} \cdot 0 + a_{22} \cdot 1
 b_1 & a_{12} \\
 b_2 & a_{22}
 \end{bmatrix}
-</display-math>
+$$
 
 <p>Finally, we can turn $I_2[1 \leftarrow x]$ into $x_1$ by taking the determinant:</p>
 
-<display-math>
+$$
 \det(I_2[1 \leftarrow x]) = \begin{vmatrix}
 x_1 & 0 \\
 x_2 & 1
 \end{vmatrix} = x_1 \cdot 1 - x_2 \cdot 0 = x_1
-</display-math>
+$$
 
 <p>To conclude, if we have that $Ax = b$, then we also have that $A \times I_2[1 \leftarrow x] = A[1 \leftarrow x]$ and that $\det(I_2[1 \leftarrow x]) = x_1$. This means that by using this trick, we might have a way to introduce the matrix $A[j \leftarrow b]$ and to extract individual solutions $x_j$ to our system of linear equations!</p>
 </example>
@@ -218,7 +222,7 @@ x_2 & 1
 
 <p>In the next example, we will consider a 3-by-3 matrix, and try to apply our trick using a different column. We once again consider a system of linear equalities and its matrix form:</p>
 
-<display-math>
+$$
 \left\{
 \begin{array}{*{3}{rC}l}
    a_{11} x_1 & + & a_{12}x_2 & + & a_{13}x_3 & = & b_1 \\
@@ -226,9 +230,9 @@ x_2 & 1
    a_{31} x_1 & + & a_{32}x_2 & + & a_{33}x_3 & = & b_3
 \end{array}
 \right.
-</display-math>
+$$
 
-<display-math>
+$$
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
@@ -242,11 +246,11 @@ b_1 \\
 b_2 \\
 b_3
 \end{bmatrix}
-</display-math>
+$$
 
 If we use $I_3[2 \leftarrow x]$ to rewrite the equation, we once again see $A[2 \leftarrow b]$ appear on the RHS, similar to the previous example:
 
-<display-math>
+$$
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
@@ -260,7 +264,7 @@ a_{11} & b_1 & a_{13} \\
 a_{21} & b_2 & a_{23} \\
 a_{31} & b_3 & a_{33}
 \end{bmatrix}.
-</display-math>
+$$
 
 <p>Note that this is different from the previous example. That is, we are replacing the columns of a 3-by-3 identity matrix instead of 2-by-2, and this time we are replacing the second column instead of the first.</p>
 
@@ -271,23 +275,29 @@ a_{31} & b_3 & a_{33}
 
 <lemma envId="col_replacement_rewrite" envName="introducing column replacement">
 Let $A$ be a square matrix of size $n$, and let $x$ and $b$ be vectors with $n$ components. If $Ax = b$, then for all $j \in \{1, \dots, n\}$:
-<display-math>A \times I_n[j \leftarrow x] = A[j \leftarrow b].</display-math>
+
+$$A \times I_n[j \leftarrow x] = A[j \leftarrow b].$$
+
 </lemma>
 
 <lemma envId="ident_matrix_col_repl" envName="extracting $x_j$">
 Let $n \in \mathbb{N}$, let $I_n$ be the $n$-by-$n$ identity matrix, and let $x$ be a vector with $n$ components. For all $j \in \{1, \dots, n\}$:
-<display-math>
+
+$$
 \det(I_n[j \leftarrow x]) = x_j.
-</display-math>
+$$
+
 </lemma>
 
 Finally, we will use one last helper lemma in the proof. This will allow us to easily work with determinants of products of matrices:
 
 <lemma envId="det_product_rule" envName="Product Rule for determinants">
 Let $A$ and $B$ by $n$-by-$n$ matrices. We then have that
-<display-math>
+
+$$
 \det(A \times B) = \det(A) \cdot \det(B).
-</display-math>
+$$
+
 </lemma>
 
 <proof>
@@ -299,7 +309,8 @@ We will now use these two tricks in the following proof of <smart-ref targetType
 
 <proof envName="Theorem 1" envId="proof1_cramer">
 Since the matrix $A$ is non-singular, we trivially have that there is a unique solution $x$. Furthermore, for all $j \in \{1, \dots, n\}$, we can deduce that:
-<display-math>
+
+$$
 \begin{aligned}
 &A x = b \\
 \iff & A \times I_n[j \leftarrow x] = A[j \leftarrow b]
@@ -312,7 +323,8 @@ Since the matrix $A$ is non-singular, we trivially have that there is a unique s
 \iff & x_j = \frac{\det(A[j \leftarrow b])}{\det(A)}
 &\text{(Since $\det(A)$ is non-zero.)}
 \end{aligned}
-</display-math>
+$$
+
 </proof>
 
 In the above proof we first formalised our notion of "replacing columns" by encoding this replacement operation as a matrix. This means that instead of replacing some arbitrary elements in a matrix, we are instead applying a matrix to another matrix, similar to the elementary matrices used in Gaussian elimination. This, in turn, allowed us to leverage the product rule to pull apart the determinants and extract $x_j$. 
@@ -325,35 +337,36 @@ In the next proof we will make use of the relation between systems of linear equ
 
 If we have a system of equations $Ax = b$ with a unique solution $x$, then we also have that $x = A^{-1}b$, where $A^{-1}$ is the <em>inverse</em> of the matrix $A$. Next, we note that there is an important relation between the inverse $A^{-1}$ and the <em>adjugate</em> of the matrix $\adj(A)$:
 
-<display-math>
+$$
 A^{-1} = \frac{1}{\det(A)}\adj(A).
-</display-math>
+$$
 
 The adjugate of a matrix is sometimes also called the "adjoint" or "adjunct". The adjugate of a matrix is a bit more involved and it is in turn defined in terms of determinants. More precisely it is the transpose of the matrix of co-factors, with each co-factor being the determinant of a sub-matrix of $A$ multiplied by either $1$ or $-1$. We will illustrate this with an example:
 
 <example envName="Example: Adjugate matrix">
 Let us consider the following matrix:
-<display-math>
+
+$$
 A = \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33}
 \end{bmatrix}.
-</display-math>
+$$
 
 <p>Its co-factor matrix is</p>
 
-<display-math>
+$$
 C(A) = \begin{bmatrix}
 C_{11} & C_{12} & C_{13} \\
 C_{21} & C_{22} & C_{23} \\
 C_{31} & C_{32} & C_{33}
 \end{bmatrix}
-</display-math>
+$$
 
 <p>with $C_{ij}$ being the determinant of the $(i,j)$-minor of $A$ times $(-1)^{i+j}$. The $(i,j)$-minor of $A$ is simply the matrix $A$ with its $i$-th row and $j$-th column removed. The co-factor $C_{31}$ is, for example, equal to </p>
 
-<display-math>
+$$
 C_{31} = (-1)^{3+1} \det \begin{bmatrix}
 \square & a_{12} & a_{13} \\
 \square & a_{22} & a_{23} \\
@@ -362,11 +375,11 @@ C_{31} = (-1)^{3+1} \det \begin{bmatrix}
 a_{12} & a_{13} \\
 a_{22} & a_{23}
 \end{bmatrix} = a_{12} a_{23} - a_{13} a_{22}.
-</display-math>
+$$
 
 The adjugate matrix of $A$ is then the transpose of the co-factor matrix:
 
-<display-math>
+$$
 \adj(A) = \begin{bmatrix}
 C_{11} & C_{12} & C_{13} \\
 C_{21} & C_{22} & C_{23} \\
@@ -376,7 +389,8 @@ C_{11} & C_{21} & C_{31} \\
 C_{12} & C_{22} & C_{32} \\
 C_{13} & C_{23} & C_{33}
 \end{bmatrix}.
-</display-math>
+$$
+
 </example>
 
 From the example above it is clear that there is a strong link between between the adjugate of a matrix and determinants. Given that the inverse of a matrix can be expressed in terms of determinants and the adjugate matrix, this suggests that we could use determinants of matrices to solve systems of linear equations. 
@@ -385,7 +399,9 @@ One final tool that involves the determinant, is the <em>co-factor expansion</em
 
 <lemma envName="Co-factor expansion">
 Given an $n$-by-$n$ matrix $A$, we have that for any $j$-th column:
-<display-math>\det(A) = \sum_{i=1}^n a_{ij} A_{ij}.</display-math>
+
+$$\det(A) = \sum_{i=1}^n a_{ij} A_{ij}.$$
+
 </lemma>
 
 To put it more concretely: we can choose an arbitrary column $j$ of a matrix, and use it together with the co-factors in the $j$-th column of the co-factor matrix in order to obtain the determinant of a matrix. Note that these co-factors do not make use of any elements in the $j$-th column of the original matrix.
@@ -396,7 +412,7 @@ In the following proof of <smart-ref targetType="thm" targetId="cramers_rule" in
 
 <p>We first re-write $x$ in terms of the adjugate matrix:</p>
 
-<display-math>
+$$
 \begin{aligned}
      &Ax = b \\
 \iff &x = A^{-1} b \\
@@ -409,17 +425,17 @@ In the following proof of <smart-ref targetType="thm" targetId="cramers_rule" in
           \end{bmatrix} \\
 \iff &x_j = \frac{(\adj(A) b)_j}{\det(A)},\,\text{for all }j \in \{1, \dots, n\}
 \end{aligned}
-</display-math>
+$$
 
 <p>In order to prove <smart-ref targetType="thm" targetId="cramers_rule" includeEnvName="true"></smart-ref>, it remains to be shown that for all $j \in \{1, \dots, n\}$:</p>
 
-<display-math>
+$$
 (\adj(A) b)_j = \det(A[j \leftarrow b]).
-</display-math>
+$$
 
 <p>In order to demonstrate this, we will have to look at how the contents of the adjugate matrix interact with matrix multiplication:</p>
 
-<display-math>
+$$
 \mathrm{adj}(A)b = \begin{bmatrix}
 A_{11} & A_{21} & \dots & A_{n1} \\
 A_{12} & A_{22} & \dots & A_{n2} \\
@@ -441,13 +457,13 @@ b_{3}
 \dots \\
 \det(A[n \leftarrow b])
 \end{bmatrix}
-</display-math>
+$$
 
 <p>The equality (*) follows from the co-factor expansion of $A[j \leftarrow b]$:</p>
 
-<display-math>
+$$
 \det(A[j \leftarrow b]) = \sum_{i=1}^n b_{i} A_{ij},
-</display-math>
+$$
 
 <p>since we are taking the co-factor expansion over the $j$-th column of $A[j \leftarrow b]$, which is equal to the vector $b$ times the $j$-th row of the adjugate matrix of $A$.</p>
 </proof>
@@ -505,9 +521,9 @@ func minorMatrix(skipRow: Int, skipCol: Int) -> Matrix<ElementType> {
 
 Now that we can compute the minor matrix, we can use this to compute the determinant using the co-factor expansion. Recall that the co-factor expansion over the $i$-th row is defined as
 
-<display-math>
+$$
 \det(A) = \sum_{j=1}^n (-1)^{i+j} \det(A_{(i,j)}) a_{ij},
-</display-math>
+$$
 
 where $A_{(i,j)}$ is the minor matrix of $A$ for row $i$ and column $j$. Note that the co-factor expansion is a recursive formula: in order to compute the determinant of a square matrix of size $n$, we need to compute the determinants of matrices with size $n-1$. For the base-case we will check if the matrix has size $2$ and apply the rule of Sarrus.
 
@@ -577,9 +593,9 @@ func withColumnReplaced(col: Int, newValue: [ElementType]) -> Matrix<ElementType
 
 <p>Now that we have all the ingredients, the only thing that remains is to implement Cramer's rule itself. Recall that for all $i \in \{ 1, \dots, n \}$:</p>
 
-<display-math>
+$$
     x_i = \frac{\det(A[i \leftarrow b])}{\det(A)}.
-</display-math>
+$$
 
 This can be implemented with a simple for-loop, in which we call the methods we implemented earlier:
 
@@ -665,12 +681,13 @@ In order to find such non-singular matrices, we will make use of <em>orthogonal<
 <definition envName="Orthogonal matrix">
 A matrix $Q$ with columns $c_1, \dots, c_n$ is orthogonal if its columns are orthonormal. Formally,
 
-<display-math>
+$$
    \forall i, j \in \{ 1, \dots, n \}: c_i \cdot c_j =\begin{cases}
     1 & \text{if } i = j  \\ 
     0 & \text{otherwise.}
 \end{cases}
-</display-math>
+$$
+
 </definition>
 
 Orthogonal matrices have the useful property that they are always invertible, which is exactly what we need. Formally:
@@ -721,7 +738,7 @@ def print_cramer_test_cases(size):
 
 If we run our Python script with `size=3`, we get the following result:
 
-<display-math>
+$$
 Q = \begin{bmatrix}
 -0.864\dots & 0.383\dots & -0.324\dots \\
 -0.401\dots & -0.915\dots & -0.009\dots \\
@@ -735,7 +752,7 @@ Q = \begin{bmatrix}
 -0.262 \dots \\
 0.221 \dots
  \end{bmatrix}.
-</display-math>
+$$
 
 ### Implementing the asserts
 

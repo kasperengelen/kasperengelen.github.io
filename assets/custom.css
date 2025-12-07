@@ -527,10 +527,11 @@ p {
     font-weight: bold;
 }
 
-
-.MathJax_Display {
-    overflow-x: auto;
-    padding-bottom: 2px;
+.MathJax {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 2px;
+  max-width: 100%;
 }
 
 .bibList {

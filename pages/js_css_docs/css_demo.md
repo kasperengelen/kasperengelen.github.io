@@ -127,7 +127,7 @@ In this demo you can see different images position next to each other in a row. 
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 <div class="highlight-box-white">
@@ -139,7 +139,7 @@ In this demo you can see different images position next to each other in a row. 
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 <div class="highlight-box-gray">
@@ -151,7 +151,7 @@ In this demo you can see different images position next to each other in a row. 
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 <div class="highlight-box-purple">
@@ -163,7 +163,7 @@ In this demo you can see different images position next to each other in a row. 
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 <div class="highlight-box-red">
@@ -175,7 +175,7 @@ In this demo you can see different images position next to each other in a row. 
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 <div class="highlight-box-blue">
@@ -187,7 +187,7 @@ In this demo you can see different images position next to each other in a row. 
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 <div class="highlight-box-green">
@@ -199,7 +199,7 @@ In this demo you can see different images position next to each other in a row. 
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 <div class="highlight-box-yellow">
@@ -211,7 +211,7 @@ In this demo you can see different images position next to each other in a row. 
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </div>
 
 ## Custom fieldsets
@@ -226,7 +226,7 @@ In this demo you can see different images position next to each other in a row. 
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -240,7 +240,7 @@ In this demo you can see different images position next to each other in a row. 
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -254,7 +254,7 @@ In this demo you can see different images position next to each other in a row. 
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -268,7 +268,7 @@ In this demo you can see different images position next to each other in a row. 
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -282,7 +282,7 @@ In this demo you can see different images position next to each other in a row. 
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -296,7 +296,7 @@ In this demo you can see different images position next to each other in a row. 
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -312,7 +312,7 @@ The following is accessible with `<example envName="Some example">...</example>`
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </example>
 
 <example>
@@ -323,7 +323,7 @@ The following is accessible with `<example envName="Some example">...</example>`
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </example>
 
 The following is accessible with `<warning-box title="Warning!">...</warning-box>`.
@@ -336,7 +336,7 @@ The following is accessible with `<warning-box title="Warning!">...</warning-box
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <display-math>I = \int f(x)\,dx</display-math>
+    $$I = \int f(x)\,dx$$
 </warning-box>
 
 The following is accessible with `<todo-box>...</todo-box>`.
@@ -365,27 +365,27 @@ Paragraph before table.
             <td>z2</td>
         </tr>
         <tr>
-            <td><inline-math>\sqrt{x_3}</inline-math></td>
-            <td><inline-math>\sqrt{y_3}</inline-math></td>
-            <td><inline-math>\sqrt{z_3}</inline-math></td>
+            <td>$\sqrt{x_3}$</td>
+            <td>$\sqrt{y_3}$</td>
+            <td>$\sqrt{z_3}$</td>
         </tr>
     </tbody>
 </table>
 
 Paragraph after table.
 
-This is a normal paragraph with a <texttt>monospace</texttt> word in it. This is text with some inline maths <inline-math>\frac{S}{dx} = S\cdot I</inline-math> as well as display maths:
-<display-math>f(x) = x^2 + 3568x</display-math>
+This is a normal paragraph with a <texttt>monospace</texttt> word in it. This is text with some inline maths $\frac{S}{dx} = S\cdot I$ as well as display maths:
+$$f(x) = x^2 + 3568x$$
 
-Display maths are done using `<display-math>...</display-math>`, inline maths can be styled using `<inline-math>...</inline-math>`.
+Display maths are done using `$$...$$`, inline maths can be styled using `$...$`.
 
 The following is accessible with `<warning-box>...</warning-box>`. The `title` attribute is optional.
 
 <warning-box>
 All of this also works within a highlight box.
 
-This is a different text with a <texttt>typewriter</texttt> word in it. This is text with some inline maths <inline-math>\frac{R}{dx} = S\cdot I</inline-math> as well as display maths:
-<display-math>\mathbf{E}(x) = \int \mathbf{P}(\omega) d\omega</display-math>
+This is a different text with a <texttt>typewriter</texttt> word in it. This is text with some inline maths $\frac{R}{dx} = S\cdot I$ as well as display maths:
+$$\mathbf{E}(x) = \int \mathbf{P}(\omega) d\omega$$
 </warning-box>
 
 ## Definition, Theorem, Lemma, and Proof using jQuery
@@ -394,11 +394,11 @@ In this section we will demonstrate various LaTeX-like environments, implemented
 
 <strong>Source:</strong> These definitions and theorems all come from the book "Understanding Analysis" by Stephen Abbott.
 
-<definition envName="<inline-math>\varepsilon</inline-math>-neighborhood" envId="eps_neighborhood">
-Given <inline-math>a \in \mathbb{R}</inline-math> and <inline-math>\varepsilon > 0</inline-math>, the <inline-math>\varepsilon</inline-math>-neighborhood of <inline-math>a</inline-math> is the set
-<display-math>
+<definition envName="$\varepsilon$-neighborhood" envId="eps_neighborhood">
+Given $a \in \mathbb{R}$ and $\varepsilon > 0$, the $\varepsilon$-neighborhood of $a$ is the set
+$$
     V_\varepsilon(a) = \{ x \in \mathbb{R} : \left| x - a \right| < \varepsilon \}.
-</display-math>
+$$
 </definition>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -407,12 +407,12 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat.
 
 <definition envId="eps_neighborhood_2">
-    <envName><inline-math>\varepsilon</inline-math>-neighborhood, from <smart-cite bibId="understanding_analysis"></smart-cite></envName>
+    <envName>$\varepsilon$-neighborhood, from <smart-cite bibId="understanding_analysis"></smart-cite></envName>
     
-Given <inline-math>a \in \mathbb{R}</inline-math> and <inline-math>\varepsilon > 0</inline-math>, the <inline-math>\varepsilon</inline-math>-neighborhood of <inline-math>a</inline-math> is the set
-<display-math>
+Given $a \in \mathbb{R}$ and $\varepsilon > 0$, the $\varepsilon$-neighborhood of $a$ is the set
+$$
     V_\varepsilon(a) = \{ x \in \mathbb{R} : \left| x - a \right| < \varepsilon \}.
-</display-math>
+$$
 </definition>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -554,7 +554,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## Mobile-friendly math
 
-<display-math>
+$$
 \mathrm{adj}(A)b = \begin{bmatrix}
 A & B & \dots & C \\
 D & E & \dots & F \\
@@ -591,13 +591,13 @@ D & E & \dots & F \\
 \dots & \dots & \dots & \dots \\
 G & H & \dots & I
 \end{bmatrix} 
-</display-math>
+$$
 
 This also works in combination with custom environments, such as `theorem`.
 
 <theorem>
 <p>Nunc interdum porttitor erat, in fermentum nisl ultricies tincidunt. Integer auctor purus id metus tempor, ac lacinia nibh dapibus. Nulla sed magna et lacus rhoncus mollis. Praesent quis sem eget purus sagittis ullamcorper. Morbi quis imperdiet ipsum. Nunc vehicula scelerisque magna sit amet ornare. Nulla sed porttitor mauris, id laoreet lacus. Nam vel sapien sit amet ipsum placerat dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam vel urna felis. Duis auctor, orci eget ultrices efficitur, massa mi mattis dui, ullamcorper iaculis orci orci in augue. Curabitur id diam tincidunt, viverra lacus in, tincidunt purus. Quisque neque odio, viverra in posuere congue, mollis mollis lorem. </p>
-<display-math>
+$$
 \mathrm{adj}(A)b = \begin{bmatrix}
 A & B & \dots & C \\
 D & E & \dots & F \\
@@ -634,7 +634,7 @@ D & E & \dots & F \\
 \dots & \dots & \dots & \dots \\
 G & H & \dots & I
 \end{bmatrix} 
-</display-math>
+$$
 </theorem>
 
 ## Bibliography

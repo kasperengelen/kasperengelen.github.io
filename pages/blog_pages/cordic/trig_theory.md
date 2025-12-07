@@ -39,38 +39,44 @@ All this can be summarised using the following system of equations. The variable
 
 <p>
 Initialisation:
-<display-math>
+
+$$
 \begin{align*}
 x_{0} &= K_n, \\
 y_{0} &= 0, \\
 \theta_{0} &= \theta.
 \end{align*}
-</display-math>
+$$
+
 If $\theta_{i} \geq 0$, then
-<display-math>
+
+$$
 \begin{align*}
 x_{i+1} &= x_{i} - y_{i} \cdot 2^{-i} \\
 y_{i+1} &= y_{i} + x_{i} \cdot 2^{-i} \\
 \theta_{i+1} &= \theta_{i} - \arctan 2^{-i},
 \end{align*}
-</display-math>
+$$
+
 otherwise,
-<display-math>
+
+$$
 \begin{align*}
 x_{i+1} &= x_{i} + y_{i} \cdot 2^{-i} \\
 y_{i+1} &= y_{i} - x_{i} \cdot 2^{-i} \\
 \theta_{i+1} &= \theta_{i} + \arctan 2^{-i}.
 \end{align*}
-</display-math></p>
+$$</p>
 
 The algorithm works for both floating-point and fixed-point. The latter is a major advantage of CORDIC, since this allows it to be implemented using only additions and bit-shifts. Also note that the values $\arctan 2^{-i}$ for $i \in \\{ 0, \dots, n-1 \\}$ can be computed beforehand.
 
 <p>
 Once $x_n$ and $y_n$ have been computed in iteration $n-1$, they will be equal to 
 
-<display-math>
+$$
 x_n = \cos \hat{\theta}\text{ and } y_n = \sin \hat{\theta}, 
-</display-math>
+$$
+
 where $\hat{\theta} \approx \theta$.
 </p>
 
@@ -95,9 +101,10 @@ In this section we will derive the formulas above, starting from first principle
 ### Trigonometry on the unit circle
 
 The CORDIC algorithm is based on the principles of trigonometry. If we consider the unit circle (i.e., the circle with radius 1), then we have that a vector $\vec{v}(\theta)$ with angle $\theta$ has coordinates
-<display-math>
+
+$$
 \vec{v}(\theta) = \begin{bmatrix} \cos \theta \\ \sin \theta \end{bmatrix}.
-</display-math>
+$$
 
 So in order to obtain the cosine and sine of an angle $\theta$, we could take a vector with angle 0 and length 1, rotate it with an angle $\theta$, and then retrieve the $x$ and $y$ components from the new vector. This is illustrated below:
 
@@ -128,33 +135,34 @@ We will now need to find a way to rotate vectors. For this we can use a so-calle
 <lemma envName="Givens rotation matrix" envId="givens_matrix">
 Given vectors $\vec{v}(\alpha) = (\cos \alpha, \sin \alpha)$ and $\vec{v}(\alpha + \beta) = (\cos \alpha + \beta, \sin \alpha + \beta)$ we have that
 
-<display-math>
+$$
     M(\beta) \vec{v}(\alpha) = \vec{v}(\alpha + \beta),
-</display-math>
+$$
 
 where $M(\beta)$ is the Givens rotation matrix for angle $\beta$, given by
 
-<display-math>
+$$
 M(\beta) = \begin{bmatrix}
 \cos \beta & -\sin \beta \\
 \sin \beta & \cos \beta
 \end{bmatrix}.
-</display-math>
+$$
+
 </lemma>
 
 <proof>
 We can re-write the vector $\vec{v}(\alpha + \beta)$ using the following two trigonometric identities
 
-<display-math>
+$$
 \begin{align*}
 \cos \alpha + \beta &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
 \sin \alpha + \beta &= \cos \alpha \sin \beta + \sin \alpha \cos \beta.
 \end{align*}
-</display-math>
+$$
 
 If we plug all of this into the matrix multiplication we can see that
 
-<display-math>
+$$
 \begin{align*}
 &\begin{bmatrix}
 \cos \beta & -\sin \beta \\
@@ -173,16 +181,18 @@ If we plug all of this into the matrix multiplication we can see that
 \sin \alpha + \beta
 \end{bmatrix}.
 \end{align*}
-</display-math>
+$$
 
 We thus conclude that the rotation matrix $M(\beta)$ will indeed rotate a vector by an angle $\beta$.
 </proof>
 
 <p>
 Our idea of rotating a vector of angle 0 to obtain a vector with angle $\theta$ can be written as
-<display-math>
+
+$$
 \vec{v}(\theta) = M(\theta)\vec{v}(0).
-</display-math>
+$$
+
 This does pose a problem: we wish to find the sine and cosine of an angle $\theta$, but in order to do that we first need to know the sine and cosine in order to construct the rotation matrix $M(\theta)$! 
 </p>
 
@@ -192,24 +202,24 @@ We thus come to a second problem: how can we obtain rotation matrices, without k
 
 We will solve the problem of finding the rotation matrix by approximating the angle $\theta$ as a sum of angles $\gamma_i$ with signs $\sigma_i \in \\{ -1, 1 \\}$, such that 
 
-<display-math>
+$$
 \theta \approx \sum_{i=0}^{n-1} \sigma_i \gamma_i.
-</display-math>
+$$
 
 Note that we can apply Givens rotation matrices multiple times one after another such that $M\left(\sum_{i=0}^{n-1} \sigma_i \gamma_i \right)=\prod_{i=0}^{n-1} M(\sigma_i \gamma_i)$. If we apply the rotation matrix for each angle $\sigma_i \gamma_i$, the formula of the CORDIC algorithm then becomes
 
-<display-math>
+$$
 \begin{align*}
 &\vec{v}(\theta) = M(\theta)\vec{v}(0) \\
 &\approx M(\sigma_n \gamma_n + \dots + \gamma_1 \sigma_1)\vec{v}(0) \\
 &= M(\sigma_n \gamma_n) \dots M(\sigma_1 \gamma_1) \vec{v}(0).
 \end{align*}
-</display-math>
+$$
 
 <p>
 In what follows we will consider the CORDIC algorithm as an iterative algorithm with $n$ iterations $i \in \{0, \dots, n-1 \}$. The algorithm starts with an initial vector $\vec{v}_{0}$, and at each $i$-th iteration it will take a vector $\vec{v}_{i}$ and produce a new vector $\vec{v}_{i+1}$, such that 
 
-<display-math>
+$$
 \begin{align*}
 \vec{v}_0 &= \begin{bmatrix}
 1 \\
@@ -219,51 +229,55 @@ In what follows we will consider the CORDIC algorithm as an iterative algorithm 
 &= M\left(\sum_{j=0}^i \sigma_j \gamma_j \right) \vec{v}_{0} \\
 &= \prod_{j=0}^i M\left(\sigma_j \gamma_j \right) \vec{v}_{0}.
 \end{align*}
-</display-math>
+$$
+
 </p>
 
 In order to further solve our problem of finding each rotation matrix $M(\sigma_i \gamma_i)$ we will simplify the rotation matrix. Consider the Givens rotation matrix for angle $\sigma_i \gamma_i$:
 
-<display-math>
+$$
 M(\sigma_i \gamma_i) = \begin{bmatrix}
 \cos(\sigma_i \gamma_i) & -\sin(\sigma_i  \gamma_i) \\
 \sin(\sigma_i \gamma_i) & \cos(\sigma_i \gamma_i)
 \end{bmatrix}.
-</display-math>
+$$
 
 Since $\cos \gamma_i = \cos -\gamma_i$ we remove the $\sigma_i$ and factor out the cosine. Since $\sin -\gamma = -\sin \gamma$, we have $\sin \sigma_i \gamma_i = \sigma_i \sin \gamma_i$, such that
 
 
-<display-math>
+$$
 M(\sigma_i \gamma_i) = \cos(\gamma_i) \begin{bmatrix}
 1 & -\sigma_i \tan(\gamma_i) \\
 \sigma_i \tan(\gamma_i) & 1
 \end{bmatrix}.
-</display-math>
+$$
 
 Next, we fix the angles $\gamma_i$ to be the same for any input angle $\theta$. This way the values $\tan \gamma_i$ do not depend on the input, and therefore can be computed beforehand. 
 
 
 Since multiplying and dividing by 2 can be easily implemented using shifts, we choose $\gamma_i = \arctan 2^{-i}$. Note that this is also mathematically correct, and allows us to approximate any angle $\theta$ with arbitrary precision. The full proof for this can be found below. The resulting matrix is 
 
-<display-math>
+$$
 M(\sigma_i \gamma_i) = \cos(\arctan 2^{-i}) \begin{bmatrix}
 1 & -\sigma_i 2^{-i} \\
 \sigma_i 2^{-i} & 1
 \end{bmatrix}.
-</display-math>
+$$
 
 Finally, we have to choose values of $\sigma_i$, which will decide in which direction the vector $v_{i}$ will be rotated in the $i$-th iteration. For this, we note that the signs must be such that all the angles $\gamma_i$ add up to $\theta$.
 
 <p>To this end, we introduce another variable, $\theta_i$, initialised as $\theta_0 = \theta$. This variable is updated using the formula $\theta_{i+1} = \theta_{i} - \sigma_i \arctan 2^{-i}$. At each iteration $i$, the value $\theta_i$ tells us how much of the angle $\theta$ there is "left to do" such that
-<display-math>
+
+$$
 \theta_i = \theta - \sum_{j=0}^{i-1} \sigma_j \arctan 2^{-j}.
-</display-math>
+$$
+
 </p>
 
 <p>
 Since our goal is to reduce the remaining angle to zero, the sign $\sigma_i$ can be computed as 
-<display-math>
+
+$$
 \begin{equation}
 \sigma_i = 
 \begin{cases}
@@ -271,7 +285,8 @@ Since our goal is to reduce the remaining angle to zero, the sign $\sigma_i$ can
     -1 & \text{otherwise.}
 \end{cases}
 \end{equation}
-</display-math>
+$$
+
 </p>
 
 ### Using shifts in fixed-point
@@ -298,7 +313,8 @@ Note that the arctan values would need to be computed beforehand, which is possi
 ### Correcting for the missing cosines
 
 <p>If we use the pseudocode above, then the final values, $x_n$ and $y_n$, still need to be corrected afterwards. This is because the above pseudocode only applies the matrix
-<display-math>
+
+$$
 \begin{bmatrix}
 1 & -\sigma_i \tan(\gamma_i) \\
 \sigma_i \tan(\gamma_i) & 1
@@ -306,11 +322,13 @@ Note that the arctan values would need to be computed beforehand, which is possi
 \cos(\sigma_i \gamma_i) & -\sin(\sigma_i  \gamma_i) \\
 \sin(\sigma_i \gamma_i) & \cos(\sigma_i \gamma_i)
 \end{bmatrix}.
-</display-math>
+$$
+
 </p>
 
 <p>After $n$ iterations we then obtain
-<display-math>
+
+$$
 \begin{align*}
 \begin{bmatrix}
 x_n\\
@@ -337,7 +355,8 @@ y_n
 0
 \end{bmatrix},
 \end{align*}
-</display-math>
+$$
+
 with $K_n = \prod_{i=0}^{n-1} \cos(\gamma_i)$.
 </p>
 
@@ -347,7 +366,8 @@ There are two ways to correct for this:
 
 <p>
 These two ways of applying this correction are mathematically equivalent. In this article we will assume we multiply $x_0$ and $y_0$ with $K_n$ beforehand. Our initial vector $v_0$ thus becomes
-<display-math>
+
+$$
 v_0 = K_n \begin{bmatrix}
 1\\
 0
@@ -355,7 +375,8 @@ v_0 = K_n \begin{bmatrix}
 K_n\\
 0
 \end{bmatrix}.
-</display-math>
+$$
+
 </p>
 
 ## Convergence
@@ -399,7 +420,8 @@ What the above theorem says is that by performing $n$ iterations of the CORDIC a
 
 <p>
 Note that we also require that $\absLength{\theta_{i+1}} = \absLength{\absLength{\theta_i} - \gamma_i} = \absLength{\theta_i - \sigma_i \gamma_i}$. This is an important requirement, that is only satisfied if we correctly set the signs such that $\theta_i$ is driven towards zero:
-<display-math>
+
+$$
 \begin{equation}
 \sigma_i = 
 \begin{cases}
@@ -407,7 +429,8 @@ Note that we also require that $\absLength{\theta_{i+1}} = \absLength{\absLength
     -1 & \text{otherwise.}
 \end{cases}
 \end{equation}
-</display-math>
+$$
+
 </p>
 
 <lemma envName="Driving the angle to 0" envId="angleToZero">
@@ -426,7 +449,8 @@ We provide by induction on $i$.
 <p><strong>Induction ($i \to i+1$):</strong></p>
 
 We start with the case for $i$, and apply some of the aforementioned constraints and assumptions to obtain the case for $i+1$.
-<display-math>
+
+$$
 \begin{align*}
 &\absLength{\theta_i} \leq \sum_{j=i}^{n-1} \gamma_j + \gamma_{n-1} \\
 &\iff \absLength{\theta_i} - \gamma_i \leq \sum_{j=i}^{n-1} \gamma_j + \gamma_{n-1} - \gamma_i \\
@@ -438,7 +462,7 @@ We start with the case for $i$, and apply some of the aforementioned constraints
 &\quad\quad\text{Constraint on the signs: $\absLength{\theta_{i+1}} = \absLength{\absLength{\theta_i} - \gamma_i}$} \\
 &\iff \absLength{\theta_{i+1}} \leq \sum_{j=i+1}^{n-1} \gamma_j + \gamma_{n-1}.
 \end{align*}
-</display-math>
+$$
 
 Note that also $\absLength{\theta_{n}} \leq \gamma_{n-1}$.
 </proof>
@@ -459,7 +483,8 @@ Note that $\frac{\gamma_{i}}{\gamma_{i+1}} = \frac{\arctan 2^i}{\arctan 2^{i+1}}
 
 <p>
 We start with the right-hand-side of the inequality.
-<display-math>
+
+$$
 \begin{align*}
 &\gamma_{i+1} + \dots + \gamma_{n-1} + \gamma_{n-1} \\
 &\quad\quad\text{(Apply  $\gamma_{i+K} \geq 2^{-K} \gamma_i$ for $K=1, \dots, K=n-1-i$)} \\
@@ -468,7 +493,8 @@ We start with the right-hand-side of the inequality.
 &\quad\quad\text{(Apply $\sum_{i=1}^{k} 2^{-i} + 2^{-k} = 1$ with $k=n-1-i$)} \\
 &= \gamma_i \cdot 1 = \gamma_i
 \end{align*}
-</display-math>
+$$
+
 </p>
 We thus conclude that the angles $\gamma_i = \arctan 2^{-i}$ satisfy the assumption on the angles.
 </proof>
@@ -531,12 +557,14 @@ We can now give a full proof of <smart-ref targetId="convergence" targetType="th
 <p>From  <smart-ref targetId="trigThetaHat" targetType="lem"></smart-ref> we know that repeatedly rotating an initial vector of angle 0 results in a vector whose $x$ and $y$ coordinates are the cosine and sine of $\hat{\theta}$, respectively.</p>
 
 <p>Finally, recall that the CORDIC algorithm applies the matrix
-<display-math>
+
+$$
 \begin{bmatrix}
 1 & -\sigma_i 2^{-i} \\
 \sigma_i 2^{-i} & 1
 \end{bmatrix} = \frac{1}{\cos(\arctan 2^{-i})} M(\sigma_i \gamma_i).
-</display-math>
+$$
+
 Therefore, we still have to correct for the missing $\cos(\arctan 2^{-i})$, by setting the initial values as $x_0 = K_n$ and $y_0 = 0$ where
 \[
 K_{n} = \prod_{i=0}^{n-1} \cos(\arctan 2^{-i}) = \prod_{i=0}^{n-1} \frac{1}{\sqrt{1 + 2^{-2i}}}.

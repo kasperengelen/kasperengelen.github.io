@@ -189,7 +189,7 @@ julia> deriv = FunctionDiff.getDerivative(polynom)
 Polynomial(2.0 + 6.0*x)
 ```
 
-Similarly, we can use `getHigherDerivative` to compute the 2nd derivative, which is <inline-math>f''(x) = 6</inline-math>.
+Similarly, we can use `getHigherDerivative` to compute the 2nd derivative, which is $f''(x) = 6$.
 
 ```
 julia> deriv2 = FunctionDiff.getHigherDerivative(polynom, 2)

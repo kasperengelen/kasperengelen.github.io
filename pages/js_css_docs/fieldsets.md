@@ -26,7 +26,7 @@ The following colors are supported:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -36,7 +36,7 @@ The following colors are supported:
         <legend>Example</legend>
         <p>...</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 ```
@@ -53,7 +53,7 @@ The following colors are supported:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -63,7 +63,7 @@ The following colors are supported:
         <legend>Example</legend>
         <p>...</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 ```
@@ -80,7 +80,7 @@ The following colors are supported:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -90,7 +90,7 @@ The following colors are supported:
         <legend>Example</legend>
         <p>...</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 ```
@@ -107,7 +107,7 @@ The following colors are supported:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -117,7 +117,7 @@ The following colors are supported:
         <legend>Example</legend>
         <p>...</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 ```
@@ -134,7 +134,7 @@ The following colors are supported:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -144,7 +144,7 @@ The following colors are supported:
         <legend>Example</legend>
         <p>...</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 ```
@@ -161,7 +161,7 @@ The following colors are supported:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 
@@ -171,7 +171,7 @@ The following colors are supported:
         <legend>Example</legend>
         <p>...</p>
 
-        <display-math>I = \int f(x)\,dx</display-math>
+        $$I = \int f(x)\,dx$$
     </fieldset>
 </div>
 ```
