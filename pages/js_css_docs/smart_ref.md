@@ -11,6 +11,11 @@ sitemap:
 Last updated: 2025-09-15
 
 <div>
+{% include enable_image_zoom.html %}
+</div>
+
+
+<div>
 {% include smart_link/load_internal_urls.html %}
 </div>
 
@@ -157,7 +162,7 @@ Similarly to the smart environments, the smart references are also compatible wi
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="some_figure">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Image with identifier.</figcaption>
         </figure>
     </div>
@@ -168,7 +173,7 @@ Similarly to the smart environments, the smart references are also compatible wi
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="some_figure">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Image with identifier.</figcaption>
         </figure>
     </div>
@@ -194,7 +199,7 @@ Finally, it is also possible to refer to figures that appear later in the text. 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="another_figure">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Second image.</figcaption>
         </figure>
     </div>
@@ -204,7 +209,7 @@ Finally, it is also possible to refer to figures that appear later in the text. 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="another_figure">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Second image.</figcaption>
         </figure>
     </div>
