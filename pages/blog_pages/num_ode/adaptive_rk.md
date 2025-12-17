@@ -7,6 +7,11 @@ referenceId: adaptive_rk
 ---
 
 <div>
+{% include enable_image_zoom.html %}
+</div>
+
+
+<div>
 {% include enable_title_numbering.html %}
 </div>
 
@@ -382,7 +387,7 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="rungeKuttaAdaptiveLogistic_traj">
-            <img src="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveLogistic_traj.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveLogistic_traj.png"></figureImage>
             <figcaption>The Runge-Kutta approximation and the exact solution.</figcaption>
         </figure>
     </div>
@@ -391,7 +396,7 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="rungeKuttaAdaptiveLogistic_steps">
-            <img src="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveLogistic_steps.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveLogistic_steps.png"></figureImage>
             <figcaption>The step-sizes for each iteration.</figcaption>
         </figure>
     </div>
@@ -413,7 +418,7 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="rungeKuttaAdaptiveCosineStable_traj">
-            <img src="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveCosineStable_traj.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveCosineStable_traj.png"></figureImage>
             <figcaption>The Runge-Kutta approximation and the exact solution.</figcaption>
         </figure>
     </div>
@@ -422,7 +427,7 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="rungeKuttaAdaptiveCosineStable_steps">
-            <img src="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveCosineStable_steps.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveCosineStable_steps.png"></figureImage>
             <figcaption>The step-sizes for each iteration.</figcaption>
         </figure>
     </div>
@@ -447,7 +452,7 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="rungeKuttaAdaptiveExp_traj">
-            <img src="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveExp_traj.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveExp_traj.png"></figureImage>
             <figcaption>The Runge-Kutta approximation and the exact solution.</figcaption>
         </figure>
     </div>
@@ -456,7 +461,7 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="rungeKuttaAdaptiveExp_steps">
-            <img src="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveExp_steps.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta_adaptive/rungeKuttaAdaptiveExp_steps.png"></figureImage>
             <figcaption>The step-sizes for each iteration.</figcaption>
         </figure>
     </div>

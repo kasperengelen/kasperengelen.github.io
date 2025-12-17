@@ -7,6 +7,10 @@ exclude: true
 ---
 
 <div>
+{% include enable_image_zoom.html %}
+</div>
+
+<div>
 {% include smart_cite/load_bib_file.html bib_file=site.data.bibliography_cordic %}
 </div>
 
@@ -87,7 +91,7 @@ In the animation below, we can see that the CORDIC algorithm will iteratively co
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/animated_with_pause.gif">
+            <figureImage imgSrc="/assets/images/cordic/animated_with_pause.gif"></figureImage>
             <figcaption>Animation of the CORDIC algorithm.</figcaption>
         </figure>
     </div>
@@ -111,7 +115,7 @@ So in order to obtain the cosine and sine of an angle $\theta$, we could take a 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/sin_cos_circle.svg">
+            <figureImage imgSrc="/assets/images/cordic/sin_cos_circle.svg"></figureImage>
             <figcaption>Relation between sine, cosine, and angle $\theta$ on the unit circle.</figcaption>
         </figure>
     </div>
@@ -124,7 +128,7 @@ So in order to obtain the cosine and sine of an angle $\theta$, we could take a 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/angle_rot.svg">
+            <figureImage imgSrc="/assets/images/cordic/angle_rot.svg"></figureImage>
             <figcaption>Illustration of a rotated vector.</figcaption>
         </figure>
     </div>
@@ -410,7 +414,7 @@ What the above theorem says is that by performing $n$ iterations of the CORDIC a
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/convergence.svg">
+            <figureImage imgSrc="/assets/images/cordic/convergence.svg"></figureImage>
             <figcaption>Maximum angle $\theta_{\mathrm{max}}$ for $n=40$.</figcaption>
         </figure>
     </div>

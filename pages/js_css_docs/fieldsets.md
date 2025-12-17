@@ -27,6 +27,7 @@ The following colors are supported:
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -37,6 +38,7 @@ The following colors are supported:
         <p>...</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 ```
@@ -54,6 +56,7 @@ The following colors are supported:
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -64,6 +67,7 @@ The following colors are supported:
         <p>...</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 ```
@@ -81,6 +85,7 @@ The following colors are supported:
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -91,6 +96,7 @@ The following colors are supported:
         <p>...</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 ```
@@ -108,6 +114,7 @@ The following colors are supported:
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -118,6 +125,7 @@ The following colors are supported:
         <p>...</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 ```
@@ -135,6 +143,7 @@ The following colors are supported:
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -162,6 +171,7 @@ The following colors are supported:
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         $$I = \int f(x)\,dx$$
+
     </fieldset>
 </div>
 
@@ -172,6 +182,7 @@ The following colors are supported:
         <p>...</p>
 
         $$I = \int f(x)\,dx$$
+        
     </fieldset>
 </div>
 ```

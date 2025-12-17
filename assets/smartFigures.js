@@ -73,7 +73,7 @@ function collectFigures() {
  * 
  * In case of duplicate figure identifiers, a warning will be added below the figure.
  */
-function processFigures(figures) {
+function processFigures(figures, enableImageZoom) {
     var seenFigureIds = new Set();
     for (fig of figures) {
 
@@ -82,6 +82,25 @@ function processFigures(figures) {
             fig.figureDomObj.insertAdjacentHTML('beforeend', warningParagraphCode);
         } else {
             seenFigureIds.add(fig.figId);
+        }
+
+        // check if there exists a "figureImage" element
+        const figureImageDomObj = $(fig.figureDomObj).find("figureImage");
+        if(figureImageDomObj.length > 0) {
+            // retrieve the URL to the image
+            let imageSource = figureImageDomObj.attr("imgSrc");
+
+            // optional zoom code
+            let zoomCode = "";
+            if(enableImageZoom) {
+                zoomCode = "class=\"zoomable\" onclick=\"openZoom(this)\"";
+            }
+
+            // add new img tag
+            const newImg = $("<img src=\"" + imageSource + "\" " + zoomCode + ">");
+
+            // replace the figureImage with an actual image
+            $(figureImageDomObj).replaceWith(newImg);
         }
 
         // if a figure identifier is specified, an "id" attribute is added to the
@@ -97,8 +116,14 @@ function processFigures(figures) {
 }
 
 $(document).ready(function () {
+
+    // opt-out for image
+    if (typeof enableImageZoom === 'undefined') {
+        enableImageZoom = false;
+    }
+    
     console.log("Loading smart figures...");
     figures = collectFigures();
-    processFigures(figures);
+    processFigures(figures, enableImageZoom);
     console.log("Loaded smart figures.");
 });

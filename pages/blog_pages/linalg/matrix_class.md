@@ -9,6 +9,10 @@ sitemap:
 ---
 
 <div>
+{% include enable_image_zoom.html %}
+</div>
+
+<div>
 {% include smart_link/load_url_file.html url_file=site.data.external_urls_linalg_matrix_class %}
 </div>
 
@@ -44,13 +48,13 @@ $$M = \begin{bmatrix}
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="rowMajor">
-            <img src="/assets/images/linalg/row_major.png">
+            <figureImage imgSrc="/assets/images/linalg/row_major.png"></figureImage>
             <figcaption>Row-major</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="colMajor">
-            <img src="/assets/images/linalg/col_major.png">
+            <figureImage imgSrc="/assets/images/linalg/col_major.png"></figureImage>
             <figcaption>Column-major</figcaption>
         </figure>
     </div>

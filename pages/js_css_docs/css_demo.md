@@ -9,6 +9,11 @@ sitemap:
 ---
 
 <div>
+{% include enable_image_zoom.html %}
+</div>
+
+
+<div>
 {% include smart_cite/load_bib_file.html bib_file=site.data.bibliography_css_demo %}
 </div>
 
@@ -60,7 +65,7 @@ In this demo you can see different images position next to each other in a row. 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Centered image.</figcaption>
         </figure>
     </div>
@@ -71,7 +76,7 @@ In this demo you can see different images position next to each other in a row. 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/red_wide.png">
+            <figureImage imgSrc="/assets/images/red_wide.png"></figureImage>
             <figcaption>Wide image.</figcaption>
         </figure>
     </div>
@@ -82,13 +87,13 @@ In this demo you can see different images position next to each other in a row. 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="fig2ID">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Left image</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/green.png">
+            <figureImage imgSrc="/assets/images/green.png"></figureImage>
             <figcaption>Right image</figcaption>
         </figure>
     </div>
@@ -99,19 +104,19 @@ In this demo you can see different images position next to each other in a row. 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Leftmost figure</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/green.png">
+            <figureImage imgSrc="/assets/images/green.png"></figureImage>
             <figcaption>Middle figure</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/blue.png">
+            <figureImage imgSrc="/assets/images/blue.png"></figureImage>
             <figcaption>Rightmost figure with a lot of text that goes on and on and on ...</figcaption>
         </figure>
     </div>
@@ -503,7 +508,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="AnotherFig">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Left image</figcaption>
         </figure>
     </div>
@@ -519,7 +524,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="Some_fig">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Left image</figcaption>
         </figure>
     </div>
@@ -548,13 +553,13 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="fig2ID">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Left image</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="fig2ID">
-            <img src="/assets/images/green.png">
+            <figureImage imgSrc="/assets/images/green.png"></figureImage>
             <figcaption>Right image</figcaption>
         </figure>
     </div>
@@ -564,13 +569,13 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Left image</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/green.png">
+            <figureImage imgSrc="/assets/images/green.png"></figureImage>
             <figcaption>Right image</figcaption>
         </figure>
     </div>

@@ -237,6 +237,7 @@ The function above is very similar to our original `solveAndPlotForwardEuler`. I
 Now that we have finished writing our code, we want to see it in action. The interfaces that are more easy-to-use and the reduced code duplication can only be seen when reading and writing the code. However, it is now also possible to put different ODE solvers in the same plot, and this is something we can demonstrate visually.
 
 As a demonstration we will use the following IVP from a previous article:
+
 $$
 \begin{align*}
 y'(t) &= 50(\cos(t) - y)\\

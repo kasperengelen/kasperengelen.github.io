@@ -7,6 +7,10 @@ referenceId: runge_kutta
 ---
 
 <div>
+{% include enable_image_zoom.html %}
+</div>
+
+<div>
 {% include enable_title_numbering.html %}
 </div>
 
@@ -323,13 +327,13 @@ We can thus conclude that the Runge-Kutta method samples the ODE at various poin
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="rk4_step_cos">
-            <img src="/assets/images/num_ode/runge_kutta/rk4_kutta_cos.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta/rk4_kutta_cos.png"></figureImage>
             <figcaption>The ODE $y' = -y - \sin(t) + \cos(t)$</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="rk4_step_nonstiff">
-            <img src="/assets/images/num_ode/runge_kutta/rk4_kutta_nonstiff.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta/rk4_kutta_nonstiff.png"></figureImage>
             <figcaption>The ODE $y' = \sin(t)^2 \cdot y$</figcaption>
         </figure>
     </div>
@@ -553,7 +557,7 @@ We first plot forward Euler (i.e., first order Runge-Kutta), the RK2 Midpoint me
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="compare_against_rk3">
-            <img src="/assets/images/num_ode/runge_kutta/CompareAgainstRK3.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta/CompareAgainstRK3.png"></figureImage>
             <figcaption>First, second, and third order RK.</figcaption>
         </figure>
     </div>
@@ -570,7 +574,7 @@ We now turn our attention to fourth order Runge-Kutta.
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="compare_against_rk4">
-            <img src="/assets/images/num_ode/runge_kutta/CompareAgainstRK4.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta/CompareAgainstRK4.png"></figureImage>
             <figcaption>First and fourth order RK.</figcaption>
         </figure>
     </div>
@@ -594,7 +598,7 @@ We plot the forward Euler method with $h=0.5$ and $h=0.1$ as well as second, thi
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="compare_cosine_stable">
-            <img src="/assets/images/num_ode/runge_kutta/CompareRKCosineStable.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta/CompareRKCosineStable.png"></figureImage>
             <figcaption>Stable cosine ODE.</figcaption>
         </figure>
     </div>
@@ -615,7 +619,7 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="compare_cosine_unstable">
-            <img src="/assets/images/num_ode/runge_kutta/CompareRKCosineUnstable.png">
+            <figureImage imgSrc="/assets/images/num_ode/runge_kutta/CompareRKCosineUnstable.png"></figureImage>
             <figcaption>Unstable cosine ODE.</figcaption>
         </figure>
     </div>

@@ -1,0 +1,44 @@
+
+<!-- script to enable zoomable images. -->
+<script>
+    let enableImageZoom = true;
+</script>
+
+<!-- This is the zoomed in image and will be dynamically adjusted to the clicked image -->
+<div id="zoomModal" class="zoomModal" onclick="closeZoom()">
+    <div class="zoomContent" onclick="event.stopPropagation()">
+        <img id="zoomImage" class="zoomImage">
+        <div id="zoomCaption" class="zoomCaption"></div>
+    </div>
+</div>
+
+<script>
+    /**
+     * Function to open the zoomed in image.
+     */
+    function openZoom(img) {
+        const figure = img.closest('figure');
+        const caption = figure.querySelector('figcaption');
+
+        // set image
+        document.getElementById("zoomImage").src = img.src;
+
+        // copy caption text
+        document.getElementById("zoomCaption").innerHTML = caption ? caption.innerHTML : "";
+
+        // make the zoomed in image visible
+        document.getElementById("zoomModal").style.display = "flex";
+
+        // freeze the background
+        document.body.classList.add('zoomModalOpen');
+    }
+
+    /**
+     * Function to close the zoomed in image.
+     */
+    function closeZoom() {
+        document.getElementById("zoomModal").style.display = "none";
+        // Unfreeze background
+        document.body.classList.remove('zoomModalOpen');
+    }
+</script>

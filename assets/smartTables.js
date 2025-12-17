@@ -123,7 +123,7 @@ function processTables(tables) {
         }
 
         // create new <table> element
-        const newTable = $("<table id=\"" + tab.tabId + "\"></table>"); // TODO: id="..."
+        const newTable = $("<table id=\"" + tab.tabId + "\"></table>");
 
         // retrieve the <table> component of the smart table
         const tableElement = $(tab.tableDomObj).find("table");

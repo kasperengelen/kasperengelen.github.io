@@ -7,6 +7,10 @@ exclude: true
 ---
 
 <div>
+{% include enable_image_zoom.html %}
+</div>
+
+<div>
 {% include smart_link/load_internal_urls.html %}
 </div>
 
@@ -170,7 +174,7 @@ Let us first explore what a fixed-point number looks like. It is similar to a de
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/fixed_point.png">
+            <figureImage imgSrc="/assets/images/cordic/fixed_point.png"></figureImage>
             <figcaption>Fixed-point number.</figcaption>
         </figure>
     </div>

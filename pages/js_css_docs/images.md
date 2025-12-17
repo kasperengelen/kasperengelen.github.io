@@ -8,7 +8,7 @@ sitemap:
     exclude: true
 ---
 
-Last updated: 2025-09-13
+Last updated: 2025-12-08
 
 This website also supports adding images as figures in a document. Figures can be put next to each other in rows that are then dynamically arranged depending on the screen size. Figures can have captions and numbering. Figures can also be labelled for referencing.
 
@@ -16,10 +16,14 @@ This website also supports adding images as figures in a document. Figures can b
 
 ### Single image
 
+<div>
+{% include enable_image_zoom.html %}
+</div>
+
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Centered image.</figcaption>
         </figure>
     </div>
@@ -29,7 +33,7 @@ This website also supports adding images as figures in a document. Figures can b
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Centered image.</figcaption>
         </figure>
     </div>
@@ -41,7 +45,7 @@ This website also supports adding images as figures in a document. Figures can b
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/red_wide.png">
+            <figureImage imgSrc="/assets/images/red_wide.png"></figureImage>
             <figcaption>Wide image.</figcaption>
         </figure>
     </div>
@@ -51,7 +55,7 @@ This website also supports adding images as figures in a document. Figures can b
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/red_wide.png">
+            <figureImage imgSrc="/assets/images/red_wide.png"></figureImage>
             <figcaption>Wide image.</figcaption>
         </figure>
     </div>
@@ -63,13 +67,13 @@ This website also supports adding images as figures in a document. Figures can b
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="fig2ID">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Left image</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/green.png">
+            <figureImage imgSrc="/assets/images/green.png"></figureImage>
             <figcaption>Right image</figcaption>
         </figure>
     </div>
@@ -79,13 +83,13 @@ This website also supports adding images as figures in a document. Figures can b
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="fig2ID">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Left image</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/green.png">
+            <figureImage imgSrc="/assets/images/green.png"></figureImage>
             <figcaption>Right image</figcaption>
         </figure>
     </div>
@@ -97,19 +101,19 @@ This website also supports adding images as figures in a document. Figures can b
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Leftmost figure</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/green.png">
+            <figureImage imgSrc="/assets/images/green.png"></figureImage>
             <figcaption>Middle figure</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/blue.png">
+            <figureImage imgSrc="/assets/images/blue.png"></figureImage>
             <figcaption>Rightmost figure with a lot of text that goes on and on and on ...</figcaption>
         </figure>
     </div>
@@ -119,19 +123,19 @@ This website also supports adding images as figures in a document. Figures can b
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Leftmost figure</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/green.png">
+            <figureImage imgSrc="/assets/images/green.png"></figureImage>
             <figcaption>Middle figure</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/blue.png">
+            <figureImage imgSrc="/assets/images/blue.png"></figureImage>
             <figcaption>Rightmost figure with a lot of text that goes on and on and on ...</figcaption>
         </figure>
     </div>
@@ -148,7 +152,7 @@ A label can be added by specifying a `figId` attribute of the `figure` tag.
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="some_figure_label">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Centered image.</figcaption>
         </figure>
     </div>
@@ -156,6 +160,17 @@ A label can be added by specifying a `figId` attribute of the `figure` tag.
 ```
 
 When a label is specified, the `figure` tag is provided with an `id`. The full identifier is the value of the `figId` attribute, prefixed with `fig_`.
+
+
+## Zooming in on pictures
+
+It is possible to click on a figure to open a zoomed-in version. To enable this functionality, you can add the following code at the top of the article:
+
+```html
+<div>
+{% raw %}{% include enable_image_zoom.html %}{% endraw %}
+</div>
+```
 
 
 ## Technical information
@@ -167,7 +182,7 @@ If there are two figures within one document with the same label, then an error 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="duplicated_label">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Centered image.</figcaption>
         </figure>
     </div>
@@ -176,7 +191,7 @@ If there are two figures within one document with the same label, then an error 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="duplicated_label">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Centered image.</figcaption>
         </figure>
     </div>
@@ -186,7 +201,7 @@ If there are two figures within one document with the same label, then an error 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="duplicated_label">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Centered image.</figcaption>
         </figure>
     </div>
@@ -195,7 +210,7 @@ If there are two figures within one document with the same label, then an error 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="duplicated_label">
-            <img src="/assets/images/red.png">
+            <figureImage imgSrc="/assets/images/red.png"></figureImage>
             <figcaption>Centered image.</figcaption>
         </figure>
     </div>

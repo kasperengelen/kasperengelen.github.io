@@ -7,6 +7,10 @@ exclude: true
 ---
 
 <div>
+{% include enable_image_zoom.html %}
+</div>
+
+<div>
 {% include smart_link/load_internal_urls.html %}
 </div>
 
@@ -127,7 +131,7 @@ The result can be seen below:
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/unit_circle_empty.png">
+            <figureImage imgSrc="/assets/images/cordic/unit_circle_empty.png"></figureImage>
             <figcaption>Empty unit circle.</figcaption>
         </figure>
     </div>
@@ -168,7 +172,7 @@ The above code will draw our target vector in green. The new vector is drawn in 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/arrows_simple.png">
+            <figureImage imgSrc="/assets/images/cordic/arrows_simple.png"></figureImage>
             <figcaption>Illustration of the second iteration ($i=1$).</figcaption>
         </figure>
     </div>
@@ -194,13 +198,13 @@ The `arrowstyle` specifies some properties of the size of the arrow. The `connec
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/arrow_wrong_1.png">
+            <figureImage imgSrc="/assets/images/cordic/arrow_wrong_1.png"></figureImage>
             <figcaption>Illustration of the second iteration ($i=1$).</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/arrow_wrong_2.png">
+            <figureImage imgSrc="/assets/images/cordic/arrow_wrong_2.png"></figureImage>
             <figcaption>Illustration of the third iteration ($i=2$).</figcaption>
         </figure>
     </div>
@@ -230,13 +234,13 @@ We can now see that the result is correct, regardless of the direction of the ro
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/arrow_correct_1.png">
+            <figureImage imgSrc="/assets/images/cordic/arrow_correct_1.png"></figureImage>
             <figcaption>Illustration of the second iteration ($i=1$).</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/arrow_correct_2.png">
+            <figureImage imgSrc="/assets/images/cordic/arrow_correct_2.png"></figureImage>
             <figcaption>Illustration of the third iteration ($i=2$).</figcaption>
         </figure>
     </div>
@@ -269,13 +273,13 @@ This means that the character at the bottom-left of the text is located at the c
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/with_text_0.png">
+            <figureImage imgSrc="/assets/images/cordic/with_text_0.png"></figureImage>
             <figcaption>Illustration of the first iteration ($i=0$).</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/with_text_1.png">
+            <figureImage imgSrc="/assets/images/cordic/with_text_1.png"></figureImage>
             <figcaption>Illustration of the second iteration ($i=1$).</figcaption>
         </figure>
     </div>
@@ -343,7 +347,7 @@ Though it is not be shown here, this does require a small modification to the `p
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/animated_no_pause.gif">
+            <figureImage imgSrc="/assets/images/cordic/animated_no_pause.gif"></figureImage>
             <figcaption>Animated.</figcaption>
         </figure>
     </div>
@@ -395,7 +399,7 @@ In the result below, there is a noticeable pause before the first iteration:
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/cordic/animated_with_pause.gif">
+            <figureImage imgSrc="/assets/images/cordic/animated_with_pause.gif"></figureImage>
             <figcaption>Animated with pause.</figcaption>
         </figure>
     </div>

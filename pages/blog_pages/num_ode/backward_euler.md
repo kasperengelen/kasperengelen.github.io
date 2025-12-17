@@ -7,6 +7,10 @@ referenceId: backward_euler
 ---
 
 <div>
+{% include enable_image_zoom.html %}
+</div>
+
+<div>
 {% include enable_title_numbering.html %}
 </div>
 
@@ -236,13 +240,13 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="be_manual">
-            <img src="/assets/images/num_ode/backward_euler/be_manual.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/be_manual.png"></figureImage>
             <figcaption>Plot of the manually computed results.</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="be_manual_full">
-            <img src="/assets/images/num_ode/backward_euler/be_manual_full.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/be_manual_full.png"></figureImage>
             <figcaption>Plot including the alternative roots we did not use.</figcaption>
         </figure>
     </div>
@@ -317,13 +321,13 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="forward_euler_quadrature">
-            <img src="/assets/images/num_ode/forward_euler_quadrature.png">
+            <figureImage imgSrc="/assets/images/num_ode/forward_euler_quadrature.png"></figureImage>
             <figcaption>Forward Euler.</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="backward_euler_quadrature">
-            <img src="/assets/images/num_ode/backward_euler/quadrature.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/quadrature.png"></figureImage>
             <figcaption>Backward Euler.</figcaption>
         </figure>
     </div>
@@ -472,13 +476,13 @@ We can then implement this IVP as a ```InitialValueProblem``` struct and call th
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="backward_euler_stiff_fe">
-            <img src="/assets/images/num_ode/backward_euler/stiff_fe.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/stiff_fe.png"></figureImage>
             <figcaption>Forward Euler.</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="backward_euler_stiff_be">
-            <img src="/assets/images/num_ode/backward_euler/stiff_be.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/stiff_be.png"></figureImage>
             <figcaption>Backward Euler.</figcaption>
         </figure>
     </div>
@@ -509,13 +513,13 @@ The intuition for the ODE is that the oxygen needed to sustain a flame is propot
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="flame_fe_easy">
-            <img src="/assets/images/num_ode/backward_euler/flame_fe_easy.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/flame_fe_easy.png"></figureImage>
             <figcaption>Forward Euler $\delta = 0.01$.</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="flame_be_easy">
-            <img src="/assets/images/num_ode/backward_euler/flame_be_easy.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/flame_be_easy.png"></figureImage>
             <figcaption>Backward Euler $\delta = 0.01$.</figcaption>
         </figure>
     </div>
@@ -527,13 +531,13 @@ Once gain we see that forward Euler exhibits oscilliatory behaviour in <smart-re
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="flame_fe_hard">
-            <img src="/assets/images/num_ode/backward_euler/flame_fe_hard.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/flame_fe_hard.png"></figureImage>
             <figcaption>Forward Euler $\delta = 0.0001$.</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="flame_be_hard">
-            <img src="/assets/images/num_ode/backward_euler/flame_be_hard.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/flame_be_hard.png"></figureImage>
             <figcaption>Backward Euler $\delta = 0.0001$.</figcaption>
         </figure>
     </div>
@@ -569,13 +573,13 @@ For this ODE we therefore have that even tiny deviations from the trajectory at 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="quadex_fe">
-            <img src="/assets/images/num_ode/backward_euler/quadex_fe.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/quadex_fe.png"></figureImage>
             <figcaption>Forward Euler.</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="quadex_be">
-            <img src="/assets/images/num_ode/backward_euler/quadex_be.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/quadex_be.png"></figureImage>
             <figcaption>Backward Euler.</figcaption>
         </figure>
     </div>
@@ -597,13 +601,13 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="stable_fe">
-            <img src="/assets/images/num_ode/backward_euler/stable_fe.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/stable_fe.png"></figureImage>
             <figcaption>Forward Euler.</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="stable_be">
-            <img src="/assets/images/num_ode/backward_euler/stable_be.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/stable_be.png"></figureImage>
             <figcaption>Backward Euler.</figcaption>
         </figure>
     </div>
@@ -625,13 +629,13 @@ $$
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="unstable_fe">
-            <img src="/assets/images/num_ode/backward_euler/unstable_fe.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/unstable_fe.png"></figureImage>
             <figcaption>Forward Euler.</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="unstable_be">
-            <img src="/assets/images/num_ode/backward_euler/unstable_be.png">
+            <figureImage imgSrc="/assets/images/num_ode/backward_euler/unstable_be.png"></figureImage>
             <figcaption>Backward Euler.</figcaption>
         </figure>
     </div>

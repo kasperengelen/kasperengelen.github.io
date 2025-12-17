@@ -23,6 +23,10 @@ referenceId: forward_euler
 {% include smart_link/load_internal_urls.html %}
 </div>
 
+<div>
+{% include enable_image_zoom.html %}
+</div>
+
 <warning-box>
 In this article we will be implementing a numerical ODE solver by hand. Note that this is purely for educational purposes. When doing practical work, always make sure to use existing libraries (e.g., GNU Scientific Library in C, odeint for C++, MATLAB, SciPy for Python, DifferentialEquations.jl for Julia, ODEPACK for FORTRAN). Since those libraries are widely used, they are also well tested and optimised and thus safe to use. 
 </warning-box>
@@ -123,7 +127,7 @@ Geometrically speaking, the forward Euler method takes a point $(t_i, y_i)$ and 
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="forward_euler_tangents">
-            <img src="/assets/images/num_ode/forward_euler_tangents.png">
+            <figureImage imgSrc="/assets/images/num_ode/forward_euler_tangents.png"></figureImage>
             <figcaption>Plot of the tangents and the forward Euler approximation of the solution.</figcaption>
         </figure>
     </div>
@@ -134,7 +138,7 @@ For completeness, we also apply the forward Euler method with step-size $h=0.1$.
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="forward_euler_steps">
-            <img src="/assets/images/num_ode/forward_euler_steps.png">
+            <figureImage imgSrc="/assets/images/num_ode/forward_euler_steps.png"></figureImage>
             <figcaption>Output of the Forward Euler method with $h=1$ and $h=0.1$.</figcaption>
         </figure>
     </div>
@@ -211,7 +215,7 @@ The area shaded in red is the error, which is the difference between the exact i
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="forward_euler_quadrature">
-            <img src="/assets/images/num_ode/forward_euler_quadrature.png">
+            <figureImage imgSrc="/assets/images/num_ode/forward_euler_quadrature.png"></figureImage>
             <figcaption>Illustration of the quadrature technique and the error.</figcaption>
         </figure>
     </div>
@@ -549,7 +553,7 @@ In order to illustrate this difference, we will plot two curves $f(x) = x$ and $
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="curve_comparison">
-            <img src="/assets/images/num_ode/curve_comparison.png">
+            <figureImage imgSrc="/assets/images/num_ode/curve_comparison.png"></figureImage>
             <figcaption>Comparison of $f(x) = x$ and $g(x) = x^2$.</figcaption>
         </figure>
     </div>
@@ -740,13 +744,13 @@ The plots for the unstable and stable IVPs can be seen in <smart-ref targetType=
 <div class="fig-row">
     <div class="fig-in-row">
         <figure figId="ode_example_1">
-            <img src="/assets/images/num_ode/ForwardEuler1.png">
+            <figureImage imgSrc="/assets/images/num_ode/ForwardEuler1.png"></figureImage>
             <figcaption>Unstable ODE, $t \in [0, 5]$.</figcaption>
         </figure>
     </div>
     <div class="fig-in-row">
         <figure figId="ode_example_2">
-            <img src="/assets/images/num_ode/ForwardEuler2.png">
+            <figureImage imgSrc="/assets/images/num_ode/ForwardEuler2.png"></figureImage>
             <figcaption>Stable ODE, $t \in [0, 10]$.</figcaption>
         </figure>
     </div>

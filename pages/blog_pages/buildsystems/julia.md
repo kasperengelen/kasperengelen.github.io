@@ -7,6 +7,10 @@ referenceId: julia_pkg
 ---
 
 <div>
+{% include enable_image_zoom.html %}
+</div>
+
+<div>
 {% include smart_link/load_url_file.html url_file=site.data.external_urls_buildsystems_julia %}
 </div>
 
@@ -238,7 +242,7 @@ In the resulting plot we can see both the function and the derivative. Also note
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/buildsystems/julia_plot.png">
+            <figureImage imgSrc="/assets/images/buildsystems/julia_plot.png"></figureImage>
             <figcaption>Plot.</figcaption>
         </figure>
     </div>
@@ -483,7 +487,7 @@ A plot of the function will be saved to `plot.png`:
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/buildsystems/julia_plot.png">
+            <figureImage imgSrc="/assets/images/buildsystems/julia_plot.png"></figureImage>
             <figcaption>Contents of <code>plot.png</code>.</figcaption>
         </figure>
     </div>
@@ -508,7 +512,7 @@ If all is well, a new browser window or tab will now open. To get started with a
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/buildsystems/pluto_welcome_screen.png">
+            <figureImage imgSrc="/assets/images/buildsystems/pluto_welcome_screen.png"></figureImage>
             <figcaption>The welcome screen.</figcaption>
         </figure>
     </div>
@@ -538,7 +542,7 @@ Pluto will now report the polynomial and its derivative, and produce the followi
 <div class="fig-row">
     <div class="fig-in-row">
         <figure>
-            <img src="/assets/images/buildsystems/julia_plot.png">
+            <figureImage imgSrc="/assets/images/buildsystems/julia_plot.png"></figureImage>
             <figcaption>Contents of the plot.</figcaption>
         </figure>
     </div>
