@@ -55,7 +55,16 @@ exclude: true
 </div>
 
 <div class="cv-section" id="mobility_phd">
-    <h2>Mobility</h2>
+    <h2>Travel and mobility</h2>
+
+    <h3>BeNeLearn/BNAIC 2025</h3>
+    <i>Namur, Belgium</i><br>
+    November 2025<br>
+    <p>
+        Once again, I was happy to attend the yearly BeNeLearn/BNAIC conference, this time taking place in Namur, Belgium.
+
+        This edition was special to me since it was organised by people that I met at ESSLLI in 2023. I attended a number of interesting talks, discussed posters, and got the opportunity to network with other AI researchers from Belgium and the Netherlands. Finally, I got the opportunity to experience the night life in Namur with its many restaurants and student bars!
+    </p>
 
     <h3>ECAI 2025</h3>
     <i>Bologna, Italy</i><br>
