@@ -211,3 +211,118 @@
     - Wikipedia Contributors
   title: Erwin Fehlberg
   url: https://de.wikipedia.org/wiki/Erwin_Fehlberg
+
+- identifier: wiki_ode
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Ordinary differential equation
+  url: en.wikipedia.org/wiki/Ordinary_differential_equation
+
+
+- identifier: wiki_lv
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Lotka-Volterra equations
+  url: https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations
+
+- identifier: wiki_fundamental_thm_calc
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Fundamental theorem of calculus
+  url: https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus
+
+
+- identifier: wiki_logistic_equation
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Logistic function
+  url: https://en.wikipedia.org/wiki/Logistic_function
+
+
+
+- identifier: lv_param_modelica
+  type: website
+  authors:
+    - "Dr. Michael M. Tiller"
+  title: "Modelica by Example - Lotka-Volterra Systems"
+  url: https://mbe.modelica.university/behavior/equations/population/
+  accessed:
+    year: 2026
+    month: 1
+    day: 31
+
+- identifier: wiki_compartmental_model
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Compartmental models (epidemiology)
+  url: https://en.wikipedia.org/wiki/Compartmental_models_(epidemiology)
+
+
+- identifier: sierra_climate_carbon_model
+  type: journalArticle
+  authors:
+    - Carlos A. Sierra
+    - Verónika Ceballos-Núñez
+    - Holger Metzler
+    - Markus Müller
+  title: Representing and Understanding the Carbon Cycle Using the Theory of Compartmental Dynamical Systems
+  journal: Journal of Advances in Modeling Earth Systems, Vol. 10
+  year: 2018
+
+
+- identifier: rlc_ode_libretexts
+  type: website
+  authors:
+    - "Prof. Kamran Iqbal"
+  title: "1.3: Second-Order ODE Models - Engineering LibreTexts"
+  url: https://eng.libretexts.org/Bookshelves/Industrial_and_Systems_Engineering/Introduction_to_Control_Systems_(Iqbal)/01%253A_Mathematical_Models_of_Physical_Systems/1.03%253A_Second-Order_ODE_Models
+  accessed:
+    year: 2026
+    month: 2
+    day: 4
+
+- identifier: wiki_two_body_problem
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Two-body problem
+  url: https://en.wikipedia.org/wiki/Two-body_problem
+
+
+- identifier: strogatz_rj
+  type: journalArticle
+  authors:
+    - Steven H. Strogatz
+  title: Love Affairs and Differential Equations
+  journal: Mathematics Magazine, Vol. 61
+  year: 1988
+
+- identifier: sprott_rj
+  type: journalArticle
+  authors:
+    - J.C. Sprott
+  title: Dynamical Models of Love
+  journal: Nonlinear Dynamics, Psychology, and Life Sciences, Vol. 8
+  year: 2004
+
+- identifier: wiki_phase_portrait
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Phase portrait
+  url: https://en.wikipedia.org/wiki/Phase_portrait
+
+- identifier: wiki_romeo_and_juliet
+  type: website
+  authors:
+    - Wikipedia Contributors
+  title: Romeo and Juliet
+  url: https://en.wikipedia.org/wiki/Romeo_and_Juliet
+
+
+

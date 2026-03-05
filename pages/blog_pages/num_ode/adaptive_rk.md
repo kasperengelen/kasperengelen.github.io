@@ -367,7 +367,7 @@ Now that we know how adaptive step-sizes can be used with Runge-Kutta, we can ap
 
 ### Logistic equation
 
-The first problem to solve is the logistic equation. This equation describes the growth of a population of animals while taking into account how many animals can be supported by the ecosystem. The full IVP is as follows:
+The first problem to solve is the logistic equation <smart-cite bibId="wiki_logistic_equation"></smart-cite>. This equation describes the growth of a population of animals while taking into account how many animals can be supported by the ecosystem. The full IVP is as follows:
 
 $$
 \begin{align*}

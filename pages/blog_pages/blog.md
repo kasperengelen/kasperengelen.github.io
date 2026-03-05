@@ -16,14 +16,14 @@ referenceId: blog_overview
 <div class="series-container series-section" id="buildsystems">
     <div class="series-top-layer">
         <div class="series-picture">
-            <img src="/assets/images/blog_icons/icon_build_series_bin.png" alt="Build systems">
+            <img src="/assets/images/blog_icons/icon_build_series_bin2.png" alt="Build systems">
         </div>
         <div class="series-explanation">
-            <h3>Build systems</h3>
+            <h3>Software Engineering</h3>
             <div class="series-picture-mobile">
-                <img src="/assets/images/blog_icons/icon_build_series_bin.png" alt="Build systems">
+                <img src="/assets/images/blog_icons/icon_build_series_bin2.png" alt="Build systems">
             </div>
-            <p>In this series we explore various build systems. Each tutorial explains how to create a new project, how to add source and test code, and how to compile the project into an executable.</p>
+            <p>In this series we explore various techniques for writing high quality software. Each tutorial will cover a topic related to software engineering: writing and organising code, building projects, optimising performance, and deployment.</p>
             <ul class="blogpost-list">
             {% include blogpost_list_entry.html title="Swift Package Manager" post_url_id="swift_package_manager" code_url_id="buildsystems_swift_code"%}
             {% include blogpost_list_entry.html title="Java projects with Gradle" post_url_id="gradle" code_url_id="buildsystems_gradle_code" %}
@@ -33,20 +33,25 @@ referenceId: blog_overview
     </div>
 </div>
 
-<div class="series-container series-section" id="linear_algebra_swift">
+<div class="series-container series-section" id="ode_numeric">
     <div class="series-top-layer">
         <div class="series-picture">
-            <img src="/assets/images/blog_icons/icon_linalg_swift.png" alt="Linear algebra in Swift">
+            <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="Numerical methods for ODEs">
         </div>
         <div class="series-explanation">
-            <h3>Linear algebra using Swift</h3>
+            <h3>Numerical methods for ODEs</h3>
             <div class="series-picture-mobile">
-                <img src="/assets/images/blog_icons/icon_linalg_swift.png" alt="Linear algebra in Swift">
+                <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="Numerical methods for ODEs">
             </div>
-            <p>We cover multiple topics in linear algebra. In each tutorial we first explore the theory behind a technique, and afterwards we implement it using the Swift programming language.</p>
+            <p>We explore different methods to numerically solve ordinary differential equations, covering both theory and implementations.</p>
             <ul class="blogpost-list">
-            {% include blogpost_list_entry.html title="Matrix class" post_url_id="linalg_matrix_class" code_url_id="linalg_swift_matrix_code"%}
-            {% include blogpost_list_entry.html title="Cramer's rule" post_url_id="cramers_rule" code_url_id="linalg_swift_cramer_code" %}
+            {% include blogpost_list_entry.html title="Intro + Forward Euler's method" post_url_id="forward_euler" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="Backward Euler's method" post_url_id="backward_euler" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="An interface for ODE solvers" post_url_id="solver_interface" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="Runge-Kutta methods" post_url_id="runge_kutta" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="Adaptive-step Runge-Kutta" post_url_id="adaptive_rk" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="Systems of ODEs" post_url_id="ode_system" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="Romeo and Juliet" post_url_id="shakespeare" code_url_id="num_ode_code" %}
             </ul>
         </div>
     </div>
@@ -72,23 +77,20 @@ referenceId: blog_overview
     </div>
 </div>
 
-<div class="series-container series-section" id="ode_numeric">
+<div class="series-container series-section" id="linear_algebra_swift">
     <div class="series-top-layer">
         <div class="series-picture">
-            <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="Numerical methods for ODEs">
+            <img src="/assets/images/blog_icons/icon_linalg_swift.png" alt="Linear algebra in Swift">
         </div>
         <div class="series-explanation">
-            <h3>Numerical methods for ODEs</h3>
+            <h3>Linear algebra using Swift</h3>
             <div class="series-picture-mobile">
-                <img src="/assets/images/blog_icons/num_ode_icon_vector_field.png" alt="Numerical methods for ODEs">
+                <img src="/assets/images/blog_icons/icon_linalg_swift.png" alt="Linear algebra in Swift">
             </div>
-            <p>We explore different methods to numerically solve ordinary differential equations, covering both theory and implementations.</p>
+            <p>We cover multiple topics in linear algebra. In each tutorial we first explore the theory behind a technique, and afterwards we implement it using the Swift programming language.</p>
             <ul class="blogpost-list">
-            {% include blogpost_list_entry.html title="Intro + Forward Euler's method" post_url_id="forward_euler" code_url_id="num_ode_code" %}
-            {% include blogpost_list_entry.html title="Backward Euler's method" post_url_id="backward_euler" code_url_id="num_ode_code" %}
-            {% include blogpost_list_entry.html title="An interface for ODE solvers" post_url_id="solver_interface" code_url_id="num_ode_code" %}
-            {% include blogpost_list_entry.html title="Runge-Kutta methods" post_url_id="runge_kutta" code_url_id="num_ode_code" %}
-            {% include blogpost_list_entry.html title="Adaptive-step Runge-Kutta" post_url_id="adaptive_rk" code_url_id="num_ode_code" %}
+            {% include blogpost_list_entry.html title="Matrix class" post_url_id="linalg_matrix_class" code_url_id="linalg_swift_matrix_code"%}
+            {% include blogpost_list_entry.html title="Cramer's rule" post_url_id="cramers_rule" code_url_id="linalg_swift_cramer_code" %}
             </ul>
         </div>
     </div>

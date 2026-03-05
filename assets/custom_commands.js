@@ -1,20 +1,20 @@
 
 
 /**
- * Replace all occurrences of the specified tag with a "highlight box".
+ * Replace all occurrences of the "todo-box" tag with a "highlight box".
  * 
  * The specified tag can take an optional attribute "title". If specified, a <h3> element will be inserted with the title.
  */
-function replaceCustomTagWithHighlightBox(tagName, highLightBoxClass) {
-    $(tagName).each(function(i) {
+function handleTodoBox(highLightBoxClass) {
+    $("todo-box").each(function(i) {
         if(this.hasAttribute("title")) {
             var titleAttr = $(this).attr("title");
             /* NOTE: this only works properly if we pass a lambda. Otherwise, the MathJAX content is not rendered properly. */
-            $(this).replaceWith(function(i, content) { return "<div class=\"" + highLightBoxClass + "\"><h3>" + titleAttr + "</h3>\n" + content +  "</div>"});
+            $(this).replaceWith(function(i, content) { return "<div class=\"" + highLightBoxClass + "\"><h3>" + titleAttr + "</h3>\nTODO: " + content +  "</div>"});
 
         } else {
             /* NOTE: this only works properly if we pass a lambda. Otherwise, the MathJAX content is not rendered properly. */
-            $(this).replaceWith(function(i, content) { return "<div class=\"" + highLightBoxClass + "\">" + content +  "</div>"});
+            $(this).replaceWith(function(i, content) { return "<div class=\"" + highLightBoxClass + "\">TODO: " + content +  "</div>"});
         }
     });
 };
@@ -45,7 +45,7 @@ $(document).ready(function () {
     // replaceCustomTagWithHighlightBox("example-box", "highlight-box-gray");
     // replaceCustomTagWithHighlightBox("warning-box", "highlight-box-yellow");
 
-    replaceCustomTagWithHighlightBox("todo-box", "highlight-box-blue");
+    handleTodoBox("highlight-box-blue");
     replaceCustomTagWithFieldset("warning-box", "fs-yellow", "Warning");
     replaceCustomTagWithFieldset("note-box", "fs-blue", "Note");
 
