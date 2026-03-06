@@ -110,5 +110,7 @@ referenceId: blog_overview
         <li>2025-07-19: Added blogpost on a user-friendly interface for ODE solvers.</li>
         <li>2025-08-29: Added blogpost on Runge-Kutta methods.</li>
         <li>2025-11-18: Added blogpost on the Runge-Kutta-Fehlberg method.</li>
+        <li>2026-03-06: Added blogpost on systems of ODEs.</li>
+        <li>2026-03-06: Added blogpost on Romeo and Juliet.</li>
     </ul>
 </div>
