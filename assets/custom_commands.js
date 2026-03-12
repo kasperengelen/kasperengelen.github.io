@@ -110,7 +110,6 @@ function collectTerminalBoxes() {
 
         // check if the box is "minimal"
         const isMinimal = $(this).attr("data-minimal") !== undefined;
-        console.log("IS MIN", isMinimal);
 
         //  handle <tTitle>
         let terminalName = null;
@@ -181,15 +180,19 @@ $(document).ready(function () {
     // replaceCustomTagWithHighlightBox("example-box", "highlight-box-gray");
     // replaceCustomTagWithHighlightBox("warning-box", "highlight-box-yellow");
 
+    console.log("Loading todo boxes...")
     handleTodoBox("highlight-box-blue");
+    console.log("Loading warning boxes...")
     replaceCustomTagWithFieldset("warning-box", "fs-yellow", "Warning");
+    console.log("Loading note boxes...")
     replaceCustomTagWithFieldset("note-box", "fs-blue", "Note");
 
     // handle styled terminal boxes
+    console.log("Loading terminal boxes...")
     terminalBoxes = collectTerminalBoxes();
     handleTerminalBoxes(terminalBoxes);
 
-
+    console.log("Loading clickable titles...")
     /* Make each h2 with an 'id' attribute clickable */
     $("h2").each(function(i) {
         if(this.hasAttribute("id")) {
@@ -210,6 +213,7 @@ $(document).ready(function () {
         }
     });
 
+    console.log("Loading code tags...")
     $("texttt").replaceWith(function(i, content) {
         return "<code>" + content + "</code>"
     });
