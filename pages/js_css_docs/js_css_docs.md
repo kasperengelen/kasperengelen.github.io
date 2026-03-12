@@ -26,4 +26,5 @@ This is the homepage for the documentation of the custom CSS and Javascript code
 - <smart-link linkType="int" linkId="js_css_docs_highlight_boxes">Highlight boxes</smart-link>
 - <smart-link linkType="int" linkId="js_css_docs_fieldsets">Custom fieldsets</smart-link>
 - <smart-link linkType="int" linkId="js_css_docs_tables">[TODO] tables</smart-link>
+- <smart-link linkType="int" linkId="js_css_docs_terminal_box">Terminal Boxes</smart-link>
 - <smart-link linkType="int" linkId="js_css_docs_extra_boxes">Typesetting TODOs, notes, and warnings</smart-link>
