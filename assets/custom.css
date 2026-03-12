@@ -745,3 +745,116 @@ p {
   min-width: 8px;         /* ensures a visible leader even if space is tiny */
   transform: translateY(0.25em); /* vertically align the dots with text baseline */
 }
+
+
+/** TERMINAL BOX **/
+
+/* Terminal container */
+.terminal {
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000000;
+  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.25);
+  font-family: monospace;
+  font-size: 14px;
+  color: #33ff33;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* window bar */
+.term_bar {
+  height: 36px;
+  background-color: #1c1c1e;
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* window bar buttons */
+.term_controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Base button style */
+.term_control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  /* cursor: pointer; */
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Traffic light colors */
+.term_control_btn_red { background-color: #ff5f56; }
+.term_control_btn_yellow { background-color: #ffbd2e; }
+.term_control_btn_green { background-color: #27c93f; }
+
+/* Symbols appear on hover */
+.term_control_btn_red::after,
+.term_control_btn_yellow::after,
+.term_control_btn_green::after {
+  content: ""; /* default no symbol */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-weight: bold;
+  color: #333333; /* dark gray symbol */
+  pointer-events: none; /* allow clicking the button itself */
+}
+
+.term_control_btn_red:hover::after { content: "×"; }
+.term_control_btn_yellow:hover::after { content: "–"; }
+.term_control_btn_green:hover::after { content: "+"; }
+
+/* Window title centered */
+.term_title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: #c7c7cc;
+}
+
+/* Terminal content */
+.term_content {
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  line-height: 1.25;                
+  white-space: pre;                 
+  word-break: break-word;
+  text-shadow: 0 0 4px rgba(51, 255, 51, 0.4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;     
+}
+
+/* Lines */
+.term_line {
+  margin: 0;
+  padding: 0;
+}
+
+.term_prompt {
+  color: #33ff33;
+  font-weight: 600;
+}
+
+.term_response {
+  color: #ffffff;
+}
+
+/** TERMINAL BOX **/
+

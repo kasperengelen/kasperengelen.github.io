@@ -40,6 +40,142 @@ function replaceCustomTagWithFieldset(tagName, fieldsetParentDivClass, defaultTi
 };
 
 
+/**
+ * Terminal command.
+ */
+class TerminalCommand {
+    constructor(content) {
+        this.content = content;
+    }
+}
+
+/**
+ * Terminal response.
+ */
+class TerminalResponse {
+    constructor(content) {
+        this.content = content;
+    }
+}
+
+/**
+ * Contains information about the contents of a terminal window.
+ */
+class TerminalBoxInfo {
+    constructor(name, elements, elementRef, isMinimal) {
+        this.name = name;
+        this.elements = elements; // Array of TerminalCommandInfo
+        this.elementRef = elementRef;   // pointer to original <terminalBox> DOM element
+        this.isMinimal = isMinimal
+    }
+}
+
+
+/**
+ * Replace all occurrences of the <terminalBox> tag with the appropriate HTML code.
+ * 
+ * Input:
+ * <terminalBox>
+ *      <tTitle>Bash</tTitle>
+ *      <tCommand>echo "Hello world!"</tCommand>
+ *      <tResponse>Hello world!</tResponse>
+ * </terminalBox>
+ * 
+ * 
+ * Output:
+ * <div class="terminal">
+ *     <div class="term_bar">
+ *         <div class="term_controls">
+ *         <span class="term_control term_control_btn_red"></span>
+ *         <span class="term_control term_control_btn_yellow"></span>
+ *         <span class="term_control term_control_btn_green"></span>
+ *         </div>
+ *         <div class="term_title">bash</div>
+ *     </div>
+ *   
+ *     <div class="term_content">
+ *         <div class="term_line term_prompt">$ ls</div>
+ *         <div class="term_line term_response">file1.txt  src/  README.md</div>
+ *         <div class="term_line term_prompt">$ echo "hello"</div>
+ *         <div class="term_line term_response">hello</div>
+ *     </div>
+ * </div>
+ *
+ */
+function collectTerminalBoxes() {
+    let allBoxes = [];
+    // handle all <terminalBox> commands
+    $("terminalBox").each(function(i) {
+        const boxElem = $(this); // jQuery pointer to this <terminalBox>
+
+        // check if the box is "minimal"
+        const isMinimal = $(this).attr("data-minimal") !== undefined;
+        console.log("IS MIN", isMinimal);
+
+        //  handle <tTitle>
+        let terminalName = null;
+        const titleElem = $(this).find("tTitle");
+        if(titleElem.length) {
+            terminalName = titleElem.html(); // use .html() to preserve content
+        }
+
+
+        //  handle <tCommand>
+        //  handle <tResponse>
+        let commands = [];
+        $(this).children().each(function() {
+            const tag = this.tagName.toLowerCase();
+
+            if (tag === "tcommand") {
+                commands.push(new TerminalCommand($(this).html()));
+            } else if (tag === "tresponse") {
+                commands.push(new TerminalResponse($(this).html()));
+            }
+        });
+
+        allBoxes.push(new TerminalBoxInfo(terminalName, commands, boxElem, isMinimal));
+    });
+
+    return allBoxes;
+}
+
+
+function handleTerminalBoxes(terminalBoxes) {
+    terminalBoxes.forEach(box => {
+        // Create terminal container
+        const $terminalHTML = $("<div>", { class: "terminal" });
+
+        // Window bar
+        if(!box.isMinimal) {
+            const $termBar = $("<div>", { class: "term_bar" });
+            const $termControls = $("<div>", { class: "term_controls" });
+            $termControls.append('<span class="term_control term_control_btn_red"></span>');
+            $termControls.append('<span class="term_control term_control_btn_yellow"></span>');
+            $termControls.append('<span class="term_control term_control_btn_green"></span>');
+
+            const $termTitle = $("<div>", { class: "term_title", html: box.name || "" });
+            $termBar.append($termControls).append($termTitle);
+            $terminalHTML.append($termBar)
+        }
+        
+
+        // Terminal content
+        const $termContent = $("<div>", { class: "term_content" });
+        box.elements.forEach(el => {
+            if (el instanceof TerminalCommand) {
+                $termContent.append($("<div>", { class: "term_line term_prompt", html: "$ " + el.content }));
+            } else if (el instanceof TerminalResponse) {
+                $termContent.append($("<div>", { class: "term_line term_response", html: el.content }));
+            }
+        });
+        $terminalHTML.append($termContent);
+
+        // Replace original <terminalBox> in DOM
+        box.elementRef.replaceWith($terminalHTML);
+    });
+}
+
+
 $(document).ready(function () {
     /* Custom tags */
     // replaceCustomTagWithHighlightBox("example-box", "highlight-box-gray");
@@ -48,6 +184,10 @@ $(document).ready(function () {
     handleTodoBox("highlight-box-blue");
     replaceCustomTagWithFieldset("warning-box", "fs-yellow", "Warning");
     replaceCustomTagWithFieldset("note-box", "fs-blue", "Note");
+
+    // handle styled terminal boxes
+    terminalBoxes = collectTerminalBoxes();
+    handleTerminalBoxes(terminalBoxes);
 
 
     /* Make each h2 with an 'id' attribute clickable */
