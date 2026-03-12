@@ -107,7 +107,7 @@ exclude: true
     <i>Rennes, France</i><br>
     May 2024<br>
     <p>
-        There were courses on SMT-solving, model checking, and reinforcement learning. This was also a great opportunity to meet other people in the field of theoretical computer science.
+        The summer school offered courses on SMT-solving, model checking, and reinforcement learning. This was a great opportunity to meet other people in the field of theoretical computer science. After hours, I got familiar with Breton culture, which includes cider and galette. Finally, I paid a visit to the city of Rennes itself, including its museum for fine arts!
     </p>
 
     <h3>ESSLLI 2023 summer school</h3>
@@ -125,7 +125,9 @@ exclude: true
         <li>Organising committee CONFEST 2023 (CONCUR, FORMATS, QEST, FMICS)</li>
         <li>External reviewer for AAMAS 2024</li>
         <li>External reviewer for ECAI 2025</li>
+        <li>Organising the Software Testing and Beyond 2025 summer school in Antwerp</li>
         <li>External reviewer for AAAI 2026</li>
+        <li>Artifact reviewer for ETAPS 2026</li>
     </ul>
 </div>
 
