@@ -40,6 +40,8 @@ When rendered, this looks as follows:
   <tResponse>hello</tResponse>
 </terminalBox>
 
+## Minimal layout
+
 Additionally, the "minimal" version can be encoded as
 ```html
 <terminalBox data-minimal>
@@ -61,3 +63,14 @@ This looks as follows:
   <tResponse>hello</tResponse>
 </terminalBox>
 
+## Horizontal scrolling
+
+A scrollbar appears in case the text is very long:
+
+<terminalBox>
+  <tTitle>Bash</tTitle>
+  <tCommand>ls</tCommand>
+  <tResponse>file1.txt  src/  README.md</tResponse>
+  <tCommand>echo "Lorem ipsum dolor sit amet. In magnam ratione rem quod ipsum in fugiat consequatur aut galisum doloremque eum facere rerum ad rerum alias et beatae consequuntur."</tCommand>
+  <tResponse>Lorem ipsum dolor sit amet. In magnam ratione rem quod ipsum in fugiat consequatur aut galisum doloremque eum facere rerum ad rerum alias et beatae consequuntur.</tResponse>
+</terminalBox>
