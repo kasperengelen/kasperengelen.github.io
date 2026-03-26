@@ -114,5 +114,7 @@ referenceId: blog_overview
         <li>2025-11-18: Added blogpost on the Runge-Kutta-Fehlberg method.</li>
         <li>2026-03-06: Added blogpost on systems of ODEs.</li>
         <li>2026-03-06: Added blogpost on Romeo and Juliet.</li>
+        <li>2026-03-26: Added blogpost on Java version management.</li>
+        <li>2026-03-26: Added blogpost on CMake projects.</li>
     </ul>
 </div>
