@@ -8,6 +8,9 @@
 - identifier: buildsystems_julia_code
   url: https://github.com/kasperengelen/tutorial_code/tree/main/buildsystems/julia
 
+- identifier: code_buildsystem_cpp_cmake
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/buildsystems/cpp_cmake
+
 - identifier: linalg_swift_matrix_code
   url: https://github.com/kasperengelen/tutorial_code/tree/main/linalg
 

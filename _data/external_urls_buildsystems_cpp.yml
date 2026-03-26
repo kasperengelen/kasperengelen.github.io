@@ -1,0 +1,12 @@
+- identifier: gtest_docs
+  url: https://google.github.io/googletest/quickstart-cmake.html
+
+- identifier: code_buildsystem_cpp_cmake
+  url: https://github.com/kasperengelen/tutorial_code/tree/main/buildsystems/cpp_meson
+
+- identifier: fmt_lib
+  url: https://github.com/fmtlib/fmt
+
+- identifier: cmake_docs_build_shared
+  url: https://cmake.org/cmake/help/latest/variable/BUILD_SHARED_LIBS.html
+

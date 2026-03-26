@@ -29,14 +29,18 @@ Finally, we will be using Gradle from the command line. Even though Gradle has e
 ## Creating a project
 
 The first step to getting started with Gradle is, of course, to install the Gradle tool. On MacOS this can be done using Homebrew:
-```
-brew install gradle
-```
+
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>brew install gradle</tCommand>
+</terminalBox>
 
 The next step is to create a new Gradle project. For this we navigate to the directory where we want our project to be located, and run the following command:
-```
-gradle init --type java-application --dsl kotlin
-```
+
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>gradle init --type java-application --dsl kotlin</tCommand>
+</terminalBox>
 
 This will create a Java application, and use the Kotlin language for specifying Gradle build settings. The Gradle tool will then prompt for various informations. We use the following settings:
 - Java version 21,
@@ -194,7 +198,7 @@ Now that we have all the necessary dependencies installed, we can proceed by wri
             +-- resources
 ```
 
-This `src` directory has two sub-directories: `main` for application code, and `test` for unit-tests. Inside the `main` and `test` directories there are again two folders: `java`, for code, and `resources`, for extra files such as images, sounds or data. The `java` folder will contain various folders called "packages" that in turn contain `.java` files with Java code. 
+This `src` directory has two sub-directories: `main` for application code, and `test` for unit tests. Inside the `main` and `test` directories there are again two folders: `java`, for code, and `resources`, for extra files such as images, sounds or data. The `java` folder will contain various folders called "packages" that in turn contain `.java` files with Java code. 
 
 In Java there are classes, which contain functionality, and packages, which group multiple classes together. The package-structure must be identical to the directory-structure of the project. If we look inside `palindrome_checker/src/main/java` we see `org/example/App.java`. Here, the package is `org.example` with a class `App` in the `App.java` file.
 
@@ -246,9 +250,12 @@ application {
 
 We can now run our Hello World example by calling the `run` task via the command line:
 
-```
-./gradlew run
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>./gradlew run</tCommand>
+  <tResponse>Hello world!</tResponse>
+</terminalBox>
+
 
 ### Adding command line arguments
 
@@ -334,26 +341,25 @@ Also note that the entire thing is surrounded with a try-catch to check for erro
 
 If we now do `./gradlew run`, we can see that our program asks for the missing arguments:
 
-```
-The following option is required: [-w | --word]
-Usage: <main class> [options]
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>./gradlew run</tCommand>
+  <tResponse>The following option is required: [-w | --word]
+Usage: &lt;main class&gt; [options]
   Options:
     -h, --help
 
   * -w, --word
-      The word that might be a palindrome.
-```
+      The word that might be a palindrome.</tResponse>
+</terminalBox>
 
-We can pass a value for the `--word` argument:
-```
-./gradlew run --args="--word Hello"
-```
+We can fix this by passing a value for the `--word` argument via the command line:
 
-The output of our program is then as follows:
-
-```
-The following word was given: 'Hello'
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>./gradlew run --args="--word Hello"</tCommand>
+  <tResponse>The following word was given: 'Hello'</tResponse>
+</terminalBox>
 
 ### Checking for palindromes
 
@@ -398,19 +404,23 @@ if(checker.isPalindrome(word)) {
 
 If we call our program using `--word abccba`, we get confirmation that it is indeed a palindrome:
 
-```
-Input 'abccba' is a palindrome.
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>./gradlew run --args="--word abccba"</tCommand>
+  <tResponse>Input 'abccba' is a palindrome.</tResponse>
+</terminalBox>
 
 On the other hand, if we call our program using `--word Hello` we can see that our program correctly detects that this is not a palindrome:
 
-```
-Input 'Hello' is not a palindrome.
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>./gradlew run --args="--word Hello"</tCommand>
+  <tResponse>Input 'Hello' is not a palindrome.</tResponse>
+</terminalBox>
 
 ## Adding tests
 
-Even though we tested our tool on some simple inputs, we still need to be sure that everything works correctly by unit-testing our code. We assume that JCommander does its job correctly, and only write some tests for the `PalindromeChecker` class.
+Even though we tested our tool on some simple inputs, we still need to be sure that everything works correctly by unit testing our code. We assume that JCommander does its job correctly, and only write some tests for the `PalindromeChecker` class.
 
 Before we can add test code, we will first need to create a package and a `.java` file. The `palindrome_checker/src/test/` directory currently looks as follows:
 
@@ -486,11 +496,19 @@ public void testBinary() {
 
 We can ask Gradle to automatically execute all tests:
 
-```
-./gradlew test
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>./gradlew test</tCommand>
+</terminalBox>
 
 Gradle will then run all tests and report on the result. If any test failed, it will be reported in the terminal output.
+
+It is also possible to run the tests in a specific class:
+
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>./gradlew test --tests "palindrome_checker.PalindromeCheckerTest"</tCommand>
+</terminalBox>
 
 ## Tasks
 
@@ -563,13 +581,15 @@ If we now invoke the `shadowJar` task using `./gradlew shadowJar`, we see that a
 
 We can run this jar-file from the command-line:
 
-```
-java -jar palindrome_checker-all.jar --word racecar
-```
+<terminalBox data-minimal>
+  <tTitle>Bash</tTitle>
+  <tCommand>java -jar palindrome_checker-all.jar --word racecar</tCommand>
+  <tResponse>Input 'racecar' is a palindrome.</tResponse>
+</terminalBox>
 
 ## Conclusion
 
-In this article we have explored the Gradle build system for Java applications. We first created a project, cleaned up the dummy code provided by default, added our own code, and wrote some automated unit-tests. Finally, we exported our code both as a zip-file as well as a jar-file.
+In this article we have explored the Gradle build system for Java applications. We first created a project, cleaned up the dummy code provided by default, added our own code, and wrote some automated unit tests. Finally, we exported our code both as a zip-file as well as a jar-file.
 
 Note that we have only explored the basics, however. Gradle also supports projects with multiple sub-projects, projects that have GUIs, continuous integration platforms, etc. Nonetheless, the tutorial above should suffice for getting started with simple command-line applications, which is ideal for small projects and research prototypes.
 

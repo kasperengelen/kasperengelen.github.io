@@ -41,18 +41,20 @@ In this post we will learn how to create a new Swift project from scratch, inclu
 
 In this post we will not go over the installation progress. How to install Swift on different platforms can be found in the <smart-link linkType="ext" linkId="swift_docs">official documentation</smart-link>. To check whether Swift is installed on MacOS, you can run the following command:
 
-```
-swift --version
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>swift --version</tCommand>
+</terminalBox>
 
 It is also assumed that you already have some programming experience in another language, such a Python, Java, or C++. Advanced knowledge of build systems is not needed.
 ## Creating a project
 
 For managing the project, its targets, and the dependencies, we will make use of the Swift Package Manager (SwiftPM). In this tutorial we will be building a command line tool. Such a project can be created with the following command:
 
-```
-swift package init --name <name> --type executable
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>swift package init --name NewProject --type executable</tCommand>
+</terminalBox>
 
 If we run the command with "NewProject" as the project name, we get the following files:
 ```
@@ -75,9 +77,14 @@ let package = Package(
 ```
 
 The `executableTarget` indicates that this project can be run as an executable. We can run the program using the `swift run` command. This results in the following output:
-```
-Hello, world!
-```
+
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>swift run</tCommand>
+  <tResponse>Hello, world!</tResponse>
+</terminalBox>
+
+
 ## Adding a dependency
 
 Since the current "hello world" example is quite boring, we can make it more interesting by adding some libraries to the project. Concretely, we will make use of the <smart-link linkType="ext" linkId="rainbow_lib">Rainbow</smart-link> library that makes it easy to print coloured text to the terminal.
@@ -121,20 +128,20 @@ print("Hello world!".bit8(13)) // purple
 ```
 If we run the `swift run` command, we get the following output:
 
-<div class="mono-box">
-<p style="font-family:'Lucida Console', monospace">
-Building for debugging...<br>
-[7/7] Applying NewProject<br>
-Build complete! (0.67s)<br>
-<span style="color:red">Hello world!</span><br>
-<span style="color:orange">Hello world!</span><br>
-<span style="color:yellow">Hello world!</span><br>
-<span style="color:green">Hello world!</span><br>
-<span style="color:cyan">Hello world!</span><br>
-<span style="color:blue">Hello world!</span><br>
-<span style="color:purple">Hello world!</span><br>
-</p>
-</div>
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>swift run</tCommand>
+  <tResponse>Building for debugging...
+[7/7] Applying NewProject
+Build complete! (0.67s)
+<span style="color:red">Hello world!</span>
+<span style="color:orange">Hello world!</span>
+<span style="color:yellow">Hello world!</span>
+<span style="color:green">Hello world!</span>
+<span style="color:cyan">Hello world!</span>
+<span style="color:blue">Hello world!</span>
+<span style="color:purple">Hello world!</span></tResponse>
+</terminalBox>
 
 ## Adding tests
 
@@ -207,15 +214,19 @@ In the code above you can see two methods, that contain three asserts in total. 
 
 We can execute our newly created unit tests by invoking the `swift test` command. In the output we can clearly see that all tests succeeded:
 
-```
-Executed 2 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>swift test</tCommand>
+  <tResponse>Executed 2 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds</tResponse>
+</terminalBox>
 
 If we modify our function `multiplyByTwo` by having it return `x * 3`, and re-run the tests, we can see that the tests failed:
 
-```
-Executed 2 tests, with 3 failures (0 unexpected) in 0.162 (0.163) seconds
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>swift test</tCommand>
+  <tResponse>Executed 2 tests, with 3 failures (0 unexpected) in 0.162 (0.163) seconds</tResponse>
+</terminalBox>
 
 As a result, adding unit tests makes it very easy to find bugs in your code. This can help you with debugging while programming (i.e., test-driven development) but it can also help you to find bugs later on while you are modifying or refactoring code (i.e., regression testing).
 

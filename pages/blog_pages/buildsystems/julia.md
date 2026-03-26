@@ -38,9 +38,11 @@ This article assumes that Julia is already installed. Information about installi
 ## Creating a project
 
 In order to create a new project, we open a terminal and navigate to the desired location of the project. We then run the following command:
-```
-julia -e 'using Pkg; Pkg.generate("FunctionDiff");'
-```
+
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>julia -e 'using Pkg; Pkg.generate("FunctionDiff");'</tCommand>
+</terminalBox>
 
 What this command does is invoke the `julia` executable and tell Julia we wish to execute some code (`-e`) with the last argument specifying the code we wish to run. This will then create a project called `FunctionDiff`. We can now see the following file structure in the working directory:
 
@@ -70,16 +72,20 @@ end # module FunctionDiff
 ```
 
 We can also run the placeholder code from the command-line:
-```
-julia --project=./FunctionDiff -e "import FunctionDiff; FunctionDiff.greet();"
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>julia --project=./FunctionDiff -e "import FunctionDiff; FunctionDiff.greet();"</tCommand>
+</terminalBox>
 
 The above command tells Julia to activate the local environment (`--project=./FunctionDiff`), to import our module, and to run the `greet()` function.
 
 If everything is in order, we should see the following output in the terminal:
-```
-Hello world!
-```
+
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>julia --project=./FunctionDiff -e "import FunctionDiff; FunctionDiff.greet();"</tCommand>
+  <tResponse>Hello world!</tResponse>
+</terminalBox>
 
 ## Dependencies
 
@@ -175,9 +181,10 @@ end
 
 We can try out our code by navigating to our project directory in the terminal and opening the Julia REPL:
 
-```
-julia --project=./FunctionDiff
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>julia --project=./FunctionDiff</tCommand>
+</terminalBox>
 
 In order to obtain a polynomial, we first import our `FunctionDiff` library, and we call the `getPolynomial` function. Julia will then report the created polynomial $f(x) = 3x^2 + 2x + 1$.
 
@@ -326,18 +333,15 @@ end
 ```
 
 
-We can invoke our tests with the following terminal command:
-
-```
-julia --project=./FunctionDiff ./FunctionDiff/test/runtests.jl
-```
-
+We can invoke our tests in the terminal.
 If all is well, Julia should report that all tests passed:
 
-```
-Test Summary:     | Pass  Total  Time
-FunctionDiffTests |    5      5  0.2s
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>julia --project=./FunctionDiff ./FunctionDiff/test/runtests.jl</tCommand>
+  <tResponse>Test Summary:     | Pass  Total  Time
+FunctionDiffTests |    5      5  0.2s</tResponse>
+</terminalBox>
 
 Note that the tests can also be run by opening the Pkg mode and invoking the `test` command.
 
@@ -381,11 +385,14 @@ end
 
 The if-statement makes sure that the `main()` function is only called if we run the script and not when we include it. This is similar to using `if __name__ == "__main__"` in Python.
 
-We can run this main file using the command `julia --project=./polynom_tool ./polynom_tool/run_program.jl`.
+We can run this main file from the terminal:
 
-```
-Hello world!
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>julia --project=./polynom_tool ./polynom_tool/run_program.jl</tCommand>
+  <tResponse>Hello world!</tResponse>
+</terminalBox>
+
 
 Next, we will make a function `parse_commandline()` that parses command-line arguments. The user will have to supply three arguments:
 - `coeffs`: the coefficients of the polynomial,
@@ -438,10 +445,11 @@ end
 
 If we now pass some arguments via the command-line, the result will be printed:
 
-```
-julia --project=./FunctionDiff ./polynom_tool/run_program.jl --coeffs 1 2 3 --order 5 --plot "hello.png"
-Dict{String, Any}("plot" => "hello.png", "order" => 5, "coeffs" => [1.0, 2.0, 3.0])
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>julia --project=./FunctionDiff ./polynom_tool/run_program.jl --coeffs 1 2 3 --order 5 --plot "hello.png"</tCommand>
+  <tResponse>Dict{String, Any}("plot" => "hello.png", "order" => 5, "coeffs" => [1.0, 2.0, 3.0])</tResponse>
+</terminalBox>
 
 Now that we have all our arguments, we can use them to call our FunctionDiff.jl package. We first add `using FunctionDiff` and `using Plots` to the top of our `run_program.jl`. We then also modify the `main` function:
 
@@ -470,18 +478,14 @@ function main()
 end
 ```
 
-We can now run our program with the following command
+We can now run our program and our command-line program will then report the polynomial and its derivative:
 
-```
-julia --project=./FunctionDiff ./polynom_tool/run_program.jl --coeffs -0.5 -1.8 -1.7 1.4 1.3 --order 1 --plot "plot.png"
-```
-
-Our command-line program will then report the polynomial and its derivative:
-
-```
-Function: -0.5 - 1.8*x - 1.7*x^2 + 1.4*x^3 + 1.3*x^4
-Order 1 derivative: -1.8 - 3.4*x + 4.2*x^2 + 5.2*x^3
-```
+<terminalBox data-minimal>
+  <tTitle>zsh</tTitle>
+  <tCommand>julia --project=./FunctionDiff ./polynom_tool/run_program.jl --coeffs -0.5 -1.8 -1.7 1.4 1.3 --order 1 --plot "plot.png"</tCommand>
+  <tResponse>Function: -0.5 - 1.8*x - 1.7*x^2 + 1.4*x^3 + 1.3*x^4
+Order 1 derivative: -1.8 - 3.4*x + 4.2*x^2 + 5.2*x^3</tResponse>
+</terminalBox>
 
 A plot of the function will be saved to `plot.png`:
 <div class="fig-row">

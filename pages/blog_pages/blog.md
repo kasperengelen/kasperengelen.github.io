@@ -28,6 +28,8 @@ referenceId: blog_overview
             {% include blogpost_list_entry.html title="Swift Package Manager" post_url_id="swift_package_manager" code_url_id="buildsystems_swift_code"%}
             {% include blogpost_list_entry.html title="Java projects with Gradle" post_url_id="gradle" code_url_id="buildsystems_gradle_code" %}
             {% include blogpost_list_entry.html title="Julia projects with Pkg" post_url_id="julia_pkg" code_url_id="buildsystems_julia_code" %}
+            {% include blogpost_list_entry.html title="Managing Java versions on macOS" post_url_id="java_home_macos" %}
+            {% include blogpost_list_entry.html title="C++ projects with CMake" post_url_id="cpp_cmake" code_url_id="code_buildsystem_cpp_cmake" %}
             </ul>
         </div>
     </div>
