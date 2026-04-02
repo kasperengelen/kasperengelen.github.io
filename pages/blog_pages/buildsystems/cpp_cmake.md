@@ -35,7 +35,7 @@ First, we will investigate how to create a CMake project and we will take a clos
 A CMake project is centered around the `CMakeLists.txt` file in the root of the project. To get started, create a `CMakeLists.txt` file with the following contents:
 
 ```
-cmake_minimum_required(VERSION 4.2.3)
+cmake_minimum_required(VERSION 4.3.1)
 
 project(VectorArithmetic)
 
@@ -44,7 +44,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 ```
 
-What this does is indicate the version of CMake functionality that we want to use. In this case our CMake file will be read and executed as if using version 4.2.3. Note that this file can only be run using CMake 4.2.3 or higher and that in future versions some functionalities might no longer be supported. Additionally, it also sets the project name to `VectorArithmetic` and enforces the usage of C++ 23.
+What this does is indicate the version of CMake functionality that we want to use. In this case our CMake file will be read and executed as if using version 4.3.1. Note that this file can only be run using CMake 4.3.1 or higher and that in future versions some functionalities might no longer be supported. Additionally, it also sets the project name to `VectorArithmetic` and enforces the usage of C++ 23.
 
 At this stage, we can also add a `README.md` to the root of our project. Documentation is a very important part of software engineering. You should always explain:
 - the dependencies you used,
